@@ -1,0 +1,7 @@
+Jack Melcher
+67574625
+2/6/2016
+EECS 117
+
+I know this late turn in won't count towards my homework grade, 
+but i did want to show that I finally figured out how to more correctly parallelize the mergesort and merge algorithms.

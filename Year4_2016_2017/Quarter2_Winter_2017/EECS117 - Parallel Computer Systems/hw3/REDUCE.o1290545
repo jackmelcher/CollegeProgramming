@@ -1,0 +1,47 @@
+Script began: Tue Mar 7 18:05:28 PST 2017
+Node: compute-1-14.local
+Current directory: /data/users/jmelcher/hw3
+
+=== Running 5 trials of sequential ... ===
+*** Trial 1 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute sequential index GPU reduction kernel: 0.001768 secs
+Effective bandwidth: 18.98 GB/s
+Time to execute naive CPU reduction: 0.116196 secs
+SUCCESS: GPU: 41.950985  CPU: 41.950985
+*** Trial 2 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute sequential index GPU reduction kernel: 0.001758 secs
+Effective bandwidth: 19.09 GB/s
+Time to execute naive CPU reduction: 0.118742 secs
+SUCCESS: GPU: 41.951115  CPU: 41.951115
+*** Trial 3 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute sequential index GPU reduction kernel: 0.001769 secs
+Effective bandwidth: 18.97 GB/s
+Time to execute naive CPU reduction: 0.116007 secs
+SUCCESS: GPU: 41.951115  CPU: 41.951115
+*** Trial 4 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute sequential index GPU reduction kernel: 0.001765 secs
+Effective bandwidth: 19.01 GB/s
+Time to execute naive CPU reduction: 0.118205 secs
+SUCCESS: GPU: 41.944740  CPU: 41.944736
+*** Trial 5 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute sequential index GPU reduction kernel: 0.001769 secs
+Effective bandwidth: 18.97 GB/s
+Time to execute naive CPU reduction: 0.116105 secs
+SUCCESS: GPU: 41.944740  CPU: 41.944736
+
+=== Done! ===

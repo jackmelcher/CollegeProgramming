@@ -1,0 +1,32 @@
+STREETS EAST-WEST:
+Antbeater Road, Barracuda Pkwy, Cauliflower Ave, Doc Arthur Blvd, East Main Street,
+Four Or Five Hours Freeway, Gymboree Road, Hazard Ave, Irvine Classic Drive, Jerkly Ave,
+Karmans Van Ave, Lawnut Ave, Michelangelo Drive, New Irvine Blvd, Orange Hill Road,
+Pale Loop, Quail Mill Pkwy, Rectangular Adobe Road, Stand Fourth, Talton Pkwy,
+University Circle, Verde Palo Road, West Campus Drive, X Roads, Yoming Ave, Z End.
+
+STREETS NORTH-SOUTH:
+1st Street, 2nd Street, 3rd Street, 4th Street, 5th Street, 6th Street, 7th Street, 8th Street, 9th Street, 10th Street,
+11th Street, 12th Street, 13th Street, 14th Street, 15th Street, 16th Street, 17th Street, 18th Street, 19th Street, 20th Street,
+21st Street, 22nd Street, 23rd Street, 24th Street, 25th Street, 26th Street, 27th Street, 28th Street, 29th Street, 30th Street,
+31st Street, 32nd Street, 33rd Street, 34th Street, 35th Street, 36th Street, 37th Street, 38th Street, 39th Street, 40th Street,
+41st Street, 42nd Street.
+
+LANDMARKS:
+University of New Irvine; AT Stand Fourth, AND 8th Street*
+NORTH Pale Loop, SOUTH West Campus Drive, EAST 19th Street, WEST 8th Street/
+Santa Claus Airport; AT Doc Arthur Blvd, AND 12th Street*
+NORTH Doc Arthur Blvd, SOUTH Irvine Classic Drive, EAST 24th Street, WEST 4th Street/
+Grand Park; AT New Irvine Blvd, AND 27th Street*
+NORTH East Main Street, SOUTH Talton Pkwy, EAST 35th Street, WEST 27th Street/
+New Irvine Train Station; AT X Roads, AND 36th Street.
+
+TAXI STANDS:
+Taxi Stand A; AT Doc Arthur Blvd, AND 8th Street,
+Taxi Stand B; AT Stand Fourth, AND 8th Street,
+Taxi Stand C; AT X Roads, AND 36th Street.
+
+PARKING:
+Taxi Stand A CAPACITY 12 CABS Limo(3), Van(6);
+Taxi Stand A CAPACITY 12 CABS Limo(3), Van(6);
+Taxi Stand A CAPACITY 12 CABS Limo(3), Van(6).

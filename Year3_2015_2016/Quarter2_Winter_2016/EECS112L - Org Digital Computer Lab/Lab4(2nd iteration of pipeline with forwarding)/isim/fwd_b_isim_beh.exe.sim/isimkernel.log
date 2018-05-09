@@ -1,0 +1,29 @@
+Command line:
+   fwd_b_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  51380
+
+Thu Mar 03 22:12:29 2016
+
+
+ Elaboration Time: 0.0468 sec
+
+ Current Memory Usage: 1317.24 Meg
+
+ Total Signals          : 6
+ Total Nets             : 130
+ Total Signal Drivers   : 1
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 1
+ Total Traceable Variables  : 8
+ Total Scalar Nets and Variables : 490
+Total Line Count : 1
+
+ Total Simulation Time: 0.0468 sec
+
+ Current Memory Usage: 1317.24 Meg
+
+Thu Mar 03 22:12:34 2016
+

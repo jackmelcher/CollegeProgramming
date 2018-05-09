@@ -1,0 +1,32 @@
+Jack Melcher 67574625
+EECS 22
+Assignment 5: MovieLab
+12/10/2014
+
+I found this assignment to be particularly challenging.
+
+The assignment felt a bit overwhelming, being our first time coding a Double-Linked List,
+command line inputs, and function pointers.
+
+Even with a lot of the descriptions in the assignment, it took a considerable amount of
+time to read through the given code, properly understand what it meant, and then add the
+necessary code to make the MovieLab work.
+
+The example code in the lecture slides was essential to being able to get started with
+the assignment. The TA slides helped with understanding the command line input code and
+how to code the -rvs function, but the Makefile diagram was misleading.
+
+Making a new list, appending images, and deleting the list was easy enough to code.
+However, the -fast,-cut,-rvs functions took a considerable amount of time to understand and code
+because of how difficult it was for me to think of how all the pointers changed in the
+Double-Linked list.
+
+How to make the Movie.c functions was easy implement as the description was pretty clear.
+
+For the MovieLab.c, I felt that it wasnt clear stated what operations were supposed
+to be done after the command line inputs were receieved by the user. like create the movie,
+read it, save it, delete it. I don't know. maybe I didnt see it.
+
+Overall, I felt that it was more challenging coding this assignment than the previous ones.
+I managed to complete the assignment, but I did not enjoy doing it. Atleast I finally 
+understand the concepts.

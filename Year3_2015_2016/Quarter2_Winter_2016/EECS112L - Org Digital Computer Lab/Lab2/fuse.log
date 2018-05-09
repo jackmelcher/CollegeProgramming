@@ -1,0 +1,44 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab2/processor_tb_isim_beh.exe -prj C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab2/processor_tb_beh.prj work.processor_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab2/processor_tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab2/lab2_pack.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab2/rom.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab2/regfile.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab2/ram.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab2/pc.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab2/output_mux.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab2/controller.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab2/b_mux.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab2/alu.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab2/processor.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module processor_tb
+Compiling module glbl
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package lab2_pack
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling package std_logic_signed
+Compiling architecture behavioral of entity pc [\pc(32,1,14)\]
+Compiling architecture behavioral of entity rom [\rom(32,14)\]
+Compiling architecture behavioral of entity controller [controller_default]
+Compiling architecture behavioral of entity regfile [\regfile(32,5,5)\]
+Compiling architecture behavioral of entity b_mux [b_mux_default]
+Compiling architecture behavioral of entity alu [alu_default]
+Compiling architecture behavioral of entity ram [\ram(32,9,9)\]
+Compiling architecture behavioral of entity output_mux [output_mux_default]
+Compiling architecture behavioral of entity processor [processor_default]
+Time Resolution for simulation is 1ps.
+Waiting for 10 sub-compilation(s) to finish...
+Compiled 25 VHDL Units
+Compiled 2 Verilog Units
+Built simulation executable C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab2/processor_tb_isim_beh.exe
+Fuse Memory Usage: 39404 KB
+Fuse CPU Usage: 685 ms

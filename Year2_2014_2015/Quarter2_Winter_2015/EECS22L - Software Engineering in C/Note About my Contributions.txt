@@ -1,0 +1,8 @@
+Designed UI for Text-based Chess
+	One of seven team members that worked on a Chess game represented with ASCII characters and text-based commands
+	Designed menus, player inputs, game responses, and ASCII representation of chess board
+
+Parsed messages sent by the client app to the host app of a Taxi Cab Simulator
+	One of seven team members that worked on a Taxi Cab Simulator Project
+	Involved taking the message sent by the client app and parsing the information for the host app, including pickup location, pickup time, drop-off location, and number of customers per ride
+

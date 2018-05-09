@@ -1,0 +1,2 @@
+vhdl isim_temp "lab2_pack.vhd"
+vhdl isim_temp "rom.vhd"

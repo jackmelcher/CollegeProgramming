@@ -1,0 +1,5 @@
+vhdl isim_temp "assignment3_67574625_mux2to1.vhd"
+vhdl isim_temp "assignment3_67574625_logic_unit.vhd"
+vhdl isim_temp "assignment3_67574625_full_adder.vhd"
+vhdl isim_temp "assignment3_67574625_arithmetic_unit.vhd"
+vhdl isim_temp "assignment3_67574625_alu_1bit.vhd"

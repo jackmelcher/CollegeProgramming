@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Jack/Desktop/EECS 31L/hw4/assignment4_67574625/testbench_registerfile_isim_beh.exe" -prj "C:/Users/Jack/Desktop/EECS 31L/hw4/assignment4_67574625/testbench_registerfile_beh.prj" "testbench_registerfile" 

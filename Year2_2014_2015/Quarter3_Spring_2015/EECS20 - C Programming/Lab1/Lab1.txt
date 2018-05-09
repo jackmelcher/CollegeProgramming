@@ -1,0 +1,56 @@
+Jack Melcher
+67574625
+4/4/2015
+
+EECS 20
+Lab 1
+
+Code Template from Step II
+        .ORIG x4000
+        LEA  R0, LABEL1
+        TRAP  x22
+        LEA  R0, LABEL2
+        TRAP  x22
+        LEA  R0, LABEL3
+        TRAP  x22
+        TRAP  x25
+LABEL1  .STRINGZ  "C Programming"
+LABEL2  .STRINGZ  "Spring 2015"
+LABEL3  .STRINGZ  "UCI"
+        .END
+
+Contents of Step III
+	C ProgrammingSpring 2015UCI
+	----- Halting the processor -----
+
+Contents of Step IV
+	Jack, Melcher, Computer Engineer, EECS20
+	----- Halting the processor -----
+
+Contents of Step V
+	C ProgrammingSpring 2015UCI
+	----- Halting the processor -----
+	Note: The program now begins at memory address x5000 instead of x4000
+
+LC-3 Psuedo Code
+
+.ORIG
+	Where the code is put in memory, the starting location of the program
+	PC is set to the .ORIG value prior to execution
+	Example: .ORIG x4000 means the code begins at memory address x4000
+
+TRAP x22 (PUT)
+	Prints a string onto the console window
+	Address of the first character in string is in R0
+
+.STRINGZ
+	Declares a string of characters
+	Example: string_name .STRINGZ "Content of string"
+
+TRAP x25 (HALT)
+	Ends the program with the use of a forever loop.
+
+.END
+	Where the assembly stops
+
+

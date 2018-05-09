@@ -1,0 +1,29 @@
+Command line:
+   assignment4_67574625_counter_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50525
+
+Sun Feb 15 18:33:03 2015
+
+
+ Elaboration Time: 0.015601 sec
+
+ Current Memory Usage: 670.093 Meg
+
+ Total Signals          : 6
+ Total Nets             : 68
+ Total Signal Drivers   : 1
+ Total Blocks           : 5
+ Total Primitive Blocks : 5
+ Total Processes        : 1
+ Total Traceable Variables  : 17
+ Total Scalar Nets and Variables : 571
+Total Line Count : 11
+
+ Total Simulation Time: 0.015601 sec
+
+ Current Memory Usage: 670.093 Meg
+
+Sun Feb 15 18:33:12 2015
+

@@ -1,0 +1,193 @@
+V3 127
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/alu.vhd" 2016/02/06.19:44:22 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/a_mux.vhd" 2016/03/03.22:36:56 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/BranchAdder.vhd" 2016/03/05.04:03:49 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/branchforwarding.vhd" 2016/03/05.18:32:23 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/branch_control.vhd" 2016/01/31.20:23:54 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/b_mux.vhd" 2016/03/03.22:37:10 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/B_mux_fwd_mem_functs.vhd" 2016/03/05.22:58:21 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/controller.vhd" 2016/03/05.23:05:32 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/ForwardingUnit.vhd" 2016/03/05.23:25:53 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/fwd_a.vhd" 2016/03/03.23:01:18 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/fwd_b.vhd" 2016/03/03.23:01:22 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/HazardDetectionUnit.vhd" 2016/03/05.00:58:16 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/HazardWriteMux.vhd" 2016/03/04.23:31:39 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/lab2_pack.vhd" 2016/02/07.00:58:33 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/output_mux.vhd" 2016/01/31.23:25:07 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/pc.vhd" 2016/03/05.22:09:45 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/PCadder.vhd" 2016/02/28.22:07:07 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/PipelineReg1_IF_ID.vhd" 2016/03/05.03:58:35 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/PipelineReg2_ID_EX.vhd" 2016/03/05.22:53:45 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/PipelineReg3_EX_MEM.vhd" 2016/03/05.03:45:52 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/PipelineReg4_MEM_WB.vhd" 2016/03/05.23:45:34 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/processor.vhd" 2016/03/06.00:27:11 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/ram.vhd" 2016/03/05.18:07:45 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/ram_read.vhd" 2016/02/13.20:12:40 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/regfile.vhd" 2016/03/03.23:46:05 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Assignment Repository/Lab4/rom.vhd" 2016/02/08.02:11:24 P.20131013
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/alu.vhd" 2016/02/06.19:44:22 P.20131013
+EN work/alu 1458100021 FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/alu.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_SIGNED 1381692178 \
+      PH work/lab2_pack 1458099986 PB ieee/NUMERIC_STD 1381692181
+AR work/alu/Behavioral 1458100022 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/alu.vhd" EN work/alu 1458100021
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/a_mux.vhd" 2016/03/03.22:36:56 P.20131013
+EN work/a_mux 1458099999 FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/a_mux.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/a_mux/Behavioral 1458100000 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/a_mux.vhd" EN work/a_mux 1458099999
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/BranchAdder.vhd" 2016/03/05.04:03:49 P.20131013
+EN work/BranchAdder 1458100005 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/BranchAdder.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/BranchAdder/Behavioral 1458100006 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/BranchAdder.vhd" \
+      EN work/BranchAdder 1458100005
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/branchforwarding.vhd" 2016/03/05.18:32:23 P.20131013
+EN work/branchforwarding 1458100011 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/branchforwarding.vhd" \
+      PB ieee/std_logic_1164 1381692176 PH work/lab2_pack 1458099986
+AR work/branchforwarding/Behavioral 1458100012 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/branchforwarding.vhd" \
+      EN work/branchforwarding 1458100011
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/branch_control.vhd" 2016/01/31.20:23:54 P.20131013
+EN work/branch_and_jump_control 1458100003 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/branch_control.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_SIGNED 1381692178 \
+      PH work/lab2_pack 1458099986
+AR work/branch_and_jump_control/Behavioral 1458100004 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/branch_control.vhd" \
+      EN work/branch_and_jump_control 1458100003
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/b_mux.vhd" 2016/03/03.22:37:10 P.20131013
+EN work/b_mux 1458100001 FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/b_mux.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/b_mux/Behavioral 1458100002 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/b_mux.vhd" EN work/b_mux 1458100001
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/B_mux_fwd_mem_functs.vhd" 2016/03/05.22:58:21 P.20131013
+EN work/B_mux_fwd_mem_functs 1458100019 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/B_mux_fwd_mem_functs.vhd" \
+      PB ieee/std_logic_1164 1381692176 PH work/lab2_pack 1458099986
+AR work/B_mux_fwd_mem_functs/Behavioral 1458100020 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/B_mux_fwd_mem_functs.vhd" \
+      EN work/B_mux_fwd_mem_functs 1458100019
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/controller.vhd" 2016/03/05.23:05:32 P.20131013
+EN work/controller 1458099995 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/controller.vhd" \
+      PB ieee/std_logic_1164 1381692176 PH work/lab2_pack 1458099986
+AR work/controller/Behavioral 1458099996 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/controller.vhd" EN work/controller 1458099995
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/ForwardingUnit.vhd" 2016/03/05.23:25:53 P.20131013
+EN work/ForwardingUnit 1458100023 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/ForwardingUnit.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PH work/lab2_pack 1458099986
+AR work/ForwardingUnit/Behavioral 1458100024 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/ForwardingUnit.vhd" \
+      EN work/ForwardingUnit 1458100023
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/fwd_a.vhd" 2016/03/03.23:01:18 P.20131013
+EN work/fwd_a 1458100015 FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/fwd_a.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/fwd_a/Behavioral 1458100016 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/fwd_a.vhd" EN work/fwd_a 1458100015
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/fwd_b.vhd" 2016/03/03.23:01:22 P.20131013
+EN work/fwd_b 1458100017 FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/fwd_b.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/fwd_b/Behavioral 1458100018 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/fwd_b.vhd" EN work/fwd_b 1458100017
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/HazardDetectionUnit.vhd" 2016/03/05.00:58:16 P.20131013
+EN work/HazardDetectionUnit 1458100007 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/HazardDetectionUnit.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/HazardDetectionUnit/Behavioral 1458100008 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/HazardDetectionUnit.vhd" \
+      EN work/HazardDetectionUnit 1458100007
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/HazardWriteMux.vhd" 2016/03/04.23:31:39 P.20131013
+EN work/HazardDetectionWriteEnableMux 1458100009 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/HazardWriteMux.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/HazardDetectionWriteEnableMux/Behavioral 1458100010 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/HazardWriteMux.vhd" \
+      EN work/HazardDetectionWriteEnableMux 1458100009
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/lab2_pack.vhd" 2016/02/07.00:58:33 P.20131013
+PH work/lab2_pack 1458099986 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/lab2_pack.vhd" \
+      PB ieee/std_logic_1164 1381692176
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/output_mux.vhd" 2016/01/31.23:25:07 P.20131013
+EN work/output_mux 1458100033 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/output_mux.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/output_mux/Behavioral 1458100034 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/output_mux.vhd" EN work/output_mux 1458100033
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/pc.vhd" 2016/03/05.22:09:45 P.20131013
+EN work/pc 1458099987 FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/pc.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/pc/Behavioral 1458099988 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/pc.vhd" EN work/pc 1458099987
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/PCadder.vhd" 2016/02/28.22:07:07 P.20131013
+EN work/PCadder 1458099989 FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/PCadder.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/PCadder/Behavioral 1458099990 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/PCadder.vhd" EN work/PCadder 1458099989
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/PipelineReg1_IF_ID.vhd" 2016/03/05.03:58:35 P.20131013
+EN work/PipelineReg1_IF_ID 1458099993 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/PipelineReg1_IF_ID.vhd" \
+      PB ieee/std_logic_1164 1381692176 PH work/lab2_pack 1458099986
+AR work/PipelineReg1_IF_ID/Behavioral 1458099994 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/PipelineReg1_IF_ID.vhd" \
+      EN work/PipelineReg1_IF_ID 1458099993
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/PipelineReg2_ID_EX.vhd" 2016/03/05.22:53:45 P.20131013
+EN work/PipelineReg2_ID_EX 1458100013 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/PipelineReg2_ID_EX.vhd" \
+      PB ieee/std_logic_1164 1381692176 PH work/lab2_pack 1458099986
+AR work/PipelineReg2_ID_EX/Behavioral 1458100014 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/PipelineReg2_ID_EX.vhd" \
+      EN work/PipelineReg2_ID_EX 1458100013
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/PipelineReg3_EX_MEM.vhd" 2016/03/05.03:45:52 P.20131013
+EN work/PipelineReg3_EX_MEM 1458100025 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/PipelineReg3_EX_MEM.vhd" \
+      PB ieee/std_logic_1164 1381692176 PH work/lab2_pack 1458099986
+AR work/PipelineReg3_EX_MEM/Behavioral 1458100026 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/PipelineReg3_EX_MEM.vhd" \
+      EN work/PipelineReg3_EX_MEM 1458100025
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/PipelineReg4_MEM_WB.vhd" 2016/03/05.23:45:34 P.20131013
+EN work/PipelineReg4_MEM_WB 1458100031 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/PipelineReg4_MEM_WB.vhd" \
+      PB ieee/std_logic_1164 1381692176 PH work/lab2_pack 1458099986
+AR work/PipelineReg4_MEM_WB/Behavioral 1458100032 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/PipelineReg4_MEM_WB.vhd" \
+      EN work/PipelineReg4_MEM_WB 1458100031
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/processor.vhd" 2016/03/06.00:27:11 P.20131013
+EN work/processor 1458100035 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/processor.vhd" \
+      PB ieee/std_logic_1164 1381692176 PH work/lab2_pack 1458099986
+AR work/processor/Behavioral 1458100036 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/processor.vhd" EN work/processor 1458100035 \
+      CP pc CP PCadder CP rom CP PipelineReg1_IF_ID CP controller CP regfile CP a_mux \
+      CP b_mux CP branch_and_jump_control CP BranchAdder CP HazardDetectionUnit \
+      CP HazardDetectionWriteEnableMux CP branchforwarding CP PipelineReg2_ID_EX \
+      CP fwd_a CP fwd_b CP B_mux_fwd_mem_functs CP alu CP ForwardingUnit \
+      CP PipelineReg3_EX_MEM CP ram CP ram_read CP PipelineReg4_MEM_WB CP output_mux
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/ram.vhd" 2016/03/15.19:04:24 P.20131013
+EN work/ram 1458100027 FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/ram.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PH work/lab2_pack 1458099986 PB ieee/NUMERIC_STD 1381692181
+AR work/ram/Behavioral 1458100028 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/ram.vhd" EN work/ram 1458100027
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/ram_read.vhd" 2016/02/13.20:12:40 P.20131013
+EN work/ram_read 1458100029 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/ram_read.vhd" \
+      PB ieee/std_logic_1164 1381692176 PH work/lab2_pack 1458099986
+AR work/ram_read/Behavioral 1458100030 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/ram_read.vhd" EN work/ram_read 1458100029
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/regfile.vhd" 2016/03/03.23:46:05 P.20131013
+EN work/regfile 1458099997 FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/regfile.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/regfile/Behavioral 1458099998 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/regfile.vhd" EN work/regfile 1458099997
+FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/rom.vhd" 2016/02/08.02:11:24 P.20131013
+EN work/rom 1458099991 FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/rom.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PB std/TEXTIO 1381692176
+AR work/rom/behavioral 1458099992 \
+      FL "C:/Users/Jack/Desktop/EECS 112L/Lab4/rom.vhd" EN work/rom 1458099991

@@ -1,0 +1,5 @@
+vhdl isim_temp "mux2to1.vhd"
+vhdl isim_temp "logic_unit.vhd"
+vhdl isim_temp "full_adder.vhd"
+vhdl isim_temp "arithmetic_unit.vhd"
+vhdl isim_temp "alu_1bit.vhd"

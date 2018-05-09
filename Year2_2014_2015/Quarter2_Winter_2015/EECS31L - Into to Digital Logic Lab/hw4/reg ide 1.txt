@@ -1,0 +1,68 @@
+ENTITY decoder IS
+	GENERIC(m: INTEGER:=3);
+	PORT ( 	ena : IN STD_LOGIC;
+				sel : IN STD_LOGIC_VECTOR (m-1 DOWNTO 0);
+				x : OUT STD_LOGIC_VECTOR (2**m-1 DOWNTO 0)
+			);
+END decoder;
+
+architecture Behavioral of decoder is
+
+begin
+
+PROCESS (ena, sel)
+	VARIABLE temp1 : STD_LOGIC_VECTOR (x'HIGH DOWNTO 0);
+	VARIABLE temp2 : INTEGER RANGE 0 TO x'HIGH;
+BEGIN
+	temp1 := (OTHERS => '1');
+	temp2 := 0;
+	IF (ena='1') THEN
+		FOR i IN sel'RANGE LOOP -- sel range is m-1 downto 0
+			IF (sel(i)='1') THEN -- Bin-to-Integer conversion
+			temp2:=2*temp2+1;
+			ELSE
+			temp2 := 2*temp2;
+			END IF;
+		END LOOP;
+	temp1(temp2):='0';
+	END IF;
+	x <= temp1;
+END PROCESS;
+
+
+
+
+architecture Behavioral of assignment4_67574625_registerfile is
+
+-- Signal Declaration
+SIGNAL temp: STD_LOGIC_VECTOR(NBIT-1 downto 0);
+
+-- Component Declaration
+    COMPONENT assignment4_67574625_register IS
+	 GENERIC( NBIT : INTEGER);
+    PORT(
+         clk : IN  std_logic;
+         rst_a : IN  std_logic;
+         rst_s : IN  std_logic;
+         inc : IN  std_logic;
+         we : IN  std_logic;
+         din : IN  std_logic_vector(31 downto 0);
+         dout : OUT  std_logic_vector(31 downto 0)
+        );
+    END COMPONENT;
+
+begin
+
+G1: FOR i IN 1 TO 2**NSEL GENERATE
+			REGs: assignment4_67574625_register 
+					GENERIC MAP (NBIT=>NBIT)
+					PORT MAP (clk=>clk ,
+									rst_a=>'0',
+									rst_s=>rst_s,
+									inc=>'0',
+									we=>'1',
+									din=>wdata,
+									dout=>temp);
+	END GENERATE;
+
+end Behavioral;

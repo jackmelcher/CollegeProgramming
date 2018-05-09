@@ -1,0 +1,44 @@
+# Makefile: MovieLab
+# Jack Melcher
+
+#Convenience Targets
+all: MovieLab
+
+clean:
+	rm -f *.o
+	rm -f *.a
+	rm -f out.yuv
+	rm -f out1.yuv
+	rm -f out2.yuv
+	rm -f bw.yuv
+	rm -f vflip.yuv
+	rm -f hmirror.yuv
+	rm -f edge.yuv
+	rm -f poster.yuv
+	rm -f resize.yuv
+	rm -f cut.yuv
+	rm -f fast.yuv
+	rm -f rvs.yuv
+
+#Compilation Rules
+MovieLab: MovieLab.c libc.a
+	gcc -Wall -ansi MovieLab.c -lMovie -L. -o MovieLab
+
+MovieLab: MovieLab.o DIPs.o Image.o ImageList.o Movie.o
+	gcc -Wall -ansi MovieLab.o DIPs.o Image.o ImageList.o Movie.o -o MovieLab
+
+DIPs.o: DIPs.c DIPs.h Image.h
+	gcc -Wall -ansi -c DIPs.c -o
+
+Image.o: Image.c Image.h
+	gcc -Wall -ansi -c Image.c -o
+
+ImageList.o: ImageList.c ImageList.h Image.h DIPs.h
+	gcc -Wall -ansi -c ImageList.c -o
+
+Movie.o: Movie.c Movie.h Image.h
+	gcc -Wall -ansi -c Movie.c -o
+
+libMovie.a: DIPs.o Image.o ImageList.o Movie.o
+	ar rc libMovie.a DIPs.o Image.o ImageList.o Movie.o
+	ranlib libMovie.a

@@ -1,0 +1,66 @@
+--Arithmetic Logic (Output)
+	output <= 	(A XOR B) XOR cin 							WHEN mode & opsel ="0000" ELSE
+					(A XOR (NOT B)) XOR '1'						WHEN mode & opsel ="0001" ELSE
+					(A XOR '0') XOR '0' 							WHEN mode & opsel ="0010" ELSE
+					(A XOR (B XOR '1')) XOR '1'				WHEN mode & opsel ="0011" ELSE
+					(A XOR '1') XOR '0'  						WHEN mode & opsel ="0100" ELSE
+					(A XOR '0') XOR '1' 							WHEN mode & opsel ="0101" ELSE
+					(A XOR B) XOR '1' 							WHEN mode & opsel ="0110" ELSE
+					'0';--No other options
+--Arithmetic Logic (Cout)			
+	cout	 <= 	(A AND B) OR (cin AND (A XOR B)) 							WHEN mode & opsel ="0000" ELSE
+					(A AND (NOT B)) OR ('1' AND (A XOR (NOT B))) 			WHEN mode & opsel ="0001" ELSE
+					(A AND '0') OR ('0' AND (A XOR '0')) 						WHEN mode & opsel ="0010" ELSE
+					(A AND (B XOR '1')) OR ('1' AND (A XOR (B XOR '1')))	WHEN mode & opsel ="0011" ELSE
+					(A AND '1') OR ('0' AND (A XOR '1'))						WHEN mode & opsel ="0100" ELSE
+					(A AND '0') OR ('1' AND (A XOR '0'))						WHEN mode & opsel ="0101" ELSE
+					(A AND B) OR ('1' AND (A XOR B))								WHEN mode & opsel ="0110" ELSE
+					'0';--No other options
+
+--Arithmetic (Logic)
+	output <= 	(A AND B) 	WHEN mode & opsel ="1000" ELSE
+					(A OR B)		WHEN mode & opsel ="1001" ELSE
+					(A XOR B) 	WHEN mode & opsel ="1010" ELSE
+					(NOT A) 		WHEN mode & opsel ="1011" ELSE
+					'0' 			WHEN mode & opsel ="1101" ELSE
+					'0';--No other options
+
+
+--Arithmetic Logic (Output)
+	output <= 	(A XOR B) XOR cin 							WHEN mode & opsel ="0000" ELSE
+					(A XOR (NOT B)) XOR cin						WHEN mode & opsel ="0001" ELSE
+					(A XOR '0') XOR '0' 							WHEN mode & opsel ="0010" ELSE
+					(A XOR (B XOR cin)) XOR cin				WHEN mode & opsel ="0011" ELSE
+					(A XOR '1') XOR cin  						WHEN mode & opsel ="0100" ELSE
+					(A XOR '0') XOR cin 							WHEN mode & opsel ="0101" ELSE
+					(A XOR B) XOR cin 							WHEN mode & opsel ="0110" ELSE
+					'0';--No other options
+--Arithmetic Logic (Cout)			
+	cout	 <= 	(A AND B) OR (cin AND (A XOR B)) 							WHEN mode & opsel ="0000" ELSE
+					(A AND (NOT B)) OR (cin AND (A XOR (NOT B))) 			WHEN mode & opsel ="0001" ELSE
+					(A AND '0') OR (cin AND (A XOR '0')) 						WHEN mode & opsel ="0010" ELSE
+					(A AND (B XOR cin)) OR (cin AND (A XOR (B XOR cin)))	WHEN mode & opsel ="0011" ELSE
+					(A AND '1') OR (cin AND (A XOR '1'))						WHEN mode & opsel ="0100" ELSE
+					(A AND '0') OR (cin AND (A XOR '0'))						WHEN mode & opsel ="0101" ELSE
+					(A AND B) OR (cin AND (A XOR B))								WHEN mode & opsel ="0110" ELSE
+					'0';--No other options
+
+--Set B
+B <= 			B							WHEN mode & opsel ="0000" ELSE
+				(NOT B)					WHEN mode & opsel ="0001" ELSE
+				'0' 						WHEN mode & opsel ="0010" ELSE
+				(B XOR '1')				WHEN mode & opsel ="0011" ELSE
+				'1' 						WHEN mode & opsel ="0100" ELSE
+				'0' 						WHEN mode & opsel ="0101" ELSE
+				B 							WHEN mode & opsel ="0110" ELSE
+				'0';--No other options
+				
+--Set cin
+cin <= 		cin 				WHEN mode & opsel ="0000" ELSE
+				'1'				WHEN mode & opsel ="0001" ELSE
+				'0' 				WHEN mode & opsel ="0010" ELSE
+				'1'				WHEN mode & opsel ="0011" ELSE
+				'0'  				WHEN mode & opsel ="0100" ELSE
+				'1' 				WHEN mode & opsel ="0101" ELSE
+				'1' 				WHEN mode & opsel ="0110" ELSE
+				'0';--No other options

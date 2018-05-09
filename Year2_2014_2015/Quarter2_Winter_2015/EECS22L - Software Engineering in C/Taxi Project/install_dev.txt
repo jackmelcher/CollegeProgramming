@@ -1,0 +1,39 @@
+-----------------------------------------------
+-------DP Studios: DPTaxi Alpha Package -------
+-------Installation	3/1/2015	-------
+-------Written by: Jack Melcher		-------
+-----------------------------------------------
+
+General use
+-----------------------
+1.	Run the command make to compile the executable files
+
+2. 	Navigate your way to the /doc directory 
+
+3. 	Read the Taxi_User_Manual.pdf before using the programs in this package.
+	Also read the Taxi SoftwareSpec.pdf to learn more about the source code.
+
+
+Running the programs
+------------------------
+1. 	Navigate your way to the /bin directory
+
+2. 	Appropriately distribute the executable files and run as stated in the Taxi_User_Manual.pdf
+
+
+Source code
+------------------------
+1.	Navigate into the /inc directory to view header files
+
+2.	Navigate into the /src directory to view source code
+
+
+
+Test Programs
+------------------------
+1. Navigate your way to the /test directory to view code used in testing functions
+
+2. There are several test executables you can run that are more verbose on what a function does
+
+
+

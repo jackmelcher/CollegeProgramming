@@ -1,0 +1,142 @@
+[jmelcher@compute-13-7 hw4]$ ./mm 1024 1024 1024 4
+N: 1024 K: 1024 M: 1024 blocksize: 4
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Naive matrix multiply
+Done
+time for naive implementation: 11.8987 seconds
+
+Cache-blocked matrix multiply
+Done
+time for cache-blocked implementation: 2.02617 seconds
+SUCCESS
+SIMD-vectorized Cache-blocked matrix multiply
+Done
+time for SIMD-vectorized cache-blocked implementation: 0.999085 seconds
+SUCCESS
+
+
+[jmelcher@compute-13-7 hw4]$ ./mm 1024 1024 1024 8
+N: 1024 K: 1024 M: 1024 blocksize: 8
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Naive matrix multiply
+Done
+time for naive implementation: 11.9122 seconds
+
+Cache-blocked matrix multiply
+Done
+time for cache-blocked implementation: 1.52355 seconds
+SUCCESS
+SIMD-vectorized Cache-blocked matrix multiply
+Done
+time for SIMD-vectorized cache-blocked implementation: 0.520858 seconds
+SUCCESS
+
+
+[jmelcher@compute-13-7 hw4]$ ./mm 1024 1024 1024 16
+N: 1024 K: 1024 M: 1024 blocksize: 16
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Naive matrix multiply
+Done
+time for naive implementation: 11.8955 seconds
+
+Cache-blocked matrix multiply
+Done
+time for cache-blocked implementation: 1.71474 seconds
+SUCCESS
+SIMD-vectorized Cache-blocked matrix multiply
+Done
+time for SIMD-vectorized cache-blocked implementation: 0.498062 seconds
+SUCCESS
+
+
+[jmelcher@compute-13-7 hw4]$ ./mm 1024 1024 1024 32
+N: 1024 K: 1024 M: 1024 blocksize: 32
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Naive matrix multiply
+Done
+time for naive implementation: 11.9203 seconds
+
+Cache-blocked matrix multiply
+Done
+time for cache-blocked implementation: 2.00116 seconds
+SUCCESS
+SIMD-vectorized Cache-blocked matrix multiply
+Done
+time for SIMD-vectorized cache-blocked implementation: 0.514059 seconds
+SUCCESS
+
+
+[jmelcher@compute-13-7 hw4]$ ./mm 1024 1024 1024 64
+N: 1024 K: 1024 M: 1024 blocksize: 64
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Naive matrix multiply
+Done
+time for naive implementation: 11.9083 seconds
+
+Cache-blocked matrix multiply
+Done
+time for cache-blocked implementation: 1.91788 seconds
+SUCCESS
+SIMD-vectorized Cache-blocked matrix multiply
+Done
+time for SIMD-vectorized cache-blocked implementation: 0.485993 seconds
+SUCCESS
+
+
+[jmelcher@compute-13-7 hw4]$ ./mm 1024 1024 1024 128
+N: 1024 K: 1024 M: 1024 blocksize: 128
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Naive matrix multiply
+Done
+time for naive implementation: 11.9178 seconds
+
+Cache-blocked matrix multiply
+Done
+time for cache-blocked implementation: 1.93617 seconds
+SUCCESS
+SIMD-vectorized Cache-blocked matrix multiply
+Done
+time for SIMD-vectorized cache-blocked implementation: 0.487966 seconds
+SUCCESS
+
+
+[jmelcher@compute-13-7 hw4]$ ./mm 1024 1024 1024 256
+N: 1024 K: 1024 M: 1024 blocksize: 256
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Naive matrix multiply
+Done
+time for naive implementation: 11.6946 seconds
+
+Cache-blocked matrix multiply
+Done
+time for cache-blocked implementation: 1.84508 seconds
+SUCCESS
+SIMD-vectorized Cache-blocked matrix multiply
+Done
+time for SIMD-vectorized cache-blocked implementation: 0.46402 seconds
+SUCCESS
+
+
+[jmelcher@compute-13-7 hw4]$ ./mm 1024 1024 1024 512
+N: 1024 K: 1024 M: 1024 blocksize: 512
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Naive matrix multiply
+Done
+time for naive implementation: 11.9256 seconds
+
+Cache-blocked matrix multiply
+Done
+time for cache-blocked implementation: 2.71515 seconds
+SUCCESS
+SIMD-vectorized Cache-blocked matrix multiply
+Done
+time for SIMD-vectorized cache-blocked implementation: 0.686583 seconds
+SUCCESS

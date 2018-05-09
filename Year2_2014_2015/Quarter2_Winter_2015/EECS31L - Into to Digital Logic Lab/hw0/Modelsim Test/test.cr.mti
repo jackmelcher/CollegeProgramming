@@ -1,0 +1,9 @@
+{C:/Users/Jack/Desktop/EECS 31L/orgate.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Jack/Desktop/EECS 31L/orgate.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4 Compiler 2014.12 Dec  3 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity orgate
+-- Compiling architecture Behavioral of orgate
+
+} {} {}}

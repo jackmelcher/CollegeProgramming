@@ -1,0 +1,57 @@
+Succeeded connecting to the Database!
+SQL: SELECT * FROM question
+Almanza, Alexander Cruz	5635	5782
+Blanco Moreno, Ivan	4386	7274
+Cao, Pino	7838	9498
+Cao, Stefan	2211	2968
+Chun, Paul	8891	1159
+Contreras, Luis Emilio	8430	4025
+Domaszewicz, Kyle Casimir	2945	8576
+Dornberg, Yuji Michael	7294	4953
+Efseaff, John Tim	2386	4053
+Fong, Sandra	1249	8584
+Herrera, Michael Ray	6598	3794
+Huang, Ting-Yi	5723	3838
+Jooryabi, Daniel	9614	2786
+Kane, Carissa Michelle	5477	5892
+Khan, Zainab Faryal	1111	2
+Kouzoukian, Yebraksi	3832	4182
+Kumar, Bhuvnesh	2391	3610
+Lam, Kyle H.	7182	1270
+Li, Zunwen	2881	8885
+Loui, Jonathan G.	6269	1950
+Melcher, Jack Collin Koakaikaina	9634	1934
+Meng, Xianpei	6307	5461
+Meurrens, Hunter Shinei	7780	4437
+Michel, Spielberg	9779	7513
+Ngo, Kevin	7259	2394
+Oreas, Dyann Ramos	9110	5564
+Ortiz-Luis, James Ryan	2708	8049
+Phi, Tony Tu	7015	5004
+Raun, Austin David	8035	5453
+Rhee, Elliot John	9799	4904
+Ribaya, Luis Santos Jr.	3566	9606
+Ring, Daniel Alexander	8343	4823
+Rodriguez, Allan	7445	6320
+Ruiz, Mario De Jesus	4477	6366
+Salinas, Brendon	2496	6029
+Shah, Saumil Mayur	8281	1303
+Soedarsono, Austin Jonathan	3886	1867
+Stevens, Tyler Patrick	4252	9394
+Venkatesh Raghavan, Gaurav	7490	5443
+Wolf, Travis Brian	5794	7291
+Yu, Andrew	8298	9856
+Yu, Miao	2344	5463
+Zhao, Yuxiang	6453	2342
+Zheng, Enze Na	5343	2355
+Zheng, Shuai	3456	8654
+
+SQL: SELECT * FROM question WHERE name = 'Melcher, Jack Collin Koakaikaina'
+Melcher, Jack Collin Koakaikaina	9634	1934
+9634 * 1934 + 25 = 18632181
+
+SQL: INSERT IGNORE INTO result (name, id2d, result) VALUES ('Melcher, Jack Collin Koakaikaina', 25, 18632181)
+
+SQL: SELECT name, result FROM result WHERE name = 'Melcher, Jack Collin Koakaikaina'
+Melcher, Jack Collin Koakaikaina	18632181
+

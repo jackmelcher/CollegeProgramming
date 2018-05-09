@@ -1,0 +1,2090 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ANSI-C Compiler
+                                      3 ; Version 3.5.0 #9253 (Jun 20 2015) (MINGW64)
+                                      4 ; This file was generated Mon May 16 01:39:24 2016
+                                      5 ;--------------------------------------------------------
+                                      6 	.module assignment4
+                                      7 	.optsdcc -mmcs51 --model-small
+                                      8 	
+                                      9 ;--------------------------------------------------------
+                                     10 ; Public variables in this module
+                                     11 ;--------------------------------------------------------
+                                     12 	.globl _NumToChar_PARM_2
+                                     13 	.globl _int1_isr
+                                     14 	.globl _int0_isr
+                                     15 	.globl __sdcc_gsinit_startup
+                                     16 	.globl _main
+                                     17 	.globl _CY
+                                     18 	.globl _AC
+                                     19 	.globl _F0
+                                     20 	.globl _RS1
+                                     21 	.globl _RS0
+                                     22 	.globl _OV
+                                     23 	.globl _F1
+                                     24 	.globl _P
+                                     25 	.globl _PS
+                                     26 	.globl _PT1
+                                     27 	.globl _PX1
+                                     28 	.globl _PT0
+                                     29 	.globl _PX0
+                                     30 	.globl _RD
+                                     31 	.globl _WR
+                                     32 	.globl _T1
+                                     33 	.globl _T0
+                                     34 	.globl _INT1
+                                     35 	.globl _INT0
+                                     36 	.globl _TXD
+                                     37 	.globl _RXD
+                                     38 	.globl _P3_7
+                                     39 	.globl _P3_6
+                                     40 	.globl _P3_5
+                                     41 	.globl _P3_4
+                                     42 	.globl _P3_3
+                                     43 	.globl _P3_2
+                                     44 	.globl _P3_1
+                                     45 	.globl _P3_0
+                                     46 	.globl _EA
+                                     47 	.globl _ES
+                                     48 	.globl _ET1
+                                     49 	.globl _EX1
+                                     50 	.globl _ET0
+                                     51 	.globl _EX0
+                                     52 	.globl _P2_7
+                                     53 	.globl _P2_6
+                                     54 	.globl _P2_5
+                                     55 	.globl _P2_4
+                                     56 	.globl _P2_3
+                                     57 	.globl _P2_2
+                                     58 	.globl _P2_1
+                                     59 	.globl _P2_0
+                                     60 	.globl _SM0
+                                     61 	.globl _SM1
+                                     62 	.globl _SM2
+                                     63 	.globl _REN
+                                     64 	.globl _TB8
+                                     65 	.globl _RB8
+                                     66 	.globl _TI
+                                     67 	.globl _RI
+                                     68 	.globl _P1_7
+                                     69 	.globl _P1_6
+                                     70 	.globl _P1_5
+                                     71 	.globl _P1_4
+                                     72 	.globl _P1_3
+                                     73 	.globl _P1_2
+                                     74 	.globl _P1_1
+                                     75 	.globl _P1_0
+                                     76 	.globl _TF1
+                                     77 	.globl _TR1
+                                     78 	.globl _TF0
+                                     79 	.globl _TR0
+                                     80 	.globl _IE1
+                                     81 	.globl _IT1
+                                     82 	.globl _IE0
+                                     83 	.globl _IT0
+                                     84 	.globl _P0_7
+                                     85 	.globl _P0_6
+                                     86 	.globl _P0_5
+                                     87 	.globl _P0_4
+                                     88 	.globl _P0_3
+                                     89 	.globl _P0_2
+                                     90 	.globl _P0_1
+                                     91 	.globl _P0_0
+                                     92 	.globl _B
+                                     93 	.globl _ACC
+                                     94 	.globl _PSW
+                                     95 	.globl _IP
+                                     96 	.globl _P3
+                                     97 	.globl _IE
+                                     98 	.globl _P2
+                                     99 	.globl _SBUF
+                                    100 	.globl _SCON
+                                    101 	.globl _P1
+                                    102 	.globl _TH1
+                                    103 	.globl _TH0
+                                    104 	.globl _TL1
+                                    105 	.globl _TL0
+                                    106 	.globl _TMOD
+                                    107 	.globl _TCON
+                                    108 	.globl _PCON
+                                    109 	.globl _DPH
+                                    110 	.globl _DPL
+                                    111 	.globl _SP
+                                    112 	.globl _P0
+                                    113 	.globl _cursorOrDisplayShift_PARM_2
+                                    114 	.globl _cursorOrDisplayShift_PARM_1
+                                    115 	.globl _displayOnOffControl_PARM_3
+                                    116 	.globl _displayOnOffControl_PARM_2
+                                    117 	.globl _displayOnOffControl_PARM_1
+                                    118 	.globl _year
+                                    119 	.globl _day
+                                    120 	.globl _month
+                                    121 	.globl _second
+                                    122 	.globl _minute
+                                    123 	.globl _hour
+                                    124 	.globl _returnHome
+                                    125 	.globl _entryModeSet
+                                    126 	.globl _displayOnOffControl
+                                    127 	.globl _cursorOrDisplayShift
+                                    128 	.globl _functionSet
+                                    129 	.globl _clearDisplay
+                                    130 	.globl _setDdRamAddress
+                                    131 	.globl _sendChar
+                                    132 	.globl _sendString
+                                    133 	.globl _delay
+                                    134 	.globl _big_delay
+                                    135 	.globl _keypad
+                                    136 	.globl _timer_delay
+                                    137 	.globl _NumToChar
+                                    138 ;--------------------------------------------------------
+                                    139 ; special function registers
+                                    140 ;--------------------------------------------------------
+                                    141 	.area RSEG    (ABS,DATA)
+      000000                        142 	.org 0x0000
+                           000080   143 _P0	=	0x0080
+                           000081   144 _SP	=	0x0081
+                           000082   145 _DPL	=	0x0082
+                           000083   146 _DPH	=	0x0083
+                           000087   147 _PCON	=	0x0087
+                           000088   148 _TCON	=	0x0088
+                           000089   149 _TMOD	=	0x0089
+                           00008A   150 _TL0	=	0x008a
+                           00008B   151 _TL1	=	0x008b
+                           00008C   152 _TH0	=	0x008c
+                           00008D   153 _TH1	=	0x008d
+                           000090   154 _P1	=	0x0090
+                           000098   155 _SCON	=	0x0098
+                           000099   156 _SBUF	=	0x0099
+                           0000A0   157 _P2	=	0x00a0
+                           0000A8   158 _IE	=	0x00a8
+                           0000B0   159 _P3	=	0x00b0
+                           0000B8   160 _IP	=	0x00b8
+                           0000D0   161 _PSW	=	0x00d0
+                           0000E0   162 _ACC	=	0x00e0
+                           0000F0   163 _B	=	0x00f0
+                                    164 ;--------------------------------------------------------
+                                    165 ; special function bits
+                                    166 ;--------------------------------------------------------
+                                    167 	.area RSEG    (ABS,DATA)
+      000000                        168 	.org 0x0000
+                           000080   169 _P0_0	=	0x0080
+                           000081   170 _P0_1	=	0x0081
+                           000082   171 _P0_2	=	0x0082
+                           000083   172 _P0_3	=	0x0083
+                           000084   173 _P0_4	=	0x0084
+                           000085   174 _P0_5	=	0x0085
+                           000086   175 _P0_6	=	0x0086
+                           000087   176 _P0_7	=	0x0087
+                           000088   177 _IT0	=	0x0088
+                           000089   178 _IE0	=	0x0089
+                           00008A   179 _IT1	=	0x008a
+                           00008B   180 _IE1	=	0x008b
+                           00008C   181 _TR0	=	0x008c
+                           00008D   182 _TF0	=	0x008d
+                           00008E   183 _TR1	=	0x008e
+                           00008F   184 _TF1	=	0x008f
+                           000090   185 _P1_0	=	0x0090
+                           000091   186 _P1_1	=	0x0091
+                           000092   187 _P1_2	=	0x0092
+                           000093   188 _P1_3	=	0x0093
+                           000094   189 _P1_4	=	0x0094
+                           000095   190 _P1_5	=	0x0095
+                           000096   191 _P1_6	=	0x0096
+                           000097   192 _P1_7	=	0x0097
+                           000098   193 _RI	=	0x0098
+                           000099   194 _TI	=	0x0099
+                           00009A   195 _RB8	=	0x009a
+                           00009B   196 _TB8	=	0x009b
+                           00009C   197 _REN	=	0x009c
+                           00009D   198 _SM2	=	0x009d
+                           00009E   199 _SM1	=	0x009e
+                           00009F   200 _SM0	=	0x009f
+                           0000A0   201 _P2_0	=	0x00a0
+                           0000A1   202 _P2_1	=	0x00a1
+                           0000A2   203 _P2_2	=	0x00a2
+                           0000A3   204 _P2_3	=	0x00a3
+                           0000A4   205 _P2_4	=	0x00a4
+                           0000A5   206 _P2_5	=	0x00a5
+                           0000A6   207 _P2_6	=	0x00a6
+                           0000A7   208 _P2_7	=	0x00a7
+                           0000A8   209 _EX0	=	0x00a8
+                           0000A9   210 _ET0	=	0x00a9
+                           0000AA   211 _EX1	=	0x00aa
+                           0000AB   212 _ET1	=	0x00ab
+                           0000AC   213 _ES	=	0x00ac
+                           0000AF   214 _EA	=	0x00af
+                           0000B0   215 _P3_0	=	0x00b0
+                           0000B1   216 _P3_1	=	0x00b1
+                           0000B2   217 _P3_2	=	0x00b2
+                           0000B3   218 _P3_3	=	0x00b3
+                           0000B4   219 _P3_4	=	0x00b4
+                           0000B5   220 _P3_5	=	0x00b5
+                           0000B6   221 _P3_6	=	0x00b6
+                           0000B7   222 _P3_7	=	0x00b7
+                           0000B0   223 _RXD	=	0x00b0
+                           0000B1   224 _TXD	=	0x00b1
+                           0000B2   225 _INT0	=	0x00b2
+                           0000B3   226 _INT1	=	0x00b3
+                           0000B4   227 _T0	=	0x00b4
+                           0000B5   228 _T1	=	0x00b5
+                           0000B6   229 _WR	=	0x00b6
+                           0000B7   230 _RD	=	0x00b7
+                           0000B8   231 _PX0	=	0x00b8
+                           0000B9   232 _PT0	=	0x00b9
+                           0000BA   233 _PX1	=	0x00ba
+                           0000BB   234 _PT1	=	0x00bb
+                           0000BC   235 _PS	=	0x00bc
+                           0000D0   236 _P	=	0x00d0
+                           0000D1   237 _F1	=	0x00d1
+                           0000D2   238 _OV	=	0x00d2
+                           0000D3   239 _RS0	=	0x00d3
+                           0000D4   240 _RS1	=	0x00d4
+                           0000D5   241 _F0	=	0x00d5
+                           0000D6   242 _AC	=	0x00d6
+                           0000D7   243 _CY	=	0x00d7
+                                    244 ;--------------------------------------------------------
+                                    245 ; overlayable register banks
+                                    246 ;--------------------------------------------------------
+                                    247 	.area REG_BANK_0	(REL,OVR,DATA)
+      000000                        248 	.ds 8
+                                    249 	.area REG_BANK_1	(REL,OVR,DATA)
+      000000                        250 	.ds 8
+                                    251 ;--------------------------------------------------------
+                                    252 ; overlayable bit register bank
+                                    253 ;--------------------------------------------------------
+                                    254 	.area BIT_BANK	(REL,OVR,DATA)
+      000000                        255 bits:
+      000000                        256 	.ds 1
+                           008000   257 	b0 = bits[0]
+                           008100   258 	b1 = bits[1]
+                           008200   259 	b2 = bits[2]
+                           008300   260 	b3 = bits[3]
+                           008400   261 	b4 = bits[4]
+                           008500   262 	b5 = bits[5]
+                           008600   263 	b6 = bits[6]
+                           008700   264 	b7 = bits[7]
+                                    265 ;--------------------------------------------------------
+                                    266 ; internal ram data
+                                    267 ;--------------------------------------------------------
+                                    268 	.area DSEG    (DATA)
+                           00007A   269 _hour	=	0x007a
+                           00007B   270 _minute	=	0x007b
+                           00007C   271 _second	=	0x007c
+                           00007D   272 _month	=	0x007d
+                           00007E   273 _day	=	0x007e
+                           00007F   274 _year	=	0x007f
+      000000                        275 _main_hours_1_15:
+      000000                        276 	.ds 2
+      000002                        277 _main_minutes_1_15:
+      000002                        278 	.ds 2
+      000004                        279 _main_seconds_1_15:
+      000004                        280 	.ds 2
+      000006                        281 _main_months_1_15:
+      000006                        282 	.ds 2
+      000008                        283 _main_days_1_15:
+      000008                        284 	.ds 2
+      00000A                        285 _main_years_1_15:
+      00000A                        286 	.ds 2
+                                    287 ;--------------------------------------------------------
+                                    288 ; overlayable items in internal ram 
+                                    289 ;--------------------------------------------------------
+                                    290 	.area	OSEG    (OVR,DATA)
+                                    291 	.area	OSEG    (OVR,DATA)
+                                    292 	.area	OSEG    (OVR,DATA)
+      000000                        293 _keypad_keypad_1_51:
+      000000                        294 	.ds 12
+                                    295 	.area	OSEG    (OVR,DATA)
+                                    296 	.area	OSEG    (OVR,DATA)
+      000000                        297 _NumToChar_PARM_2:
+      000000                        298 	.ds 3
+                                    299 ;--------------------------------------------------------
+                                    300 ; Stack segment in internal ram 
+                                    301 ;--------------------------------------------------------
+                                    302 	.area	SSEG
+      000000                        303 __start__stack:
+      000000                        304 	.ds	1
+                                    305 
+                                    306 ;--------------------------------------------------------
+                                    307 ; indirectly addressable internal ram data
+                                    308 ;--------------------------------------------------------
+                                    309 	.area ISEG    (DATA)
+                                    310 ;--------------------------------------------------------
+                                    311 ; absolute internal ram data
+                                    312 ;--------------------------------------------------------
+                                    313 	.area IABS    (ABS,DATA)
+                                    314 	.area IABS    (ABS,DATA)
+                                    315 ;--------------------------------------------------------
+                                    316 ; bit data
+                                    317 ;--------------------------------------------------------
+                                    318 	.area BSEG    (BIT)
+      000000                        319 _displayOnOffControl_PARM_1:
+      000000                        320 	.ds 1
+      000001                        321 _displayOnOffControl_PARM_2:
+      000001                        322 	.ds 1
+      000002                        323 _displayOnOffControl_PARM_3:
+      000002                        324 	.ds 1
+      000003                        325 _cursorOrDisplayShift_PARM_1:
+      000003                        326 	.ds 1
+      000004                        327 _cursorOrDisplayShift_PARM_2:
+      000004                        328 	.ds 1
+                                    329 ;--------------------------------------------------------
+                                    330 ; paged external ram data
+                                    331 ;--------------------------------------------------------
+                                    332 	.area PSEG    (PAG,XDATA)
+                                    333 ;--------------------------------------------------------
+                                    334 ; external ram data
+                                    335 ;--------------------------------------------------------
+                                    336 	.area XSEG    (XDATA)
+                                    337 ;--------------------------------------------------------
+                                    338 ; absolute external ram data
+                                    339 ;--------------------------------------------------------
+                                    340 	.area XABS    (ABS,XDATA)
+                                    341 ;--------------------------------------------------------
+                                    342 ; external initialized ram data
+                                    343 ;--------------------------------------------------------
+                                    344 	.area XISEG   (XDATA)
+                                    345 	.area HOME    (CODE)
+                                    346 	.area GSINIT0 (CODE)
+                                    347 	.area GSINIT1 (CODE)
+                                    348 	.area GSINIT2 (CODE)
+                                    349 	.area GSINIT3 (CODE)
+                                    350 	.area GSINIT4 (CODE)
+                                    351 	.area GSINIT5 (CODE)
+                                    352 	.area GSINIT  (CODE)
+                                    353 	.area GSFINAL (CODE)
+                                    354 	.area CSEG    (CODE)
+                                    355 ;--------------------------------------------------------
+                                    356 ; interrupt vector 
+                                    357 ;--------------------------------------------------------
+                                    358 	.area HOME    (CODE)
+      000000                        359 __interrupt_vect:
+      000000 02r03r23         [24]  360 	ljmp	__sdcc_gsinit_startup
+      000003 02r03r29         [24]  361 	ljmp	_int0_isr
+      000006                        362 	.ds	5
+      00000B 32               [24]  363 	reti
+      00000C                        364 	.ds	7
+      000013 02r05r9A         [24]  365 	ljmp	_int1_isr
+                                    366 ;--------------------------------------------------------
+                                    367 ; global & static initialisations
+                                    368 ;--------------------------------------------------------
+                                    369 	.area HOME    (CODE)
+                                    370 	.area GSINIT  (CODE)
+                                    371 	.area GSFINAL (CODE)
+                                    372 	.area GSINIT  (CODE)
+                                    373 	.globl __sdcc_gsinit_startup
+                                    374 	.globl __sdcc_program_startup
+                                    375 	.globl __start__stack
+                                    376 	.globl __mcs51_genXINIT
+                                    377 	.globl __mcs51_genXRAMCLEAR
+                                    378 	.globl __mcs51_genRAMCLEAR
+                                    379 	.area GSFINAL (CODE)
+      000000 02r00r16         [24]  380 	ljmp	__sdcc_program_startup
+                                    381 ;--------------------------------------------------------
+                                    382 ; Home
+                                    383 ;--------------------------------------------------------
+                                    384 	.area HOME    (CODE)
+                                    385 	.area HOME    (CODE)
+      000016                        386 __sdcc_program_startup:
+      000016 02r00r00         [24]  387 	ljmp	_main
+                                    388 ;	return from main will return to caller
+                                    389 ;--------------------------------------------------------
+                                    390 ; code
+                                    391 ;--------------------------------------------------------
+                                    392 	.area CSEG    (CODE)
+                                    393 ;------------------------------------------------------------
+                                    394 ;Allocation info for local variables in function 'main'
+                                    395 ;------------------------------------------------------------
+                                    396 ;hours                     Allocated with name '_main_hours_1_15'
+                                    397 ;minutes                   Allocated with name '_main_minutes_1_15'
+                                    398 ;seconds                   Allocated with name '_main_seconds_1_15'
+                                    399 ;months                    Allocated with name '_main_months_1_15'
+                                    400 ;days                      Allocated with name '_main_days_1_15'
+                                    401 ;years                     Allocated with name '_main_years_1_15'
+                                    402 ;------------------------------------------------------------
+                                    403 ;	assignment4.c:62: void main(void) {
+                                    404 ;	-----------------------------------------
+                                    405 ;	 function main
+                                    406 ;	-----------------------------------------
+      000000                        407 _main:
+                           000007   408 	ar7 = 0x07
+                           000006   409 	ar6 = 0x06
+                           000005   410 	ar5 = 0x05
+                           000004   411 	ar4 = 0x04
+                           000003   412 	ar3 = 0x03
+                           000002   413 	ar2 = 0x02
+                           000001   414 	ar1 = 0x01
+                           000000   415 	ar0 = 0x00
+                                    416 ;	assignment4.c:69: unsigned char hours[2] = { 0, 0 }, minutes[2] = { 0, 0 }, seconds[2] = { 0, 0 };
+      000000 75*00 00         [24]  417 	mov	_main_hours_1_15,#0x00
+      000003 75*01 00         [24]  418 	mov	(_main_hours_1_15 + 0x0001),#0x00
+      000006 75*02 00         [24]  419 	mov	_main_minutes_1_15,#0x00
+      000009 75*03 00         [24]  420 	mov	(_main_minutes_1_15 + 0x0001),#0x00
+      00000C 75*04 00         [24]  421 	mov	_main_seconds_1_15,#0x00
+      00000F 75*05 00         [24]  422 	mov	(_main_seconds_1_15 + 0x0001),#0x00
+                                    423 ;	assignment4.c:70: unsigned char months[2] = { 0, 0 }, days[2] = { 0, 0 }, years[2] = { 0, 0 };
+      000012 75*06 00         [24]  424 	mov	_main_months_1_15,#0x00
+      000015 75*07 00         [24]  425 	mov	(_main_months_1_15 + 0x0001),#0x00
+      000018 75*08 00         [24]  426 	mov	_main_days_1_15,#0x00
+      00001B 75*09 00         [24]  427 	mov	(_main_days_1_15 + 0x0001),#0x00
+      00001E 75*0A 00         [24]  428 	mov	_main_years_1_15,#0x00
+      000021 75*0B 00         [24]  429 	mov	(_main_years_1_15 + 0x0001),#0x00
+                                    430 ;	assignment4.c:73: hour = 0;
+      000024 75 7A 00         [24]  431 	mov	_hour,#0x00
+                                    432 ;	assignment4.c:74: minute = 0;
+      000027 75 7B 00         [24]  433 	mov	_minute,#0x00
+                                    434 ;	assignment4.c:75: second = 0;
+      00002A 75 7C 00         [24]  435 	mov	_second,#0x00
+                                    436 ;	assignment4.c:76: month = 1;
+      00002D 75 7D 01         [24]  437 	mov	_month,#0x01
+                                    438 ;	assignment4.c:77: day = 1;
+      000030 75 7E 01         [24]  439 	mov	_day,#0x01
+                                    440 ;	assignment4.c:78: year = 0;
+      000033 75 7F 00         [24]  441 	mov	_year,#0x00
+                                    442 ;	assignment4.c:80: IT0 = 1;   // make INT0 to edge triggered
+      000036 D2 88            [12]  443 	setb	_IT0
+                                    444 ;	assignment4.c:81: IT1 = 1;   // make INT1 to edge triggered
+      000038 D2 8A            [12]  445 	setb	_IT1
+                                    446 ;	assignment4.c:82: IE = 0x85;  //enable external interrupt0 and external interrupt1
+      00003A 75 A8 85         [24]  447 	mov	_IE,#0x85
+                                    448 ;	assignment4.c:85: functionSet();
+      00003D 12r01rF8         [24]  449 	lcall	_functionSet
+                                    450 ;	assignment4.c:86: entryModeSet(); // increment and no shift
+      000040 12r01rB2         [24]  451 	lcall	_entryModeSet
+                                    452 ;	assignment4.c:87: displayOnOffControl(1, 1, 1); // display on, cursor on and blinking on
+      000043 D2*00            [12]  453 	setb	_displayOnOffControl_PARM_1
+      000045 D2*01            [12]  454 	setb	_displayOnOffControl_PARM_2
+      000047 D2*02            [12]  455 	setb	_displayOnOffControl_PARM_3
+      000049 12r01rBE         [24]  456 	lcall	_displayOnOffControl
+                                    457 ;	assignment4.c:90: sendString("00:00:00");
+      00004C 90r00r00         [24]  458 	mov	dptr,#___str_0
+      00004F 75 F0 80         [24]  459 	mov	b,#0x80
+      000052 12r02r2D         [24]  460 	lcall	_sendString
+                                    461 ;	assignment4.c:91: setDdRamAddress(0x40); // set address to start of second line
+      000055 75 82 40         [24]  462 	mov	dpl,#0x40
+      000058 12r02r10         [24]  463 	lcall	_setDdRamAddress
+                                    464 ;	assignment4.c:92: sendString("01-01-00");
+      00005B 90r00r09         [24]  465 	mov	dptr,#___str_1
+      00005E 75 F0 80         [24]  466 	mov	b,#0x80
+      000061 12r02r2D         [24]  467 	lcall	_sendString
+                                    468 ;	assignment4.c:94: while (1) {
+      000064                        469 00127$:
+                                    470 ;	assignment4.c:96: timer_delay();
+      000064 12r02rD7         [24]  471 	lcall	_timer_delay
+                                    472 ;	assignment4.c:99: second++;
+      000067 05 7C            [12]  473 	inc	_second
+                                    474 ;	assignment4.c:100: if (second == 60) {
+      000069 74 3C            [12]  475 	mov	a,#0x3C
+      00006B B5 7C 05         [24]  476 	cjne	a,_second,00102$
+                                    477 ;	assignment4.c:101: minute++;
+      00006E 05 7B            [12]  478 	inc	_minute
+                                    479 ;	assignment4.c:102: second = 0;
+      000070 75 7C 00         [24]  480 	mov	_second,#0x00
+      000073                        481 00102$:
+                                    482 ;	assignment4.c:104: if (minute == 60) {
+      000073 74 3C            [12]  483 	mov	a,#0x3C
+      000075 B5 7B 05         [24]  484 	cjne	a,_minute,00104$
+                                    485 ;	assignment4.c:105: hour++;
+      000078 05 7A            [12]  486 	inc	_hour
+                                    487 ;	assignment4.c:106: minute = 0;
+      00007A 75 7B 00         [24]  488 	mov	_minute,#0x00
+      00007D                        489 00104$:
+                                    490 ;	assignment4.c:108: if (hour == 24) {
+      00007D 74 18            [12]  491 	mov	a,#0x18
+      00007F B5 7A 05         [24]  492 	cjne	a,_hour,00106$
+                                    493 ;	assignment4.c:109: hour = 0;
+      000082 75 7A 00         [24]  494 	mov	_hour,#0x00
+                                    495 ;	assignment4.c:110: day++;
+      000085 05 7E            [12]  496 	inc	_day
+      000087                        497 00106$:
+                                    498 ;	assignment4.c:112: if (month == 2) {
+      000087 74 02            [12]  499 	mov	a,#0x02
+      000089 B5 7D 0D         [24]  500 	cjne	a,_month,00120$
+                                    501 ;	assignment4.c:113: if (day > 28) {
+      00008C E5 7E            [12]  502 	mov	a,_day
+      00008E 24 E3            [12]  503 	add	a,#0xff - 0x1C
+      000090 50 39            [24]  504 	jnc	00121$
+                                    505 ;	assignment4.c:114: month++;
+      000092 05 7D            [12]  506 	inc	_month
+                                    507 ;	assignment4.c:115: day = 1;
+      000094 75 7E 01         [24]  508 	mov	_day,#0x01
+      000097 80 32            [24]  509 	sjmp	00121$
+      000099                        510 00120$:
+                                    511 ;	assignment4.c:118: else if (month == 4 || month == 6 || month == 9 || month == 11) {
+      000099 74 04            [12]  512 	mov	a,#0x04
+      00009B B5 7D 02         [24]  513 	cjne	a,_month,00179$
+      00009E 80 13            [24]  514 	sjmp	00113$
+      0000A0                        515 00179$:
+      0000A0 74 06            [12]  516 	mov	a,#0x06
+      0000A2 B5 7D 02         [24]  517 	cjne	a,_month,00180$
+      0000A5 80 0C            [24]  518 	sjmp	00113$
+      0000A7                        519 00180$:
+      0000A7 74 09            [12]  520 	mov	a,#0x09
+      0000A9 B5 7D 02         [24]  521 	cjne	a,_month,00181$
+      0000AC 80 05            [24]  522 	sjmp	00113$
+      0000AE                        523 00181$:
+      0000AE 74 0B            [12]  524 	mov	a,#0x0B
+      0000B0 B5 7D 0D         [24]  525 	cjne	a,_month,00114$
+      0000B3                        526 00113$:
+                                    527 ;	assignment4.c:119: if (day > 30) {
+      0000B3 E5 7E            [12]  528 	mov	a,_day
+      0000B5 24 E1            [12]  529 	add	a,#0xff - 0x1E
+      0000B7 50 12            [24]  530 	jnc	00121$
+                                    531 ;	assignment4.c:120: month++;
+      0000B9 05 7D            [12]  532 	inc	_month
+                                    533 ;	assignment4.c:121: day = 1;
+      0000BB 75 7E 01         [24]  534 	mov	_day,#0x01
+      0000BE 80 0B            [24]  535 	sjmp	00121$
+      0000C0                        536 00114$:
+                                    537 ;	assignment4.c:125: if (day > 31) {
+      0000C0 E5 7E            [12]  538 	mov	a,_day
+      0000C2 24 E0            [12]  539 	add	a,#0xff - 0x1F
+      0000C4 50 05            [24]  540 	jnc	00121$
+                                    541 ;	assignment4.c:126: month++;
+      0000C6 05 7D            [12]  542 	inc	_month
+                                    543 ;	assignment4.c:127: day = 1;
+      0000C8 75 7E 01         [24]  544 	mov	_day,#0x01
+      0000CB                        545 00121$:
+                                    546 ;	assignment4.c:130: if (month == 13) {
+      0000CB 74 0D            [12]  547 	mov	a,#0x0D
+      0000CD B5 7D 05         [24]  548 	cjne	a,_month,00123$
+                                    549 ;	assignment4.c:131: year++;
+      0000D0 05 7F            [12]  550 	inc	_year
+                                    551 ;	assignment4.c:132: month = 1;
+      0000D2 75 7D 01         [24]  552 	mov	_month,#0x01
+      0000D5                        553 00123$:
+                                    554 ;	assignment4.c:134: if (year == 100) {
+      0000D5 74 64            [12]  555 	mov	a,#0x64
+      0000D7 B5 7F 03         [24]  556 	cjne	a,_year,00125$
+                                    557 ;	assignment4.c:135: year = 0;
+      0000DA 75 7F 00         [24]  558 	mov	_year,#0x00
+      0000DD                        559 00125$:
+                                    560 ;	assignment4.c:140: NumToChar(second, seconds);
+      0000DD 75*00r04         [24]  561 	mov	_NumToChar_PARM_2,#_main_seconds_1_15
+      0000E0 75*01 00         [24]  562 	mov	(_NumToChar_PARM_2 + 1),#0x00
+      0000E3 75*02 40         [24]  563 	mov	(_NumToChar_PARM_2 + 2),#0x40
+      0000E6 85 7C 82         [24]  564 	mov	dpl,_second
+      0000E9 12r02rF2         [24]  565 	lcall	_NumToChar
+                                    566 ;	assignment4.c:141: NumToChar(minute, minutes);
+      0000EC 75*00r02         [24]  567 	mov	_NumToChar_PARM_2,#_main_minutes_1_15
+      0000EF 75*01 00         [24]  568 	mov	(_NumToChar_PARM_2 + 1),#0x00
+      0000F2 75*02 40         [24]  569 	mov	(_NumToChar_PARM_2 + 2),#0x40
+      0000F5 85 7B 82         [24]  570 	mov	dpl,_minute
+      0000F8 12r02rF2         [24]  571 	lcall	_NumToChar
+                                    572 ;	assignment4.c:142: NumToChar(hour, hours);
+      0000FB 75*00r00         [24]  573 	mov	_NumToChar_PARM_2,#_main_hours_1_15
+      0000FE 75*01 00         [24]  574 	mov	(_NumToChar_PARM_2 + 1),#0x00
+      000101 75*02 40         [24]  575 	mov	(_NumToChar_PARM_2 + 2),#0x40
+      000104 85 7A 82         [24]  576 	mov	dpl,_hour
+      000107 12r02rF2         [24]  577 	lcall	_NumToChar
+                                    578 ;	assignment4.c:143: NumToChar(day, days);
+      00010A 75*00r08         [24]  579 	mov	_NumToChar_PARM_2,#_main_days_1_15
+      00010D 75*01 00         [24]  580 	mov	(_NumToChar_PARM_2 + 1),#0x00
+      000110 75*02 40         [24]  581 	mov	(_NumToChar_PARM_2 + 2),#0x40
+      000113 85 7E 82         [24]  582 	mov	dpl,_day
+      000116 12r02rF2         [24]  583 	lcall	_NumToChar
+                                    584 ;	assignment4.c:144: NumToChar(month, months);
+      000119 75*00r06         [24]  585 	mov	_NumToChar_PARM_2,#_main_months_1_15
+      00011C 75*01 00         [24]  586 	mov	(_NumToChar_PARM_2 + 1),#0x00
+      00011F 75*02 40         [24]  587 	mov	(_NumToChar_PARM_2 + 2),#0x40
+      000122 85 7D 82         [24]  588 	mov	dpl,_month
+      000125 12r02rF2         [24]  589 	lcall	_NumToChar
+                                    590 ;	assignment4.c:145: NumToChar(year, years);
+      000128 75*00r0A         [24]  591 	mov	_NumToChar_PARM_2,#_main_years_1_15
+      00012B 75*01 00         [24]  592 	mov	(_NumToChar_PARM_2 + 1),#0x00
+      00012E 75*02 40         [24]  593 	mov	(_NumToChar_PARM_2 + 2),#0x40
+      000131 85 7F 82         [24]  594 	mov	dpl,_year
+      000134 12r02rF2         [24]  595 	lcall	_NumToChar
+                                    596 ;	assignment4.c:148: setDdRamAddress(0x00);
+      000137 75 82 00         [24]  597 	mov	dpl,#0x00
+      00013A 12r02r10         [24]  598 	lcall	_setDdRamAddress
+                                    599 ;	assignment4.c:149: sendChar(hours[0]);
+      00013D 85*00 82         [24]  600 	mov	dpl,_main_hours_1_15
+      000140 12r02r20         [24]  601 	lcall	_sendChar
+                                    602 ;	assignment4.c:150: sendChar(hours[1]);
+      000143 85*01 82         [24]  603 	mov	dpl,(_main_hours_1_15 + 0x0001)
+      000146 12r02r20         [24]  604 	lcall	_sendChar
+                                    605 ;	assignment4.c:151: sendChar(':');
+      000149 75 82 3A         [24]  606 	mov	dpl,#0x3A
+      00014C 12r02r20         [24]  607 	lcall	_sendChar
+                                    608 ;	assignment4.c:152: sendChar(minutes[0]);
+      00014F 85*02 82         [24]  609 	mov	dpl,_main_minutes_1_15
+      000152 12r02r20         [24]  610 	lcall	_sendChar
+                                    611 ;	assignment4.c:153: sendChar(minutes[1]);
+      000155 85*03 82         [24]  612 	mov	dpl,(_main_minutes_1_15 + 0x0001)
+      000158 12r02r20         [24]  613 	lcall	_sendChar
+                                    614 ;	assignment4.c:154: sendChar(':');
+      00015B 75 82 3A         [24]  615 	mov	dpl,#0x3A
+      00015E 12r02r20         [24]  616 	lcall	_sendChar
+                                    617 ;	assignment4.c:155: sendChar(seconds[0]);
+      000161 85*04 82         [24]  618 	mov	dpl,_main_seconds_1_15
+      000164 12r02r20         [24]  619 	lcall	_sendChar
+                                    620 ;	assignment4.c:156: sendChar(seconds[1]);
+      000167 85*05 82         [24]  621 	mov	dpl,(_main_seconds_1_15 + 0x0001)
+      00016A 12r02r20         [24]  622 	lcall	_sendChar
+                                    623 ;	assignment4.c:158: setDdRamAddress(0x40);
+      00016D 75 82 40         [24]  624 	mov	dpl,#0x40
+      000170 12r02r10         [24]  625 	lcall	_setDdRamAddress
+                                    626 ;	assignment4.c:159: sendChar(months[0]);
+      000173 85*06 82         [24]  627 	mov	dpl,_main_months_1_15
+      000176 12r02r20         [24]  628 	lcall	_sendChar
+                                    629 ;	assignment4.c:160: sendChar(months[1]);
+      000179 85*07 82         [24]  630 	mov	dpl,(_main_months_1_15 + 0x0001)
+      00017C 12r02r20         [24]  631 	lcall	_sendChar
+                                    632 ;	assignment4.c:161: sendChar('-');
+      00017F 75 82 2D         [24]  633 	mov	dpl,#0x2D
+      000182 12r02r20         [24]  634 	lcall	_sendChar
+                                    635 ;	assignment4.c:162: sendChar(days[0]);
+      000185 85*08 82         [24]  636 	mov	dpl,_main_days_1_15
+      000188 12r02r20         [24]  637 	lcall	_sendChar
+                                    638 ;	assignment4.c:163: sendChar(days[1]);
+      00018B 85*09 82         [24]  639 	mov	dpl,(_main_days_1_15 + 0x0001)
+      00018E 12r02r20         [24]  640 	lcall	_sendChar
+                                    641 ;	assignment4.c:164: sendChar('-');
+      000191 75 82 2D         [24]  642 	mov	dpl,#0x2D
+      000194 12r02r20         [24]  643 	lcall	_sendChar
+                                    644 ;	assignment4.c:165: sendChar(years[0]);
+      000197 85*0A 82         [24]  645 	mov	dpl,_main_years_1_15
+      00019A 12r02r20         [24]  646 	lcall	_sendChar
+                                    647 ;	assignment4.c:166: sendChar(years[1]);
+      00019D 85*0B 82         [24]  648 	mov	dpl,(_main_years_1_15 + 0x0001)
+      0001A0 12r02r20         [24]  649 	lcall	_sendChar
+      0001A3 02r00r64         [24]  650 	ljmp	00127$
+                                    651 ;------------------------------------------------------------
+                                    652 ;Allocation info for local variables in function 'returnHome'
+                                    653 ;------------------------------------------------------------
+                                    654 ;	assignment4.c:173: void returnHome(void) {
+                                    655 ;	-----------------------------------------
+                                    656 ;	 function returnHome
+                                    657 ;	-----------------------------------------
+      0001A6                        658 _returnHome:
+                                    659 ;	assignment4.c:174: RS = 0;
+      0001A6 C2 A1            [12]  660 	clr	_P2_1
+                                    661 ;	assignment4.c:175: P1 = 0x02; // LCD command to return home (the first location of the first lcd line)
+      0001A8 75 90 02         [24]  662 	mov	_P1,#0x02
+                                    663 ;	assignment4.c:176: E = 1;
+      0001AB D2 A0            [12]  664 	setb	_P2_0
+                                    665 ;	assignment4.c:177: E = 0;
+      0001AD C2 A0            [12]  666 	clr	_P2_0
+                                    667 ;	assignment4.c:178: big_delay(); // This operation needs a bigger delay
+      0001AF 02r02r63         [24]  668 	ljmp	_big_delay
+                                    669 ;------------------------------------------------------------
+                                    670 ;Allocation info for local variables in function 'entryModeSet'
+                                    671 ;------------------------------------------------------------
+                                    672 ;	assignment4.c:181: void entryModeSet() {
+                                    673 ;	-----------------------------------------
+                                    674 ;	 function entryModeSet
+                                    675 ;	-----------------------------------------
+      0001B2                        676 _entryModeSet:
+                                    677 ;	assignment4.c:182: RS = 0;
+      0001B2 C2 A1            [12]  678 	clr	_P2_1
+                                    679 ;	assignment4.c:183: P1 = 0x06;
+      0001B4 75 90 06         [24]  680 	mov	_P1,#0x06
+                                    681 ;	assignment4.c:184: E = 1;
+      0001B7 D2 A0            [12]  682 	setb	_P2_0
+                                    683 ;	assignment4.c:185: E = 0;
+      0001B9 C2 A0            [12]  684 	clr	_P2_0
+                                    685 ;	assignment4.c:186: delay();
+      0001BB 02r02r5A         [24]  686 	ljmp	_delay
+                                    687 ;------------------------------------------------------------
+                                    688 ;Allocation info for local variables in function 'displayOnOffControl'
+                                    689 ;------------------------------------------------------------
+                                    690 ;	assignment4.c:189: void displayOnOffControl(__bit display, __bit cursor, __bit blinking) {
+                                    691 ;	-----------------------------------------
+                                    692 ;	 function displayOnOffControl
+                                    693 ;	-----------------------------------------
+      0001BE                        694 _displayOnOffControl:
+                                    695 ;	assignment4.c:190: P1_7 = 0;
+      0001BE C2 97            [12]  696 	clr	_P1_7
+                                    697 ;	assignment4.c:191: P1_6 = 0;
+      0001C0 C2 96            [12]  698 	clr	_P1_6
+                                    699 ;	assignment4.c:192: P1_5 = 0;
+      0001C2 C2 95            [12]  700 	clr	_P1_5
+                                    701 ;	assignment4.c:193: P1_4 = 0;
+      0001C4 C2 94            [12]  702 	clr	_P1_4
+                                    703 ;	assignment4.c:194: P1_3 = 1;
+      0001C6 D2 93            [12]  704 	setb	_P1_3
+                                    705 ;	assignment4.c:195: P1_2 = display;
+      0001C8 A2*00            [12]  706 	mov	c,_displayOnOffControl_PARM_1
+      0001CA 92 92            [24]  707 	mov	_P1_2,c
+                                    708 ;	assignment4.c:196: P1_1 = cursor;
+      0001CC A2*01            [12]  709 	mov	c,_displayOnOffControl_PARM_2
+      0001CE 92 91            [24]  710 	mov	_P1_1,c
+                                    711 ;	assignment4.c:197: P1_0 = blinking;
+      0001D0 A2*02            [12]  712 	mov	c,_displayOnOffControl_PARM_3
+      0001D2 92 90            [24]  713 	mov	_P1_0,c
+                                    714 ;	assignment4.c:198: E = 1;
+      0001D4 D2 A0            [12]  715 	setb	_P2_0
+                                    716 ;	assignment4.c:199: E = 0;
+      0001D6 C2 A0            [12]  717 	clr	_P2_0
+                                    718 ;	assignment4.c:200: delay();
+      0001D8 02r02r5A         [24]  719 	ljmp	_delay
+                                    720 ;------------------------------------------------------------
+                                    721 ;Allocation info for local variables in function 'cursorOrDisplayShift'
+                                    722 ;------------------------------------------------------------
+                                    723 ;	assignment4.c:203: void cursorOrDisplayShift(__bit sc, __bit rl) {
+                                    724 ;	-----------------------------------------
+                                    725 ;	 function cursorOrDisplayShift
+                                    726 ;	-----------------------------------------
+      0001DB                        727 _cursorOrDisplayShift:
+                                    728 ;	assignment4.c:204: RS = 0;
+      0001DB C2 A1            [12]  729 	clr	_P2_1
+                                    730 ;	assignment4.c:205: P1_7 = 0;
+      0001DD C2 97            [12]  731 	clr	_P1_7
+                                    732 ;	assignment4.c:206: P1_6 = 0;
+      0001DF C2 96            [12]  733 	clr	_P1_6
+                                    734 ;	assignment4.c:207: P1_5 = 0;
+      0001E1 C2 95            [12]  735 	clr	_P1_5
+                                    736 ;	assignment4.c:208: P1_4 = 1;
+      0001E3 D2 94            [12]  737 	setb	_P1_4
+                                    738 ;	assignment4.c:209: P1_3 = sc;
+      0001E5 A2*03            [12]  739 	mov	c,_cursorOrDisplayShift_PARM_1
+      0001E7 92 93            [24]  740 	mov	_P1_3,c
+                                    741 ;	assignment4.c:210: P1_2 = rl;
+      0001E9 A2*04            [12]  742 	mov	c,_cursorOrDisplayShift_PARM_2
+      0001EB 92 92            [24]  743 	mov	_P1_2,c
+                                    744 ;	assignment4.c:211: P1_1 = 0;
+      0001ED C2 91            [12]  745 	clr	_P1_1
+                                    746 ;	assignment4.c:212: P1_0 = 0;
+      0001EF C2 90            [12]  747 	clr	_P1_0
+                                    748 ;	assignment4.c:213: E = 1;
+      0001F1 D2 A0            [12]  749 	setb	_P2_0
+                                    750 ;	assignment4.c:214: E = 0;
+      0001F3 C2 A0            [12]  751 	clr	_P2_0
+                                    752 ;	assignment4.c:215: delay();
+      0001F5 02r02r5A         [24]  753 	ljmp	_delay
+                                    754 ;------------------------------------------------------------
+                                    755 ;Allocation info for local variables in function 'functionSet'
+                                    756 ;------------------------------------------------------------
+                                    757 ;	assignment4.c:218: void functionSet(void) {
+                                    758 ;	-----------------------------------------
+                                    759 ;	 function functionSet
+                                    760 ;	-----------------------------------------
+      0001F8                        761 _functionSet:
+                                    762 ;	assignment4.c:219: RS = 0;
+      0001F8 C2 A1            [12]  763 	clr	_P2_1
+                                    764 ;	assignment4.c:220: P1 = 0x38; // 8-bit mode, 2 lines LCD
+      0001FA 75 90 38         [24]  765 	mov	_P1,#0x38
+                                    766 ;	assignment4.c:221: E = 1;
+      0001FD D2 A0            [12]  767 	setb	_P2_0
+                                    768 ;	assignment4.c:222: E = 0;
+      0001FF C2 A0            [12]  769 	clr	_P2_0
+                                    770 ;	assignment4.c:223: delay();
+      000201 02r02r5A         [24]  771 	ljmp	_delay
+                                    772 ;------------------------------------------------------------
+                                    773 ;Allocation info for local variables in function 'clearDisplay'
+                                    774 ;------------------------------------------------------------
+                                    775 ;	assignment4.c:226: void clearDisplay(void) {
+                                    776 ;	-----------------------------------------
+                                    777 ;	 function clearDisplay
+                                    778 ;	-----------------------------------------
+      000204                        779 _clearDisplay:
+                                    780 ;	assignment4.c:227: RS = 0;
+      000204 C2 A1            [12]  781 	clr	_P2_1
+                                    782 ;	assignment4.c:228: P1 = 0x01; // command to clear LCD and return the cursor to the home position
+      000206 75 90 01         [24]  783 	mov	_P1,#0x01
+                                    784 ;	assignment4.c:229: E = 1;
+      000209 D2 A0            [12]  785 	setb	_P2_0
+                                    786 ;	assignment4.c:230: E = 0;
+      00020B C2 A0            [12]  787 	clr	_P2_0
+                                    788 ;	assignment4.c:231: big_delay(); // This operation needs a bigger delay
+      00020D 02r02r63         [24]  789 	ljmp	_big_delay
+                                    790 ;------------------------------------------------------------
+                                    791 ;Allocation info for local variables in function 'setDdRamAddress'
+                                    792 ;------------------------------------------------------------
+                                    793 ;address                   Allocated to registers r7 
+                                    794 ;------------------------------------------------------------
+                                    795 ;	assignment4.c:234: void setDdRamAddress(char address) {  // Determine the place to place the next character - First LCD location address in 00h for line 1 and 40h for line 2
+                                    796 ;	-----------------------------------------
+                                    797 ;	 function setDdRamAddress
+                                    798 ;	-----------------------------------------
+      000210                        799 _setDdRamAddress:
+      000210 AF 82            [24]  800 	mov	r7,dpl
+                                    801 ;	assignment4.c:235: RS = 0;
+      000212 C2 A1            [12]  802 	clr	_P2_1
+                                    803 ;	assignment4.c:236: P1 = address | 0x80;  // set the MSB to detect that this is an address
+      000214 74 80            [12]  804 	mov	a,#0x80
+      000216 4F               [12]  805 	orl	a,r7
+      000217 F5 90            [12]  806 	mov	_P1,a
+                                    807 ;	assignment4.c:237: E = 1;
+      000219 D2 A0            [12]  808 	setb	_P2_0
+                                    809 ;	assignment4.c:238: E = 0;
+      00021B C2 A0            [12]  810 	clr	_P2_0
+                                    811 ;	assignment4.c:239: delay();
+      00021D 02r02r5A         [24]  812 	ljmp	_delay
+                                    813 ;------------------------------------------------------------
+                                    814 ;Allocation info for local variables in function 'sendChar'
+                                    815 ;------------------------------------------------------------
+                                    816 ;c                         Allocated to registers r7 
+                                    817 ;------------------------------------------------------------
+                                    818 ;	assignment4.c:244: void sendChar(char c) {  // Function to send one character to be displayed on the LCD
+                                    819 ;	-----------------------------------------
+                                    820 ;	 function sendChar
+                                    821 ;	-----------------------------------------
+      000220                        822 _sendChar:
+      000220 AF 82            [24]  823 	mov	r7,dpl
+                                    824 ;	assignment4.c:245: RS = 1;
+      000222 D2 A1            [12]  825 	setb	_P2_1
+                                    826 ;	assignment4.c:246: P1 = c;
+      000224 8F 90            [24]  827 	mov	_P1,r7
+                                    828 ;	assignment4.c:247: E = 1;
+      000226 D2 A0            [12]  829 	setb	_P2_0
+                                    830 ;	assignment4.c:248: E = 0;
+      000228 C2 A0            [12]  831 	clr	_P2_0
+                                    832 ;	assignment4.c:249: delay();
+      00022A 02r02r5A         [24]  833 	ljmp	_delay
+                                    834 ;------------------------------------------------------------
+                                    835 ;Allocation info for local variables in function 'sendString'
+                                    836 ;------------------------------------------------------------
+                                    837 ;str                       Allocated to registers 
+                                    838 ;c                         Allocated to registers r3 
+                                    839 ;------------------------------------------------------------
+                                    840 ;	assignment4.c:252: void sendString(char* str) {  // Function to send a string of characters to be displayed on the lCD
+                                    841 ;	-----------------------------------------
+                                    842 ;	 function sendString
+                                    843 ;	-----------------------------------------
+      00022D                        844 _sendString:
+      00022D AD 82            [24]  845 	mov	r5,dpl
+      00022F AE 83            [24]  846 	mov	r6,dph
+      000231 AF F0            [24]  847 	mov	r7,b
+                                    848 ;	assignment4.c:254: while (c = *str++) {
+      000233                        849 00101$:
+      000233 8D 82            [24]  850 	mov	dpl,r5
+      000235 8E 83            [24]  851 	mov	dph,r6
+      000237 8F F0            [24]  852 	mov	b,r7
+      000239 12r00r00         [24]  853 	lcall	__gptrget
+      00023C FC               [12]  854 	mov	r4,a
+      00023D A3               [24]  855 	inc	dptr
+      00023E AD 82            [24]  856 	mov	r5,dpl
+      000240 AE 83            [24]  857 	mov	r6,dph
+      000242 EC               [12]  858 	mov	a,r4
+      000243 FB               [12]  859 	mov	r3,a
+      000244 60 13            [24]  860 	jz	00104$
+                                    861 ;	assignment4.c:255: sendChar(c);
+      000246 8B 82            [24]  862 	mov	dpl,r3
+      000248 C0 07            [24]  863 	push	ar7
+      00024A C0 06            [24]  864 	push	ar6
+      00024C C0 05            [24]  865 	push	ar5
+      00024E 12r02r20         [24]  866 	lcall	_sendChar
+      000251 D0 05            [24]  867 	pop	ar5
+      000253 D0 06            [24]  868 	pop	ar6
+      000255 D0 07            [24]  869 	pop	ar7
+      000257 80 DA            [24]  870 	sjmp	00101$
+      000259                        871 00104$:
+      000259 22               [24]  872 	ret
+                                    873 ;------------------------------------------------------------
+                                    874 ;Allocation info for local variables in function 'delay'
+                                    875 ;------------------------------------------------------------
+                                    876 ;c                         Allocated to registers r7 
+                                    877 ;------------------------------------------------------------
+                                    878 ;	assignment4.c:259: void delay(void) {
+                                    879 ;	-----------------------------------------
+                                    880 ;	 function delay
+                                    881 ;	-----------------------------------------
+      00025A                        882 _delay:
+                                    883 ;	assignment4.c:261: for (c = 0; c < 50; c++);
+      00025A 7F 32            [12]  884 	mov	r7,#0x32
+      00025C                        885 00104$:
+      00025C EF               [12]  886 	mov	a,r7
+      00025D 14               [12]  887 	dec	a
+      00025E FE               [12]  888 	mov	r6,a
+      00025F FF               [12]  889 	mov	r7,a
+      000260 70 FA            [24]  890 	jnz	00104$
+      000262 22               [24]  891 	ret
+                                    892 ;------------------------------------------------------------
+                                    893 ;Allocation info for local variables in function 'big_delay'
+                                    894 ;------------------------------------------------------------
+                                    895 ;c                         Allocated to registers r7 
+                                    896 ;------------------------------------------------------------
+                                    897 ;	assignment4.c:264: void big_delay(void) {
+                                    898 ;	-----------------------------------------
+                                    899 ;	 function big_delay
+                                    900 ;	-----------------------------------------
+      000263                        901 _big_delay:
+                                    902 ;	assignment4.c:266: for (c = 0; c < 255; c++);
+      000263 7F FF            [12]  903 	mov	r7,#0xFF
+      000265                        904 00104$:
+      000265 8F 06            [24]  905 	mov	ar6,r7
+      000267 1E               [12]  906 	dec	r6
+      000268 EE               [12]  907 	mov	a,r6
+      000269 FF               [12]  908 	mov	r7,a
+      00026A 70 F9            [24]  909 	jnz	00104$
+      00026C 22               [24]  910 	ret
+                                    911 ;------------------------------------------------------------
+                                    912 ;Allocation info for local variables in function 'keypad'
+                                    913 ;------------------------------------------------------------
+                                    914 ;row                       Allocated to registers r6 
+                                    915 ;col                       Allocated to registers r3 
+                                    916 ;keypad                    Allocated with name '_keypad_keypad_1_51'
+                                    917 ;i                         Allocated to registers r5 
+                                    918 ;gotkey                    Allocated to registers r7 
+                                    919 ;------------------------------------------------------------
+                                    920 ;	assignment4.c:270: void keypad(void) {
+                                    921 ;	-----------------------------------------
+                                    922 ;	 function keypad
+                                    923 ;	-----------------------------------------
+      00026D                        924 _keypad:
+                                    925 ;	assignment4.c:273: unsigned char keypad[4][3] = {   // This array contains the ASCII of the keypad keys
+      00026D 75*00 33         [24]  926 	mov	_keypad_keypad_1_51,#0x33
+      000270 75*01 32         [24]  927 	mov	(_keypad_keypad_1_51 + 0x0001),#0x32
+      000273 75*02 31         [24]  928 	mov	(_keypad_keypad_1_51 + 0x0002),#0x31
+      000276 75*03 36         [24]  929 	mov	(_keypad_keypad_1_51 + 0x0003),#0x36
+      000279 75*04 35         [24]  930 	mov	(_keypad_keypad_1_51 + 0x0004),#0x35
+      00027C 75*05 34         [24]  931 	mov	(_keypad_keypad_1_51 + 0x0005),#0x34
+      00027F 75*06 39         [24]  932 	mov	(_keypad_keypad_1_51 + 0x0006),#0x39
+      000282 75*07 38         [24]  933 	mov	(_keypad_keypad_1_51 + 0x0007),#0x38
+      000285 75*08 37         [24]  934 	mov	(_keypad_keypad_1_51 + 0x0008),#0x37
+      000288 75*09 23         [24]  935 	mov	(_keypad_keypad_1_51 + 0x0009),#0x23
+      00028B 75*0A 30         [24]  936 	mov	(_keypad_keypad_1_51 + 0x000a),#0x30
+      00028E 75*0B 2A         [24]  937 	mov	(_keypad_keypad_1_51 + 0x000b),#0x2A
+                                    938 ;	assignment4.c:280: unsigned char gotkey = 0;
+      000291 7F 00            [12]  939 	mov	r7,#0x00
+                                    940 ;	assignment4.c:281: while (1) {
+      000293                        941 00107$:
+                                    942 ;	assignment4.c:282: row = 0xf7;  // The first row (connected to P0.3) will be zero
+      000293 7E F7            [12]  943 	mov	r6,#0xF7
+                                    944 ;	assignment4.c:284: for (i = 0; i<4; ++i) { // loop over the 4 rows
+      000295 7D 00            [12]  945 	mov	r5,#0x00
+      000297 7C 00            [12]  946 	mov	r4,#0x00
+      000299                        947 00109$:
+                                    948 ;	assignment4.c:286: P0 = 0xff;     // Initialize the 4 rows to '1' and set the column ports to inputs
+      000299 75 80 FF         [24]  949 	mov	_P0,#0xFF
+                                    950 ;	assignment4.c:287: P0 = P0 & row; // clear one row at a time
+      00029C EE               [12]  951 	mov	a,r6
+      00029D 52 80            [12]  952 	anl	_P0,a
+                                    953 ;	assignment4.c:288: col = P0 & 0x70;  // Read the 3 columns
+      00029F 74 70            [12]  954 	mov	a,#0x70
+      0002A1 55 80            [12]  955 	anl	a,_P0
+      0002A3 FB               [12]  956 	mov	r3,a
+                                    957 ;	assignment4.c:289: if (col != 0x70) { // If any column is zero i.e. a key is pressed
+      0002A4 BB 70 02         [24]  958 	cjne	r3,#0x70,00125$
+      0002A7 80 19            [24]  959 	sjmp	00102$
+      0002A9                        960 00125$:
+                                    961 ;	assignment4.c:290: col = (~col) & 0x70;  // because the selected column returns zero
+      0002A9 EB               [12]  962 	mov	a,r3
+      0002AA F4               [12]  963 	cpl	a
+      0002AB FA               [12]  964 	mov	r2,a
+      0002AC 74 70            [12]  965 	mov	a,#0x70
+      0002AE 5A               [12]  966 	anl	a,r2
+                                    967 ;	assignment4.c:291: col = col >> 5;       // The column variable now contain the number of the selected column
+      0002AF C4               [12]  968 	swap	a
+      0002B0 03               [12]  969 	rr	a
+      0002B1 54 07            [12]  970 	anl	a,#0x07
+      0002B3 FB               [12]  971 	mov	r3,a
+                                    972 ;	assignment4.c:292: gotkey = keypad[i][col]; // Get the ASCII of the corresponding pressed key
+      0002B4 ED               [12]  973 	mov	a,r5
+      0002B5 75 F0 03         [24]  974 	mov	b,#0x03
+      0002B8 A4               [48]  975 	mul	ab
+      0002B9 24r00            [12]  976 	add	a,#_keypad_keypad_1_51
+      0002BB FA               [12]  977 	mov	r2,a
+      0002BC 2B               [12]  978 	add	a,r3
+      0002BD F9               [12]  979 	mov	r1,a
+      0002BE 87 07            [24]  980 	mov	ar7,@r1
+                                    981 ;	assignment4.c:293: break;  // Since a key was detected -> Exit the for loop
+      0002C0 80 0F            [24]  982 	sjmp	00103$
+      0002C2                        983 00102$:
+                                    984 ;	assignment4.c:295: row = row >> 1;   // No key is detected yet, try the next row
+      0002C2 EE               [12]  985 	mov	a,r6
+      0002C3 C3               [12]  986 	clr	c
+      0002C4 13               [12]  987 	rrc	a
+      0002C5 FE               [12]  988 	mov	r6,a
+                                    989 ;	assignment4.c:296: row = row | 0xf0; // Only one of the least 4 significant bits is '0' at a time 
+      0002C6 43 06 F0         [24]  990 	orl	ar6,#0xF0
+                                    991 ;	assignment4.c:284: for (i = 0; i<4; ++i) { // loop over the 4 rows
+      0002C9 0C               [12]  992 	inc	r4
+      0002CA 8C 05            [24]  993 	mov	ar5,r4
+      0002CC BC 04 00         [24]  994 	cjne	r4,#0x04,00126$
+      0002CF                        995 00126$:
+      0002CF 40 C8            [24]  996 	jc	00109$
+      0002D1                        997 00103$:
+                                    998 ;	assignment4.c:300: if (gotkey != 0) { break; }  // Since a key was detected -> exit the while loop
+      0002D1 EF               [12]  999 	mov	a,r7
+      0002D2 60 BF            [24] 1000 	jz	00107$
+                                   1001 ;	assignment4.c:304: P1 = gotkey;  // Send the detected key to the output
+      0002D4 8F 90            [24] 1002 	mov	_P1,r7
+      0002D6 22               [24] 1003 	ret
+                                   1004 ;------------------------------------------------------------
+                                   1005 ;Allocation info for local variables in function 'timer_delay'
+                                   1006 ;------------------------------------------------------------
+                                   1007 ;a                         Allocated to registers r7 
+                                   1008 ;------------------------------------------------------------
+                                   1009 ;	assignment4.c:310: void timer_delay(void) {
+                                   1010 ;	-----------------------------------------
+                                   1011 ;	 function timer_delay
+                                   1012 ;	-----------------------------------------
+      0002D7                       1013 _timer_delay:
+                                   1014 ;	assignment4.c:313: TMOD = 0x01;
+      0002D7 75 89 01         [24] 1015 	mov	_TMOD,#0x01
+                                   1016 ;	assignment4.c:314: while (a != 0) {
+      0002DA 7F 14            [12] 1017 	mov	r7,#0x14
+      0002DC                       1018 00104$:
+      0002DC EF               [12] 1019 	mov	a,r7
+      0002DD 60 12            [24] 1020 	jz	00107$
+                                   1021 ;	assignment4.c:315: TL0 = 0xAF;
+      0002DF 75 8A AF         [24] 1022 	mov	_TL0,#0xAF
+                                   1023 ;	assignment4.c:316: TH0 = 0x3C;
+      0002E2 75 8C 3C         [24] 1024 	mov	_TH0,#0x3C
+                                   1025 ;	assignment4.c:317: TR0 = 1;
+      0002E5 D2 8C            [12] 1026 	setb	_TR0
+                                   1027 ;	assignment4.c:318: while (!TF0);
+      0002E7                       1028 00101$:
+      0002E7 30 8D FD         [24] 1029 	jnb	_TF0,00101$
+                                   1030 ;	assignment4.c:319: TR0 = 0;
+      0002EA C2 8C            [12] 1031 	clr	_TR0
+                                   1032 ;	assignment4.c:320: TF0 = 0;
+      0002EC C2 8D            [12] 1033 	clr	_TF0
+                                   1034 ;	assignment4.c:321: a = a - 1;
+      0002EE 1F               [12] 1035 	dec	r7
+      0002EF 80 EB            [24] 1036 	sjmp	00104$
+      0002F1                       1037 00107$:
+      0002F1 22               [24] 1038 	ret
+                                   1039 ;------------------------------------------------------------
+                                   1040 ;Allocation info for local variables in function 'NumToChar'
+                                   1041 ;------------------------------------------------------------
+                                   1042 ;nums                      Allocated with name '_NumToChar_PARM_2'
+                                   1043 ;num                       Allocated to registers r7 
+                                   1044 ;------------------------------------------------------------
+                                   1045 ;	assignment4.c:328: void NumToChar(unsigned char num, unsigned char nums[2]) {
+                                   1046 ;	-----------------------------------------
+                                   1047 ;	 function NumToChar
+                                   1048 ;	-----------------------------------------
+      0002F2                       1049 _NumToChar:
+      0002F2 AF 82            [24] 1050 	mov	r7,dpl
+                                   1051 ;	assignment4.c:331: nums[0] = (num/10) + '0';
+      0002F4 AC*00            [24] 1052 	mov	r4,_NumToChar_PARM_2
+      0002F6 AD*01            [24] 1053 	mov	r5,(_NumToChar_PARM_2 + 1)
+      0002F8 AE*02            [24] 1054 	mov	r6,(_NumToChar_PARM_2 + 2)
+      0002FA 75 F0 0A         [24] 1055 	mov	b,#0x0A
+      0002FD EF               [12] 1056 	mov	a,r7
+      0002FE 84               [48] 1057 	div	ab
+      0002FF 24 30            [12] 1058 	add	a,#0x30
+      000301 FB               [12] 1059 	mov	r3,a
+      000302 8C 82            [24] 1060 	mov	dpl,r4
+      000304 8D 83            [24] 1061 	mov	dph,r5
+      000306 8E F0            [24] 1062 	mov	b,r6
+      000308 12r00r00         [24] 1063 	lcall	__gptrput
+                                   1064 ;	assignment4.c:334: nums[1] = (num%10) + '0';
+      00030B 0C               [12] 1065 	inc	r4
+      00030C BC 00 01         [24] 1066 	cjne	r4,#0x00,00103$
+      00030F 0D               [12] 1067 	inc	r5
+      000310                       1068 00103$:
+      000310 75 F0 0A         [24] 1069 	mov	b,#0x0A
+      000313 EF               [12] 1070 	mov	a,r7
+      000314 84               [48] 1071 	div	ab
+      000315 AF F0            [24] 1072 	mov	r7,b
+      000317 74 30            [12] 1073 	mov	a,#0x30
+      000319 2F               [12] 1074 	add	a,r7
+      00031A 8C 82            [24] 1075 	mov	dpl,r4
+      00031C 8D 83            [24] 1076 	mov	dph,r5
+      00031E 8E F0            [24] 1077 	mov	b,r6
+      000320 02r00r00         [24] 1078 	ljmp	__gptrput
+                                   1079 ;------------------------------------------------------------
+                                   1080 ;Allocation info for local variables in function '_sdcc_gsinit_startup'
+                                   1081 ;------------------------------------------------------------
+                                   1082 ;	assignment4.c:338: void _sdcc_gsinit_startup(void) {
+                                   1083 ;	-----------------------------------------
+                                   1084 ;	 function _sdcc_gsinit_startup
+                                   1085 ;	-----------------------------------------
+      000323                       1086 __sdcc_gsinit_startup:
+                                   1087 ;	assignment4.c:342: __endasm;
+      000323 75 81 5F         [24] 1088 	mov sp, #0x5F
+                                   1089 ;	assignment4.c:343: main();
+      000326 02r00r00         [24] 1090 	ljmp	_main
+                                   1091 ;------------------------------------------------------------
+                                   1092 ;Allocation info for local variables in function 'int0_isr'
+                                   1093 ;------------------------------------------------------------
+                                   1094 ;count                     Allocated to registers r7 
+                                   1095 ;------------------------------------------------------------
+                                   1096 ;	assignment4.c:349: void int0_isr(void) __interrupt(0) __using(1) {
+                                   1097 ;	-----------------------------------------
+                                   1098 ;	 function int0_isr
+                                   1099 ;	-----------------------------------------
+      000329                       1100 _int0_isr:
+                           00000F  1101 	ar7 = 0x0F
+                           00000E  1102 	ar6 = 0x0E
+                           00000D  1103 	ar5 = 0x0D
+                           00000C  1104 	ar4 = 0x0C
+                           00000B  1105 	ar3 = 0x0B
+                           00000A  1106 	ar2 = 0x0A
+                           000009  1107 	ar1 = 0x09
+                           000008  1108 	ar0 = 0x08
+      000329 C0*00            [24] 1109 	push	bits
+      00032B C0 E0            [24] 1110 	push	acc
+      00032D C0 F0            [24] 1111 	push	b
+      00032F C0 82            [24] 1112 	push	dpl
+      000331 C0 83            [24] 1113 	push	dph
+      000333 C0 07            [24] 1114 	push	(0+7)
+      000335 C0 06            [24] 1115 	push	(0+6)
+      000337 C0 05            [24] 1116 	push	(0+5)
+      000339 C0 04            [24] 1117 	push	(0+4)
+      00033B C0 03            [24] 1118 	push	(0+3)
+      00033D C0 02            [24] 1119 	push	(0+2)
+      00033F C0 01            [24] 1120 	push	(0+1)
+      000341 C0 00            [24] 1121 	push	(0+0)
+      000343 C0 D0            [24] 1122 	push	psw
+      000345 75 D0 08         [24] 1123 	mov	psw,#0x08
+                                   1124 ;	assignment4.c:350: char count = 0;
+      000348 7F 00            [12] 1125 	mov	r7,#0x00
+                                   1126 ;	assignment4.c:352: setDdRamAddress(count);
+      00034A 75 82 00         [24] 1127 	mov	dpl,#0x00
+      00034D C0 0F            [24] 1128 	push	ar7
+      00034F 75 D0 00         [24] 1129 	mov	psw,#0x00
+      000352 12r02r10         [24] 1130 	lcall	_setDdRamAddress
+      000355 75 D0 08         [24] 1131 	mov	psw,#0x08
+      000358 D0 0F            [24] 1132 	pop	ar7
+                                   1133 ;	assignment4.c:354: while (SW0 == 0) {
+      00035A                       1134 00139$:
+      00035A 30 B2 03         [24] 1135 	jnb	_P3_2,00204$
+      00035D 02r05r7D         [24] 1136 	ljmp	00142$
+      000360                       1137 00204$:
+                                   1138 ;	assignment4.c:357: keypad();
+      000360 C0 0F            [24] 1139 	push	ar7
+      000362 75 D0 00         [24] 1140 	mov	psw,#0x00
+      000365 12r02r6D         [24] 1141 	lcall	_keypad
+      000368 75 D0 08         [24] 1142 	mov	psw,#0x08
+      00036B D0 0F            [24] 1143 	pop	ar7
+                                   1144 ;	assignment4.c:362: if (P1 == '*') {
+      00036D 74 2A            [12] 1145 	mov	a,#0x2A
+      00036F B5 90 22         [24] 1146 	cjne	a,_P1,00137$
+                                   1147 ;	assignment4.c:363: count--;
+      000372 1F               [12] 1148 	dec	r7
+                                   1149 ;	assignment4.c:364: if (count < 0) {
+      000373 EF               [12] 1150 	mov	a,r7
+      000374 30 E7 02         [24] 1151 	jnb	acc.7,00102$
+                                   1152 ;	assignment4.c:365: count = 7;
+      000377 7F 07            [12] 1153 	mov	r7,#0x07
+      000379                       1154 00102$:
+                                   1155 ;	assignment4.c:367: if (count == 2) {
+      000379 BF 02 02         [24] 1156 	cjne	r7,#0x02,00104$
+                                   1157 ;	assignment4.c:368: count = 1;
+      00037C 7F 01            [12] 1158 	mov	r7,#0x01
+      00037E                       1159 00104$:
+                                   1160 ;	assignment4.c:370: if (count == 5) {
+      00037E BF 05 02         [24] 1161 	cjne	r7,#0x05,00106$
+                                   1162 ;	assignment4.c:371: count = 4;
+      000381 7F 04            [12] 1163 	mov	r7,#0x04
+      000383                       1164 00106$:
+                                   1165 ;	assignment4.c:373: setDdRamAddress(count);
+      000383 8F 82            [24] 1166 	mov	dpl,r7
+      000385 C0 0F            [24] 1167 	push	ar7
+      000387 75 D0 00         [24] 1168 	mov	psw,#0x00
+      00038A 12r02r10         [24] 1169 	lcall	_setDdRamAddress
+      00038D 75 D0 08         [24] 1170 	mov	psw,#0x08
+      000390 D0 0F            [24] 1171 	pop	ar7
+      000392 80 C6            [24] 1172 	sjmp	00139$
+      000394                       1173 00137$:
+                                   1174 ;	assignment4.c:376: else if (P1 == '#') {
+      000394 74 23            [12] 1175 	mov	a,#0x23
+      000396 B5 90 2A         [24] 1176 	cjne	a,_P1,00134$
+                                   1177 ;	assignment4.c:377: count++;
+      000399 0F               [12] 1178 	inc	r7
+                                   1179 ;	assignment4.c:378: if (count > 7) {
+      00039A C3               [12] 1180 	clr	c
+      00039B 74 87            [12] 1181 	mov	a,#(0x07 ^ 0x80)
+      00039D 8F F0            [24] 1182 	mov	b,r7
+      00039F 63 F0 80         [24] 1183 	xrl	b,#0x80
+      0003A2 95 F0            [12] 1184 	subb	a,b
+      0003A4 50 02            [24] 1185 	jnc	00108$
+                                   1186 ;	assignment4.c:379: count = 0;
+      0003A6 7F 00            [12] 1187 	mov	r7,#0x00
+      0003A8                       1188 00108$:
+                                   1189 ;	assignment4.c:381: if (count == 2) {
+      0003A8 BF 02 02         [24] 1190 	cjne	r7,#0x02,00110$
+                                   1191 ;	assignment4.c:382: count = 3;
+      0003AB 7F 03            [12] 1192 	mov	r7,#0x03
+      0003AD                       1193 00110$:
+                                   1194 ;	assignment4.c:384: if (count == 5) {
+      0003AD BF 05 02         [24] 1195 	cjne	r7,#0x05,00112$
+                                   1196 ;	assignment4.c:385: count = 6;
+      0003B0 7F 06            [12] 1197 	mov	r7,#0x06
+      0003B2                       1198 00112$:
+                                   1199 ;	assignment4.c:387: setDdRamAddress(count);
+      0003B2 8F 82            [24] 1200 	mov	dpl,r7
+      0003B4 C0 0F            [24] 1201 	push	ar7
+      0003B6 75 D0 00         [24] 1202 	mov	psw,#0x00
+      0003B9 12r02r10         [24] 1203 	lcall	_setDdRamAddress
+      0003BC 75 D0 08         [24] 1204 	mov	psw,#0x08
+      0003BF D0 0F            [24] 1205 	pop	ar7
+      0003C1 80 97            [24] 1206 	sjmp	00139$
+      0003C3                       1207 00134$:
+                                   1208 ;	assignment4.c:391: switch (count) {
+      0003C3 BF 00 02         [24] 1209 	cjne	r7,#0x00,00219$
+      0003C6 80 20            [24] 1210 	sjmp	00113$
+      0003C8                       1211 00219$:
+      0003C8 BF 01 02         [24] 1212 	cjne	r7,#0x01,00220$
+      0003CB 80 61            [24] 1213 	sjmp	00117$
+      0003CD                       1214 00220$:
+      0003CD BF 03 03         [24] 1215 	cjne	r7,#0x03,00221$
+      0003D0 02r04r7A         [24] 1216 	ljmp	00122$
+      0003D3                       1217 00221$:
+      0003D3 BF 04 03         [24] 1218 	cjne	r7,#0x04,00222$
+      0003D6 02r04rC0         [24] 1219 	ljmp	00126$
+      0003D9                       1220 00222$:
+      0003D9 BF 06 03         [24] 1221 	cjne	r7,#0x06,00223$
+      0003DC 02r04rFD         [24] 1222 	ljmp	00127$
+      0003DF                       1223 00223$:
+      0003DF BF 07 03         [24] 1224 	cjne	r7,#0x07,00224$
+      0003E2 02r05r43         [24] 1225 	ljmp	00131$
+      0003E5                       1226 00224$:
+      0003E5 02r03r5A         [24] 1227 	ljmp	00139$
+                                   1228 ;	assignment4.c:393: case 0:
+      0003E8                       1229 00113$:
+                                   1230 ;	assignment4.c:394: if (P1 > '2') {
+      0003E8 E5 90            [12] 1231 	mov	a,_P1
+      0003EA 24 CD            [12] 1232 	add	a,#0xff - 0x32
+      0003EC 50 03            [24] 1233 	jnc	00225$
+      0003EE 02r03r5A         [24] 1234 	ljmp	00139$
+      0003F1                       1235 00225$:
+                                   1236 ;	assignment4.c:398: hour = (P1 - '0') * 10;
+      0003F1 E5 90            [12] 1237 	mov	a,_P1
+      0003F3 24 D0            [12] 1238 	add	a,#0xD0
+      0003F5 75 F0 0A         [24] 1239 	mov	b,#0x0A
+      0003F8 A4               [48] 1240 	mul	ab
+      0003F9 F5 7A            [12] 1241 	mov	_hour,a
+                                   1242 ;	assignment4.c:399: sendChar(P1);
+      0003FB 85 90 82         [24] 1243 	mov	dpl,_P1
+      0003FE C0 0F            [24] 1244 	push	ar7
+      000400 75 D0 00         [24] 1245 	mov	psw,#0x00
+      000403 12r02r20         [24] 1246 	lcall	_sendChar
+      000406 75 D0 08         [24] 1247 	mov	psw,#0x08
+      000409 D0 0F            [24] 1248 	pop	ar7
+                                   1249 ;	assignment4.c:400: count++;
+      00040B 0F               [12] 1250 	inc	r7
+                                   1251 ;	assignment4.c:401: sendChar('0');
+      00040C 75 82 30         [24] 1252 	mov	dpl,#0x30
+      00040F C0 0F            [24] 1253 	push	ar7
+      000411 75 D0 00         [24] 1254 	mov	psw,#0x00
+      000414 12r02r20         [24] 1255 	lcall	_sendChar
+      000417 75 D0 08         [24] 1256 	mov	psw,#0x08
+      00041A D0 0F            [24] 1257 	pop	ar7
+                                   1258 ;	assignment4.c:402: setDdRamAddress(count);
+      00041C 8F 82            [24] 1259 	mov	dpl,r7
+      00041E C0 0F            [24] 1260 	push	ar7
+      000420 75 D0 00         [24] 1261 	mov	psw,#0x00
+      000423 12r02r10         [24] 1262 	lcall	_setDdRamAddress
+      000426 75 D0 08         [24] 1263 	mov	psw,#0x08
+      000429 D0 0F            [24] 1264 	pop	ar7
+                                   1265 ;	assignment4.c:403: break;
+      00042B 02r03r5A         [24] 1266 	ljmp	00139$
+                                   1267 ;	assignment4.c:405: case 1:
+      00042E                       1268 00117$:
+                                   1269 ;	assignment4.c:406: if (P1 > '3' && hour >= 20) {
+      00042E E5 90            [12] 1270 	mov	a,_P1
+      000430 24 CC            [12] 1271 	add	a,#0xff - 0x33
+      000432 50 09            [24] 1272 	jnc	00119$
+      000434 74 EC            [12] 1273 	mov	a,#0x100 - 0x14
+      000436 25 7A            [12] 1274 	add	a,_hour
+      000438 50 03            [24] 1275 	jnc	00227$
+      00043A 02r03r5A         [24] 1276 	ljmp	00139$
+      00043D                       1277 00227$:
+                                   1278 ;	assignment4.c:407: break;
+      00043D                       1279 00119$:
+                                   1280 ;	assignment4.c:410: hour /= 10;
+      00043D 75 F0 0A         [24] 1281 	mov	b,#0x0A
+      000440 E5 7A            [12] 1282 	mov	a,_hour
+      000442 84               [48] 1283 	div	ab
+      000443 F5 7A            [12] 1284 	mov	_hour,a
+                                   1285 ;	assignment4.c:411: hour *= 10;
+      000445 E5 7A            [12] 1286 	mov	a,_hour
+      000447 75 F0 0A         [24] 1287 	mov	b,#0x0A
+      00044A A4               [48] 1288 	mul	ab
+      00044B F5 7A            [12] 1289 	mov	_hour,a
+                                   1290 ;	assignment4.c:412: hour += (P1 - '0');
+      00044D E5 90            [12] 1291 	mov	a,_P1
+      00044F 24 D0            [12] 1292 	add	a,#0xD0
+      000451 AD 7A            [24] 1293 	mov	r5,_hour
+      000453 2D               [12] 1294 	add	a,r5
+      000454 F5 7A            [12] 1295 	mov	_hour,a
+                                   1296 ;	assignment4.c:413: sendChar(P1);
+      000456 85 90 82         [24] 1297 	mov	dpl,_P1
+      000459 C0 0F            [24] 1298 	push	ar7
+      00045B 75 D0 00         [24] 1299 	mov	psw,#0x00
+      00045E 12r02r20         [24] 1300 	lcall	_sendChar
+      000461 75 D0 08         [24] 1301 	mov	psw,#0x08
+      000464 D0 0F            [24] 1302 	pop	ar7
+                                   1303 ;	assignment4.c:414: count += 2;
+      000466 0F               [12] 1304 	inc	r7
+      000467 0F               [12] 1305 	inc	r7
+                                   1306 ;	assignment4.c:415: setDdRamAddress(count);
+      000468 8F 82            [24] 1307 	mov	dpl,r7
+      00046A C0 0F            [24] 1308 	push	ar7
+      00046C 75 D0 00         [24] 1309 	mov	psw,#0x00
+      00046F 12r02r10         [24] 1310 	lcall	_setDdRamAddress
+      000472 75 D0 08         [24] 1311 	mov	psw,#0x08
+      000475 D0 0F            [24] 1312 	pop	ar7
+                                   1313 ;	assignment4.c:416: break;
+      000477 02r03r5A         [24] 1314 	ljmp	00139$
+                                   1315 ;	assignment4.c:419: case 3:
+      00047A                       1316 00122$:
+                                   1317 ;	assignment4.c:420: if (P1 > '5') {
+      00047A E5 90            [12] 1318 	mov	a,_P1
+      00047C 24 CA            [12] 1319 	add	a,#0xff - 0x35
+      00047E 50 03            [24] 1320 	jnc	00228$
+      000480 02r03r5A         [24] 1321 	ljmp	00139$
+      000483                       1322 00228$:
+                                   1323 ;	assignment4.c:424: minute = (P1 - '0') * 10;
+      000483 E5 90            [12] 1324 	mov	a,_P1
+      000485 24 D0            [12] 1325 	add	a,#0xD0
+      000487 75 F0 0A         [24] 1326 	mov	b,#0x0A
+      00048A A4               [48] 1327 	mul	ab
+      00048B F5 7B            [12] 1328 	mov	_minute,a
+                                   1329 ;	assignment4.c:425: sendChar(P1);
+      00048D 85 90 82         [24] 1330 	mov	dpl,_P1
+      000490 C0 0F            [24] 1331 	push	ar7
+      000492 75 D0 00         [24] 1332 	mov	psw,#0x00
+      000495 12r02r20         [24] 1333 	lcall	_sendChar
+      000498 75 D0 08         [24] 1334 	mov	psw,#0x08
+      00049B D0 0F            [24] 1335 	pop	ar7
+                                   1336 ;	assignment4.c:426: count++;
+      00049D 0F               [12] 1337 	inc	r7
+                                   1338 ;	assignment4.c:427: sendChar('0');
+      00049E 75 82 30         [24] 1339 	mov	dpl,#0x30
+      0004A1 C0 0F            [24] 1340 	push	ar7
+      0004A3 75 D0 00         [24] 1341 	mov	psw,#0x00
+      0004A6 12r02r20         [24] 1342 	lcall	_sendChar
+      0004A9 75 D0 08         [24] 1343 	mov	psw,#0x08
+      0004AC D0 0F            [24] 1344 	pop	ar7
+                                   1345 ;	assignment4.c:428: setDdRamAddress(count);
+      0004AE 8F 82            [24] 1346 	mov	dpl,r7
+      0004B0 C0 0F            [24] 1347 	push	ar7
+      0004B2 75 D0 00         [24] 1348 	mov	psw,#0x00
+      0004B5 12r02r10         [24] 1349 	lcall	_setDdRamAddress
+      0004B8 75 D0 08         [24] 1350 	mov	psw,#0x08
+      0004BB D0 0F            [24] 1351 	pop	ar7
+                                   1352 ;	assignment4.c:429: break;
+      0004BD 02r03r5A         [24] 1353 	ljmp	00139$
+                                   1354 ;	assignment4.c:431: case 4:
+      0004C0                       1355 00126$:
+                                   1356 ;	assignment4.c:432: minute /= 10;
+      0004C0 75 F0 0A         [24] 1357 	mov	b,#0x0A
+      0004C3 E5 7B            [12] 1358 	mov	a,_minute
+      0004C5 84               [48] 1359 	div	ab
+      0004C6 F5 7B            [12] 1360 	mov	_minute,a
+                                   1361 ;	assignment4.c:433: minute *= 10;
+      0004C8 E5 7B            [12] 1362 	mov	a,_minute
+      0004CA 75 F0 0A         [24] 1363 	mov	b,#0x0A
+      0004CD A4               [48] 1364 	mul	ab
+      0004CE F5 7B            [12] 1365 	mov	_minute,a
+                                   1366 ;	assignment4.c:434: minute += (P1 - '0');
+      0004D0 E5 90            [12] 1367 	mov	a,_P1
+      0004D2 24 D0            [12] 1368 	add	a,#0xD0
+      0004D4 AD 7B            [24] 1369 	mov	r5,_minute
+      0004D6 2D               [12] 1370 	add	a,r5
+      0004D7 F5 7B            [12] 1371 	mov	_minute,a
+                                   1372 ;	assignment4.c:435: sendChar(P1);
+      0004D9 85 90 82         [24] 1373 	mov	dpl,_P1
+      0004DC C0 0F            [24] 1374 	push	ar7
+      0004DE 75 D0 00         [24] 1375 	mov	psw,#0x00
+      0004E1 12r02r20         [24] 1376 	lcall	_sendChar
+      0004E4 75 D0 08         [24] 1377 	mov	psw,#0x08
+      0004E7 D0 0F            [24] 1378 	pop	ar7
+                                   1379 ;	assignment4.c:436: count += 2;
+      0004E9 0F               [12] 1380 	inc	r7
+      0004EA 0F               [12] 1381 	inc	r7
+                                   1382 ;	assignment4.c:437: setDdRamAddress(count);
+      0004EB 8F 82            [24] 1383 	mov	dpl,r7
+      0004ED C0 0F            [24] 1384 	push	ar7
+      0004EF 75 D0 00         [24] 1385 	mov	psw,#0x00
+      0004F2 12r02r10         [24] 1386 	lcall	_setDdRamAddress
+      0004F5 75 D0 08         [24] 1387 	mov	psw,#0x08
+      0004F8 D0 0F            [24] 1388 	pop	ar7
+                                   1389 ;	assignment4.c:438: break;
+      0004FA 02r03r5A         [24] 1390 	ljmp	00139$
+                                   1391 ;	assignment4.c:440: case 6:
+      0004FD                       1392 00127$:
+                                   1393 ;	assignment4.c:441: if (P1 > '5') {
+      0004FD E5 90            [12] 1394 	mov	a,_P1
+      0004FF 24 CA            [12] 1395 	add	a,#0xff - 0x35
+      000501 50 03            [24] 1396 	jnc	00229$
+      000503 02r03r5A         [24] 1397 	ljmp	00139$
+      000506                       1398 00229$:
+                                   1399 ;	assignment4.c:445: second = (P1 - '0') * 10;
+      000506 E5 90            [12] 1400 	mov	a,_P1
+      000508 24 D0            [12] 1401 	add	a,#0xD0
+      00050A 75 F0 0A         [24] 1402 	mov	b,#0x0A
+      00050D A4               [48] 1403 	mul	ab
+      00050E F5 7C            [12] 1404 	mov	_second,a
+                                   1405 ;	assignment4.c:446: sendChar(P1);
+      000510 85 90 82         [24] 1406 	mov	dpl,_P1
+      000513 C0 0F            [24] 1407 	push	ar7
+      000515 75 D0 00         [24] 1408 	mov	psw,#0x00
+      000518 12r02r20         [24] 1409 	lcall	_sendChar
+      00051B 75 D0 08         [24] 1410 	mov	psw,#0x08
+      00051E D0 0F            [24] 1411 	pop	ar7
+                                   1412 ;	assignment4.c:447: count++;
+      000520 0F               [12] 1413 	inc	r7
+                                   1414 ;	assignment4.c:448: sendChar('0');
+      000521 75 82 30         [24] 1415 	mov	dpl,#0x30
+      000524 C0 0F            [24] 1416 	push	ar7
+      000526 75 D0 00         [24] 1417 	mov	psw,#0x00
+      000529 12r02r20         [24] 1418 	lcall	_sendChar
+      00052C 75 D0 08         [24] 1419 	mov	psw,#0x08
+      00052F D0 0F            [24] 1420 	pop	ar7
+                                   1421 ;	assignment4.c:449: setDdRamAddress(count);
+      000531 8F 82            [24] 1422 	mov	dpl,r7
+      000533 C0 0F            [24] 1423 	push	ar7
+      000535 75 D0 00         [24] 1424 	mov	psw,#0x00
+      000538 12r02r10         [24] 1425 	lcall	_setDdRamAddress
+      00053B 75 D0 08         [24] 1426 	mov	psw,#0x08
+      00053E D0 0F            [24] 1427 	pop	ar7
+                                   1428 ;	assignment4.c:450: break;
+      000540 02r03r5A         [24] 1429 	ljmp	00139$
+                                   1430 ;	assignment4.c:452: case 7:
+      000543                       1431 00131$:
+                                   1432 ;	assignment4.c:453: second /= 10;
+      000543 75 F0 0A         [24] 1433 	mov	b,#0x0A
+      000546 E5 7C            [12] 1434 	mov	a,_second
+      000548 84               [48] 1435 	div	ab
+      000549 F5 7C            [12] 1436 	mov	_second,a
+                                   1437 ;	assignment4.c:454: second *= 10;
+      00054B E5 7C            [12] 1438 	mov	a,_second
+      00054D 75 F0 0A         [24] 1439 	mov	b,#0x0A
+      000550 A4               [48] 1440 	mul	ab
+      000551 F5 7C            [12] 1441 	mov	_second,a
+                                   1442 ;	assignment4.c:455: second += (P1 - '0');
+      000553 E5 90            [12] 1443 	mov	a,_P1
+      000555 24 D0            [12] 1444 	add	a,#0xD0
+      000557 AD 7C            [24] 1445 	mov	r5,_second
+      000559 2D               [12] 1446 	add	a,r5
+      00055A F5 7C            [12] 1447 	mov	_second,a
+                                   1448 ;	assignment4.c:456: sendChar(P1);
+      00055C 85 90 82         [24] 1449 	mov	dpl,_P1
+      00055F 75 D0 00         [24] 1450 	mov	psw,#0x00
+      000562 12r02r20         [24] 1451 	lcall	_sendChar
+      000565 75 D0 08         [24] 1452 	mov	psw,#0x08
+                                   1453 ;	assignment4.c:457: count = 0;
+      000568 7F 00            [12] 1454 	mov	r7,#0x00
+                                   1455 ;	assignment4.c:458: setDdRamAddress(count);
+      00056A 75 82 00         [24] 1456 	mov	dpl,#0x00
+      00056D C0 0F            [24] 1457 	push	ar7
+      00056F 75 D0 00         [24] 1458 	mov	psw,#0x00
+      000572 12r02r10         [24] 1459 	lcall	_setDdRamAddress
+      000575 75 D0 08         [24] 1460 	mov	psw,#0x08
+      000578 D0 0F            [24] 1461 	pop	ar7
+                                   1462 ;	assignment4.c:460: }
+      00057A 02r03r5A         [24] 1463 	ljmp	00139$
+      00057D                       1464 00142$:
+      00057D D0 D0            [24] 1465 	pop	psw
+      00057F D0 00            [24] 1466 	pop	(0+0)
+      000581 D0 01            [24] 1467 	pop	(0+1)
+      000583 D0 02            [24] 1468 	pop	(0+2)
+      000585 D0 03            [24] 1469 	pop	(0+3)
+      000587 D0 04            [24] 1470 	pop	(0+4)
+      000589 D0 05            [24] 1471 	pop	(0+5)
+      00058B D0 06            [24] 1472 	pop	(0+6)
+      00058D D0 07            [24] 1473 	pop	(0+7)
+      00058F D0 83            [24] 1474 	pop	dph
+      000591 D0 82            [24] 1475 	pop	dpl
+      000593 D0 F0            [24] 1476 	pop	b
+      000595 D0 E0            [24] 1477 	pop	acc
+      000597 D0*00            [24] 1478 	pop	bits
+      000599 32               [24] 1479 	reti
+                                   1480 ;------------------------------------------------------------
+                                   1481 ;Allocation info for local variables in function 'int1_isr'
+                                   1482 ;------------------------------------------------------------
+                                   1483 ;count                     Allocated to registers r7 
+                                   1484 ;------------------------------------------------------------
+                                   1485 ;	assignment4.c:468: void int1_isr(void) __interrupt(2) __using(1) {
+                                   1486 ;	-----------------------------------------
+                                   1487 ;	 function int1_isr
+                                   1488 ;	-----------------------------------------
+      00059A                       1489 _int1_isr:
+      00059A C0*00            [24] 1490 	push	bits
+      00059C C0 E0            [24] 1491 	push	acc
+      00059E C0 F0            [24] 1492 	push	b
+      0005A0 C0 82            [24] 1493 	push	dpl
+      0005A2 C0 83            [24] 1494 	push	dph
+      0005A4 C0 07            [24] 1495 	push	(0+7)
+      0005A6 C0 06            [24] 1496 	push	(0+6)
+      0005A8 C0 05            [24] 1497 	push	(0+5)
+      0005AA C0 04            [24] 1498 	push	(0+4)
+      0005AC C0 03            [24] 1499 	push	(0+3)
+      0005AE C0 02            [24] 1500 	push	(0+2)
+      0005B0 C0 01            [24] 1501 	push	(0+1)
+      0005B2 C0 00            [24] 1502 	push	(0+0)
+      0005B4 C0 D0            [24] 1503 	push	psw
+      0005B6 75 D0 08         [24] 1504 	mov	psw,#0x08
+                                   1505 ;	assignment4.c:470: char count = 0x40;
+      0005B9 7F 40            [12] 1506 	mov	r7,#0x40
+                                   1507 ;	assignment4.c:472: setDdRamAddress(count);
+      0005BB 75 82 40         [24] 1508 	mov	dpl,#0x40
+      0005BE C0 0F            [24] 1509 	push	ar7
+      0005C0 75 D0 00         [24] 1510 	mov	psw,#0x00
+      0005C3 12r02r10         [24] 1511 	lcall	_setDdRamAddress
+      0005C6 75 D0 08         [24] 1512 	mov	psw,#0x08
+      0005C9 D0 0F            [24] 1513 	pop	ar7
+                                   1514 ;	assignment4.c:474: while (SW1 == 0) {
+      0005CB                       1515 00171$:
+      0005CB 30 B3 03         [24] 1516 	jnb	_P3_3,00287$
+      0005CE 02r09r7D         [24] 1517 	ljmp	00174$
+      0005D1                       1518 00287$:
+                                   1519 ;	assignment4.c:477: keypad();
+      0005D1 C0 0F            [24] 1520 	push	ar7
+      0005D3 75 D0 00         [24] 1521 	mov	psw,#0x00
+      0005D6 12r02r6D         [24] 1522 	lcall	_keypad
+      0005D9 75 D0 08         [24] 1523 	mov	psw,#0x08
+      0005DC D0 0F            [24] 1524 	pop	ar7
+                                   1525 ;	assignment4.c:482: if (P1 == '*') {
+      0005DE 74 2A            [12] 1526 	mov	a,#0x2A
+      0005E0 B5 90 26         [24] 1527 	cjne	a,_P1,00169$
+                                   1528 ;	assignment4.c:483: count--;
+      0005E3 1F               [12] 1529 	dec	r7
+                                   1530 ;	assignment4.c:484: if (count < 0x40) {
+      0005E4 C3               [12] 1531 	clr	c
+      0005E5 EF               [12] 1532 	mov	a,r7
+      0005E6 64 80            [12] 1533 	xrl	a,#0x80
+      0005E8 94 C0            [12] 1534 	subb	a,#0xc0
+      0005EA 50 02            [24] 1535 	jnc	00102$
+                                   1536 ;	assignment4.c:485: count = 0x47;
+      0005EC 7F 47            [12] 1537 	mov	r7,#0x47
+      0005EE                       1538 00102$:
+                                   1539 ;	assignment4.c:487: if (count == 0x42) {
+      0005EE BF 42 02         [24] 1540 	cjne	r7,#0x42,00104$
+                                   1541 ;	assignment4.c:488: count = 0x41;
+      0005F1 7F 41            [12] 1542 	mov	r7,#0x41
+      0005F3                       1543 00104$:
+                                   1544 ;	assignment4.c:490: if (count == 0x45) {
+      0005F3 BF 45 02         [24] 1545 	cjne	r7,#0x45,00106$
+                                   1546 ;	assignment4.c:491: count = 0x44;
+      0005F6 7F 44            [12] 1547 	mov	r7,#0x44
+      0005F8                       1548 00106$:
+                                   1549 ;	assignment4.c:493: setDdRamAddress(count);
+      0005F8 8F 82            [24] 1550 	mov	dpl,r7
+      0005FA C0 0F            [24] 1551 	push	ar7
+      0005FC 75 D0 00         [24] 1552 	mov	psw,#0x00
+      0005FF 12r02r10         [24] 1553 	lcall	_setDdRamAddress
+      000602 75 D0 08         [24] 1554 	mov	psw,#0x08
+      000605 D0 0F            [24] 1555 	pop	ar7
+      000607 80 C2            [24] 1556 	sjmp	00171$
+      000609                       1557 00169$:
+                                   1558 ;	assignment4.c:496: else if (P1 == '#') {
+      000609 74 23            [12] 1559 	mov	a,#0x23
+      00060B B5 90 2A         [24] 1560 	cjne	a,_P1,00166$
+                                   1561 ;	assignment4.c:497: count++;
+      00060E 0F               [12] 1562 	inc	r7
+                                   1563 ;	assignment4.c:498: if (count > 0x47) {
+      00060F C3               [12] 1564 	clr	c
+      000610 74 C7            [12] 1565 	mov	a,#(0x47 ^ 0x80)
+      000612 8F F0            [24] 1566 	mov	b,r7
+      000614 63 F0 80         [24] 1567 	xrl	b,#0x80
+      000617 95 F0            [12] 1568 	subb	a,b
+      000619 50 02            [24] 1569 	jnc	00108$
+                                   1570 ;	assignment4.c:499: count = 0x40;
+      00061B 7F 40            [12] 1571 	mov	r7,#0x40
+      00061D                       1572 00108$:
+                                   1573 ;	assignment4.c:501: if (count == 0x42) {
+      00061D BF 42 02         [24] 1574 	cjne	r7,#0x42,00110$
+                                   1575 ;	assignment4.c:502: count = 0x43;
+      000620 7F 43            [12] 1576 	mov	r7,#0x43
+      000622                       1577 00110$:
+                                   1578 ;	assignment4.c:504: if (count == 0x45) {
+      000622 BF 45 02         [24] 1579 	cjne	r7,#0x45,00112$
+                                   1580 ;	assignment4.c:505: count = 0x46;
+      000625 7F 46            [12] 1581 	mov	r7,#0x46
+      000627                       1582 00112$:
+                                   1583 ;	assignment4.c:507: setDdRamAddress(count);
+      000627 8F 82            [24] 1584 	mov	dpl,r7
+      000629 C0 0F            [24] 1585 	push	ar7
+      00062B 75 D0 00         [24] 1586 	mov	psw,#0x00
+      00062E 12r02r10         [24] 1587 	lcall	_setDdRamAddress
+      000631 75 D0 08         [24] 1588 	mov	psw,#0x08
+      000634 D0 0F            [24] 1589 	pop	ar7
+      000636 80 93            [24] 1590 	sjmp	00171$
+      000638                       1591 00166$:
+                                   1592 ;	assignment4.c:511: switch (count) {
+      000638 BF 40 02         [24] 1593 	cjne	r7,#0x40,00302$
+      00063B 80 21            [24] 1594 	sjmp	00113$
+      00063D                       1595 00302$:
+      00063D BF 41 03         [24] 1596 	cjne	r7,#0x41,00303$
+      000640 02r07r2D         [24] 1597 	ljmp	00119$
+      000643                       1598 00303$:
+      000643 BF 43 03         [24] 1599 	cjne	r7,#0x43,00304$
+      000646 02r07rB2         [24] 1600 	ljmp	00127$
+      000649                       1601 00304$:
+      000649 BF 44 03         [24] 1602 	cjne	r7,#0x44,00305$
+      00064C 02r08r41         [24] 1603 	ljmp	00136$
+      00064F                       1604 00305$:
+      00064F BF 46 03         [24] 1605 	cjne	r7,#0x46,00306$
+      000652 02r09r06         [24] 1606 	ljmp	00162$
+      000655                       1607 00306$:
+      000655 BF 47 03         [24] 1608 	cjne	r7,#0x47,00307$
+      000658 02r09r43         [24] 1609 	ljmp	00163$
+      00065B                       1610 00307$:
+      00065B 02r05rCB         [24] 1611 	ljmp	00171$
+                                   1612 ;	assignment4.c:513: case 0x40:
+      00065E                       1613 00113$:
+                                   1614 ;	assignment4.c:514: if (P1 > '1') {
+      00065E E5 90            [12] 1615 	mov	a,_P1
+      000660 24 CE            [12] 1616 	add	a,#0xff - 0x31
+      000662 50 03            [24] 1617 	jnc	00308$
+      000664 02r05rCB         [24] 1618 	ljmp	00171$
+      000667                       1619 00308$:
+                                   1620 ;	assignment4.c:517: if (P1 == '0') {
+      000667 74 30            [12] 1621 	mov	a,#0x30
+      000669 B5 90 5D         [24] 1622 	cjne	a,_P1,00117$
+                                   1623 ;	assignment4.c:518: month = 1;
+      00066C 75 7D 01         [24] 1624 	mov	_month,#0x01
+                                   1625 ;	assignment4.c:519: sendChar(P1);
+      00066F 85 90 82         [24] 1626 	mov	dpl,_P1
+      000672 C0 0F            [24] 1627 	push	ar7
+      000674 75 D0 00         [24] 1628 	mov	psw,#0x00
+      000677 12r02r20         [24] 1629 	lcall	_sendChar
+      00067A 75 D0 08         [24] 1630 	mov	psw,#0x08
+      00067D D0 0F            [24] 1631 	pop	ar7
+                                   1632 ;	assignment4.c:520: count++;
+      00067F 0F               [12] 1633 	inc	r7
+                                   1634 ;	assignment4.c:521: sendChar('1');
+      000680 75 82 31         [24] 1635 	mov	dpl,#0x31
+      000683 C0 0F            [24] 1636 	push	ar7
+      000685 75 D0 00         [24] 1637 	mov	psw,#0x00
+      000688 12r02r20         [24] 1638 	lcall	_sendChar
+      00068B 75 D0 08         [24] 1639 	mov	psw,#0x08
+                                   1640 ;	assignment4.c:523: setDdRamAddress(0x43);
+      00068E 75 82 43         [24] 1641 	mov	dpl,#0x43
+      000691 75 D0 00         [24] 1642 	mov	psw,#0x00
+      000694 12r02r10         [24] 1643 	lcall	_setDdRamAddress
+      000697 75 D0 08         [24] 1644 	mov	psw,#0x08
+                                   1645 ;	assignment4.c:524: sendChar('0');
+      00069A 75 82 30         [24] 1646 	mov	dpl,#0x30
+      00069D 75 D0 00         [24] 1647 	mov	psw,#0x00
+      0006A0 12r02r20         [24] 1648 	lcall	_sendChar
+      0006A3 75 D0 08         [24] 1649 	mov	psw,#0x08
+                                   1650 ;	assignment4.c:525: sendChar('1');
+      0006A6 75 82 31         [24] 1651 	mov	dpl,#0x31
+      0006A9 75 D0 00         [24] 1652 	mov	psw,#0x00
+      0006AC 12r02r20         [24] 1653 	lcall	_sendChar
+      0006AF 75 D0 08         [24] 1654 	mov	psw,#0x08
+      0006B2 D0 0F            [24] 1655 	pop	ar7
+                                   1656 ;	assignment4.c:526: day = 1;
+      0006B4 75 7E 01         [24] 1657 	mov	_day,#0x01
+                                   1658 ;	assignment4.c:528: setDdRamAddress(count);
+      0006B7 8F 82            [24] 1659 	mov	dpl,r7
+      0006B9 C0 0F            [24] 1660 	push	ar7
+      0006BB 75 D0 00         [24] 1661 	mov	psw,#0x00
+      0006BE 12r02r10         [24] 1662 	lcall	_setDdRamAddress
+      0006C1 75 D0 08         [24] 1663 	mov	psw,#0x08
+      0006C4 D0 0F            [24] 1664 	pop	ar7
+                                   1665 ;	assignment4.c:529: break;				
+      0006C6 02r05rCB         [24] 1666 	ljmp	00171$
+      0006C9                       1667 00117$:
+                                   1668 ;	assignment4.c:532: month = (P1 - '0') * 10;
+      0006C9 E5 90            [12] 1669 	mov	a,_P1
+      0006CB 24 D0            [12] 1670 	add	a,#0xD0
+      0006CD 75 F0 0A         [24] 1671 	mov	b,#0x0A
+      0006D0 A4               [48] 1672 	mul	ab
+      0006D1 F5 7D            [12] 1673 	mov	_month,a
+                                   1674 ;	assignment4.c:533: sendChar(P1);
+      0006D3 85 90 82         [24] 1675 	mov	dpl,_P1
+      0006D6 C0 0F            [24] 1676 	push	ar7
+      0006D8 75 D0 00         [24] 1677 	mov	psw,#0x00
+      0006DB 12r02r20         [24] 1678 	lcall	_sendChar
+      0006DE 75 D0 08         [24] 1679 	mov	psw,#0x08
+      0006E1 D0 0F            [24] 1680 	pop	ar7
+                                   1681 ;	assignment4.c:534: count++;
+      0006E3 0F               [12] 1682 	inc	r7
+                                   1683 ;	assignment4.c:535: sendChar('0');
+      0006E4 75 82 30         [24] 1684 	mov	dpl,#0x30
+      0006E7 C0 0F            [24] 1685 	push	ar7
+      0006E9 75 D0 00         [24] 1686 	mov	psw,#0x00
+      0006EC 12r02r20         [24] 1687 	lcall	_sendChar
+      0006EF 75 D0 08         [24] 1688 	mov	psw,#0x08
+                                   1689 ;	assignment4.c:537: setDdRamAddress(0x43);
+      0006F2 75 82 43         [24] 1690 	mov	dpl,#0x43
+      0006F5 75 D0 00         [24] 1691 	mov	psw,#0x00
+      0006F8 12r02r10         [24] 1692 	lcall	_setDdRamAddress
+      0006FB 75 D0 08         [24] 1693 	mov	psw,#0x08
+                                   1694 ;	assignment4.c:538: sendChar('0');
+      0006FE 75 82 30         [24] 1695 	mov	dpl,#0x30
+      000701 75 D0 00         [24] 1696 	mov	psw,#0x00
+      000704 12r02r20         [24] 1697 	lcall	_sendChar
+      000707 75 D0 08         [24] 1698 	mov	psw,#0x08
+                                   1699 ;	assignment4.c:539: sendChar('1');
+      00070A 75 82 31         [24] 1700 	mov	dpl,#0x31
+      00070D 75 D0 00         [24] 1701 	mov	psw,#0x00
+      000710 12r02r20         [24] 1702 	lcall	_sendChar
+      000713 75 D0 08         [24] 1703 	mov	psw,#0x08
+      000716 D0 0F            [24] 1704 	pop	ar7
+                                   1705 ;	assignment4.c:540: day = 1;
+      000718 75 7E 01         [24] 1706 	mov	_day,#0x01
+                                   1707 ;	assignment4.c:542: setDdRamAddress(count);
+      00071B 8F 82            [24] 1708 	mov	dpl,r7
+      00071D C0 0F            [24] 1709 	push	ar7
+      00071F 75 D0 00         [24] 1710 	mov	psw,#0x00
+      000722 12r02r10         [24] 1711 	lcall	_setDdRamAddress
+      000725 75 D0 08         [24] 1712 	mov	psw,#0x08
+      000728 D0 0F            [24] 1713 	pop	ar7
+                                   1714 ;	assignment4.c:543: break;
+      00072A 02r05rCB         [24] 1715 	ljmp	00171$
+                                   1716 ;	assignment4.c:546: case 0x41:
+      00072D                       1717 00119$:
+                                   1718 ;	assignment4.c:547: if (month >= 10 && P1 > '2') {
+      00072D 74 F6            [12] 1719 	mov	a,#0x100 - 0x0A
+      00072F 25 7D            [12] 1720 	add	a,_month
+      000731 50 09            [24] 1721 	jnc	00121$
+      000733 E5 90            [12] 1722 	mov	a,_P1
+      000735 24 CD            [12] 1723 	add	a,#0xff - 0x32
+      000737 50 03            [24] 1724 	jnc	00312$
+      000739 02r05rCB         [24] 1725 	ljmp	00171$
+      00073C                       1726 00312$:
+                                   1727 ;	assignment4.c:548: break;
+      00073C                       1728 00121$:
+                                   1729 ;	assignment4.c:550: if (P1 == '0' && month < 10) {
+      00073C 74 30            [12] 1730 	mov	a,#0x30
+      00073E B5 90 09         [24] 1731 	cjne	a,_P1,00124$
+      000741 74 F6            [12] 1732 	mov	a,#0x100 - 0x0A
+      000743 25 7D            [12] 1733 	add	a,_month
+      000745 40 03            [24] 1734 	jc	00315$
+      000747 02r05rCB         [24] 1735 	ljmp	00171$
+      00074A                       1736 00315$:
+                                   1737 ;	assignment4.c:551: break;
+      00074A                       1738 00124$:
+                                   1739 ;	assignment4.c:554: month /= 10;
+      00074A 75 F0 0A         [24] 1740 	mov	b,#0x0A
+      00074D E5 7D            [12] 1741 	mov	a,_month
+      00074F 84               [48] 1742 	div	ab
+      000750 F5 7D            [12] 1743 	mov	_month,a
+                                   1744 ;	assignment4.c:555: month *= 10;
+      000752 E5 7D            [12] 1745 	mov	a,_month
+      000754 75 F0 0A         [24] 1746 	mov	b,#0x0A
+      000757 A4               [48] 1747 	mul	ab
+      000758 F5 7D            [12] 1748 	mov	_month,a
+                                   1749 ;	assignment4.c:556: month += (P1 - '0');
+      00075A E5 90            [12] 1750 	mov	a,_P1
+      00075C 24 D0            [12] 1751 	add	a,#0xD0
+      00075E AD 7D            [24] 1752 	mov	r5,_month
+      000760 2D               [12] 1753 	add	a,r5
+      000761 F5 7D            [12] 1754 	mov	_month,a
+                                   1755 ;	assignment4.c:557: sendChar(P1);
+      000763 85 90 82         [24] 1756 	mov	dpl,_P1
+      000766 C0 0F            [24] 1757 	push	ar7
+      000768 75 D0 00         [24] 1758 	mov	psw,#0x00
+      00076B 12r02r20         [24] 1759 	lcall	_sendChar
+      00076E 75 D0 08         [24] 1760 	mov	psw,#0x08
+      000771 D0 0F            [24] 1761 	pop	ar7
+                                   1762 ;	assignment4.c:558: count += 2;
+      000773 0F               [12] 1763 	inc	r7
+      000774 0F               [12] 1764 	inc	r7
+                                   1765 ;	assignment4.c:560: setDdRamAddress(0x43);
+      000775 75 82 43         [24] 1766 	mov	dpl,#0x43
+      000778 C0 0F            [24] 1767 	push	ar7
+      00077A 75 D0 00         [24] 1768 	mov	psw,#0x00
+      00077D 12r02r10         [24] 1769 	lcall	_setDdRamAddress
+      000780 75 D0 08         [24] 1770 	mov	psw,#0x08
+                                   1771 ;	assignment4.c:561: sendChar('0');
+      000783 75 82 30         [24] 1772 	mov	dpl,#0x30
+      000786 75 D0 00         [24] 1773 	mov	psw,#0x00
+      000789 12r02r20         [24] 1774 	lcall	_sendChar
+      00078C 75 D0 08         [24] 1775 	mov	psw,#0x08
+                                   1776 ;	assignment4.c:562: sendChar('1');
+      00078F 75 82 31         [24] 1777 	mov	dpl,#0x31
+      000792 75 D0 00         [24] 1778 	mov	psw,#0x00
+      000795 12r02r20         [24] 1779 	lcall	_sendChar
+      000798 75 D0 08         [24] 1780 	mov	psw,#0x08
+      00079B D0 0F            [24] 1781 	pop	ar7
+                                   1782 ;	assignment4.c:563: day = 1;
+      00079D 75 7E 01         [24] 1783 	mov	_day,#0x01
+                                   1784 ;	assignment4.c:565: setDdRamAddress(count);
+      0007A0 8F 82            [24] 1785 	mov	dpl,r7
+      0007A2 C0 0F            [24] 1786 	push	ar7
+      0007A4 75 D0 00         [24] 1787 	mov	psw,#0x00
+      0007A7 12r02r10         [24] 1788 	lcall	_setDdRamAddress
+      0007AA 75 D0 08         [24] 1789 	mov	psw,#0x08
+      0007AD D0 0F            [24] 1790 	pop	ar7
+                                   1791 ;	assignment4.c:566: break;
+      0007AF 02r05rCB         [24] 1792 	ljmp	00171$
+                                   1793 ;	assignment4.c:569: case 0x43:
+      0007B2                       1794 00127$:
+                                   1795 ;	assignment4.c:570: if (P1 > '3') {
+      0007B2 E5 90            [12] 1796 	mov	a,_P1
+      0007B4 24 CC            [12] 1797 	add	a,#0xff - 0x33
+      0007B6 50 03            [24] 1798 	jnc	00316$
+      0007B8 02r05rCB         [24] 1799 	ljmp	00171$
+      0007BB                       1800 00316$:
+                                   1801 ;	assignment4.c:573: if (P1 > '2' && month == 2) {
+      0007BB E5 90            [12] 1802 	mov	a,_P1
+      0007BD 24 CD            [12] 1803 	add	a,#0xff - 0x32
+      0007BF 50 08            [24] 1804 	jnc	00131$
+      0007C1 74 02            [12] 1805 	mov	a,#0x02
+      0007C3 B5 7D 03         [24] 1806 	cjne	a,_month,00318$
+      0007C6 02r05rCB         [24] 1807 	ljmp	00171$
+      0007C9                       1808 00318$:
+                                   1809 ;	assignment4.c:574: break;
+      0007C9                       1810 00131$:
+                                   1811 ;	assignment4.c:576: if (P1 == '0') {
+      0007C9 74 30            [12] 1812 	mov	a,#0x30
+      0007CB B5 90 36         [24] 1813 	cjne	a,_P1,00134$
+                                   1814 ;	assignment4.c:577: day = 1;
+      0007CE 75 7E 01         [24] 1815 	mov	_day,#0x01
+                                   1816 ;	assignment4.c:578: sendChar(P1);
+      0007D1 85 90 82         [24] 1817 	mov	dpl,_P1
+      0007D4 C0 0F            [24] 1818 	push	ar7
+      0007D6 75 D0 00         [24] 1819 	mov	psw,#0x00
+      0007D9 12r02r20         [24] 1820 	lcall	_sendChar
+      0007DC 75 D0 08         [24] 1821 	mov	psw,#0x08
+      0007DF D0 0F            [24] 1822 	pop	ar7
+                                   1823 ;	assignment4.c:579: count++;
+      0007E1 0F               [12] 1824 	inc	r7
+                                   1825 ;	assignment4.c:580: sendChar('1');
+      0007E2 75 82 31         [24] 1826 	mov	dpl,#0x31
+      0007E5 C0 0F            [24] 1827 	push	ar7
+      0007E7 75 D0 00         [24] 1828 	mov	psw,#0x00
+      0007EA 12r02r20         [24] 1829 	lcall	_sendChar
+      0007ED 75 D0 08         [24] 1830 	mov	psw,#0x08
+      0007F0 D0 0F            [24] 1831 	pop	ar7
+                                   1832 ;	assignment4.c:581: setDdRamAddress(count);
+      0007F2 8F 82            [24] 1833 	mov	dpl,r7
+      0007F4 C0 0F            [24] 1834 	push	ar7
+      0007F6 75 D0 00         [24] 1835 	mov	psw,#0x00
+      0007F9 12r02r10         [24] 1836 	lcall	_setDdRamAddress
+      0007FC 75 D0 08         [24] 1837 	mov	psw,#0x08
+      0007FF D0 0F            [24] 1838 	pop	ar7
+                                   1839 ;	assignment4.c:582: break;
+      000801 02r05rCB         [24] 1840 	ljmp	00171$
+      000804                       1841 00134$:
+                                   1842 ;	assignment4.c:585: day = (P1 - '0') * 10;
+      000804 E5 90            [12] 1843 	mov	a,_P1
+      000806 24 D0            [12] 1844 	add	a,#0xD0
+      000808 75 F0 0A         [24] 1845 	mov	b,#0x0A
+      00080B A4               [48] 1846 	mul	ab
+      00080C F5 7E            [12] 1847 	mov	_day,a
+                                   1848 ;	assignment4.c:586: sendChar(P1);
+      00080E 85 90 82         [24] 1849 	mov	dpl,_P1
+      000811 C0 0F            [24] 1850 	push	ar7
+      000813 75 D0 00         [24] 1851 	mov	psw,#0x00
+      000816 12r02r20         [24] 1852 	lcall	_sendChar
+      000819 75 D0 08         [24] 1853 	mov	psw,#0x08
+      00081C D0 0F            [24] 1854 	pop	ar7
+                                   1855 ;	assignment4.c:587: count++;
+      00081E 0F               [12] 1856 	inc	r7
+                                   1857 ;	assignment4.c:588: sendChar('0');
+      00081F 75 82 30         [24] 1858 	mov	dpl,#0x30
+      000822 C0 0F            [24] 1859 	push	ar7
+      000824 75 D0 00         [24] 1860 	mov	psw,#0x00
+      000827 12r02r20         [24] 1861 	lcall	_sendChar
+      00082A 75 D0 08         [24] 1862 	mov	psw,#0x08
+      00082D D0 0F            [24] 1863 	pop	ar7
+                                   1864 ;	assignment4.c:589: setDdRamAddress(count);
+      00082F 8F 82            [24] 1865 	mov	dpl,r7
+      000831 C0 0F            [24] 1866 	push	ar7
+      000833 75 D0 00         [24] 1867 	mov	psw,#0x00
+      000836 12r02r10         [24] 1868 	lcall	_setDdRamAddress
+      000839 75 D0 08         [24] 1869 	mov	psw,#0x08
+      00083C D0 0F            [24] 1870 	pop	ar7
+                                   1871 ;	assignment4.c:590: break;
+      00083E 02r05rCB         [24] 1872 	ljmp	00171$
+                                   1873 ;	assignment4.c:593: case 0x44:
+      000841                       1874 00136$:
+                                   1875 ;	assignment4.c:594: if (day >= 30 && (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && P1 > '1') {
+      000841 74 E2            [12] 1876 	mov	a,#0x100 - 0x1E
+      000843 25 7E            [12] 1877 	add	a,_day
+      000845 50 38            [24] 1878 	jnc	00138$
+      000847 74 01            [12] 1879 	mov	a,#0x01
+      000849 B5 7D 02         [24] 1880 	cjne	a,_month,00322$
+      00084C 80 28            [24] 1881 	sjmp	00146$
+      00084E                       1882 00322$:
+      00084E 74 03            [12] 1883 	mov	a,#0x03
+      000850 B5 7D 02         [24] 1884 	cjne	a,_month,00323$
+      000853 80 21            [24] 1885 	sjmp	00146$
+      000855                       1886 00323$:
+      000855 74 05            [12] 1887 	mov	a,#0x05
+      000857 B5 7D 02         [24] 1888 	cjne	a,_month,00324$
+      00085A 80 1A            [24] 1889 	sjmp	00146$
+      00085C                       1890 00324$:
+      00085C 74 07            [12] 1891 	mov	a,#0x07
+      00085E B5 7D 02         [24] 1892 	cjne	a,_month,00325$
+      000861 80 13            [24] 1893 	sjmp	00146$
+      000863                       1894 00325$:
+      000863 74 08            [12] 1895 	mov	a,#0x08
+      000865 B5 7D 02         [24] 1896 	cjne	a,_month,00326$
+      000868 80 0C            [24] 1897 	sjmp	00146$
+      00086A                       1898 00326$:
+      00086A 74 0A            [12] 1899 	mov	a,#0x0A
+      00086C B5 7D 02         [24] 1900 	cjne	a,_month,00327$
+      00086F 80 05            [24] 1901 	sjmp	00146$
+      000871                       1902 00327$:
+      000871 74 0C            [12] 1903 	mov	a,#0x0C
+      000873 B5 7D 09         [24] 1904 	cjne	a,_month,00138$
+      000876                       1905 00146$:
+      000876 E5 90            [12] 1906 	mov	a,_P1
+      000878 24 CE            [12] 1907 	add	a,#0xff - 0x31
+      00087A 50 03            [24] 1908 	jnc	00330$
+      00087C 02r05rCB         [24] 1909 	ljmp	00171$
+      00087F                       1910 00330$:
+                                   1911 ;	assignment4.c:595: break;
+      00087F                       1912 00138$:
+                                   1913 ;	assignment4.c:597: if (day == 30 && (month == 4 || month == 6 || month == 9 || month == 11) && P1 > '0') {
+      00087F 74 1E            [12] 1914 	mov	a,#0x1E
+      000881 B5 7E 23         [24] 1915 	cjne	a,_day,00148$
+      000884 74 04            [12] 1916 	mov	a,#0x04
+      000886 B5 7D 02         [24] 1917 	cjne	a,_month,00333$
+      000889 80 13            [24] 1918 	sjmp	00153$
+      00088B                       1919 00333$:
+      00088B 74 06            [12] 1920 	mov	a,#0x06
+      00088D B5 7D 02         [24] 1921 	cjne	a,_month,00334$
+      000890 80 0C            [24] 1922 	sjmp	00153$
+      000892                       1923 00334$:
+      000892 74 09            [12] 1924 	mov	a,#0x09
+      000894 B5 7D 02         [24] 1925 	cjne	a,_month,00335$
+      000897 80 05            [24] 1926 	sjmp	00153$
+      000899                       1927 00335$:
+      000899 74 0B            [12] 1928 	mov	a,#0x0B
+      00089B B5 7D 09         [24] 1929 	cjne	a,_month,00148$
+      00089E                       1930 00153$:
+      00089E E5 90            [12] 1931 	mov	a,_P1
+      0008A0 24 CF            [12] 1932 	add	a,#0xff - 0x30
+      0008A2 50 03            [24] 1933 	jnc	00338$
+      0008A4 02r05rCB         [24] 1934 	ljmp	00171$
+      0008A7                       1935 00338$:
+                                   1936 ;	assignment4.c:598: break;
+      0008A7                       1937 00148$:
+                                   1938 ;	assignment4.c:600: if (day >= 20 && month == 2 && P1 > '8') {
+      0008A7 74 EC            [12] 1939 	mov	a,#0x100 - 0x14
+      0008A9 25 7E            [12] 1940 	add	a,_day
+      0008AB 50 0E            [24] 1941 	jnc	00155$
+      0008AD 74 02            [12] 1942 	mov	a,#0x02
+      0008AF B5 7D 09         [24] 1943 	cjne	a,_month,00155$
+      0008B2 E5 90            [12] 1944 	mov	a,_P1
+      0008B4 24 C7            [12] 1945 	add	a,#0xff - 0x38
+      0008B6 50 03            [24] 1946 	jnc	00342$
+      0008B8 02r05rCB         [24] 1947 	ljmp	00171$
+      0008BB                       1948 00342$:
+                                   1949 ;	assignment4.c:601: break;
+      0008BB                       1950 00155$:
+                                   1951 ;	assignment4.c:603: if (P1 == '0' && day < 10) {
+      0008BB 74 30            [12] 1952 	mov	a,#0x30
+      0008BD B5 90 09         [24] 1953 	cjne	a,_P1,00159$
+      0008C0 74 F6            [12] 1954 	mov	a,#0x100 - 0x0A
+      0008C2 25 7E            [12] 1955 	add	a,_day
+      0008C4 40 03            [24] 1956 	jc	00345$
+      0008C6 02r05rCB         [24] 1957 	ljmp	00171$
+      0008C9                       1958 00345$:
+                                   1959 ;	assignment4.c:604: break;
+      0008C9                       1960 00159$:
+                                   1961 ;	assignment4.c:607: day /= 10;
+      0008C9 75 F0 0A         [24] 1962 	mov	b,#0x0A
+      0008CC E5 7E            [12] 1963 	mov	a,_day
+      0008CE 84               [48] 1964 	div	ab
+      0008CF F5 7E            [12] 1965 	mov	_day,a
+                                   1966 ;	assignment4.c:608: day *= 10;
+      0008D1 E5 7E            [12] 1967 	mov	a,_day
+      0008D3 75 F0 0A         [24] 1968 	mov	b,#0x0A
+      0008D6 A4               [48] 1969 	mul	ab
+      0008D7 F5 7E            [12] 1970 	mov	_day,a
+                                   1971 ;	assignment4.c:609: day += (P1 - '0');
+      0008D9 E5 90            [12] 1972 	mov	a,_P1
+      0008DB 24 D0            [12] 1973 	add	a,#0xD0
+      0008DD AD 7E            [24] 1974 	mov	r5,_day
+      0008DF 2D               [12] 1975 	add	a,r5
+      0008E0 F5 7E            [12] 1976 	mov	_day,a
+                                   1977 ;	assignment4.c:610: sendChar(P1);
+      0008E2 85 90 82         [24] 1978 	mov	dpl,_P1
+      0008E5 C0 0F            [24] 1979 	push	ar7
+      0008E7 75 D0 00         [24] 1980 	mov	psw,#0x00
+      0008EA 12r02r20         [24] 1981 	lcall	_sendChar
+      0008ED 75 D0 08         [24] 1982 	mov	psw,#0x08
+      0008F0 D0 0F            [24] 1983 	pop	ar7
+                                   1984 ;	assignment4.c:611: count += 2;
+      0008F2 0F               [12] 1985 	inc	r7
+      0008F3 0F               [12] 1986 	inc	r7
+                                   1987 ;	assignment4.c:612: setDdRamAddress(count);
+      0008F4 8F 82            [24] 1988 	mov	dpl,r7
+      0008F6 C0 0F            [24] 1989 	push	ar7
+      0008F8 75 D0 00         [24] 1990 	mov	psw,#0x00
+      0008FB 12r02r10         [24] 1991 	lcall	_setDdRamAddress
+      0008FE 75 D0 08         [24] 1992 	mov	psw,#0x08
+      000901 D0 0F            [24] 1993 	pop	ar7
+                                   1994 ;	assignment4.c:613: break;
+      000903 02r05rCB         [24] 1995 	ljmp	00171$
+                                   1996 ;	assignment4.c:617: case 0x46:
+      000906                       1997 00162$:
+                                   1998 ;	assignment4.c:618: year = (P1 - '0') * 10;
+      000906 E5 90            [12] 1999 	mov	a,_P1
+      000908 24 D0            [12] 2000 	add	a,#0xD0
+      00090A 75 F0 0A         [24] 2001 	mov	b,#0x0A
+      00090D A4               [48] 2002 	mul	ab
+      00090E F5 7F            [12] 2003 	mov	_year,a
+                                   2004 ;	assignment4.c:619: sendChar(P1);
+      000910 85 90 82         [24] 2005 	mov	dpl,_P1
+      000913 C0 0F            [24] 2006 	push	ar7
+      000915 75 D0 00         [24] 2007 	mov	psw,#0x00
+      000918 12r02r20         [24] 2008 	lcall	_sendChar
+      00091B 75 D0 08         [24] 2009 	mov	psw,#0x08
+      00091E D0 0F            [24] 2010 	pop	ar7
+                                   2011 ;	assignment4.c:620: count++;
+      000920 0F               [12] 2012 	inc	r7
+                                   2013 ;	assignment4.c:621: sendChar('0');
+      000921 75 82 30         [24] 2014 	mov	dpl,#0x30
+      000924 C0 0F            [24] 2015 	push	ar7
+      000926 75 D0 00         [24] 2016 	mov	psw,#0x00
+      000929 12r02r20         [24] 2017 	lcall	_sendChar
+      00092C 75 D0 08         [24] 2018 	mov	psw,#0x08
+      00092F D0 0F            [24] 2019 	pop	ar7
+                                   2020 ;	assignment4.c:622: setDdRamAddress(count);
+      000931 8F 82            [24] 2021 	mov	dpl,r7
+      000933 C0 0F            [24] 2022 	push	ar7
+      000935 75 D0 00         [24] 2023 	mov	psw,#0x00
+      000938 12r02r10         [24] 2024 	lcall	_setDdRamAddress
+      00093B 75 D0 08         [24] 2025 	mov	psw,#0x08
+      00093E D0 0F            [24] 2026 	pop	ar7
+                                   2027 ;	assignment4.c:623: break;
+      000940 02r05rCB         [24] 2028 	ljmp	00171$
+                                   2029 ;	assignment4.c:625: case 0x47:
+      000943                       2030 00163$:
+                                   2031 ;	assignment4.c:626: year /= 10;
+      000943 75 F0 0A         [24] 2032 	mov	b,#0x0A
+      000946 E5 7F            [12] 2033 	mov	a,_year
+      000948 84               [48] 2034 	div	ab
+      000949 F5 7F            [12] 2035 	mov	_year,a
+                                   2036 ;	assignment4.c:627: year *= 10;
+      00094B E5 7F            [12] 2037 	mov	a,_year
+      00094D 75 F0 0A         [24] 2038 	mov	b,#0x0A
+      000950 A4               [48] 2039 	mul	ab
+      000951 F5 7F            [12] 2040 	mov	_year,a
+                                   2041 ;	assignment4.c:628: year += (P1 - '0');
+      000953 E5 90            [12] 2042 	mov	a,_P1
+      000955 24 D0            [12] 2043 	add	a,#0xD0
+      000957 AD 7F            [24] 2044 	mov	r5,_year
+      000959 2D               [12] 2045 	add	a,r5
+      00095A F5 7F            [12] 2046 	mov	_year,a
+                                   2047 ;	assignment4.c:629: sendChar(P1);
+      00095C 85 90 82         [24] 2048 	mov	dpl,_P1
+      00095F 75 D0 00         [24] 2049 	mov	psw,#0x00
+      000962 12r02r20         [24] 2050 	lcall	_sendChar
+      000965 75 D0 08         [24] 2051 	mov	psw,#0x08
+                                   2052 ;	assignment4.c:630: count = 0x40;
+      000968 7F 40            [12] 2053 	mov	r7,#0x40
+                                   2054 ;	assignment4.c:631: setDdRamAddress(count);
+      00096A 75 82 40         [24] 2055 	mov	dpl,#0x40
+      00096D C0 0F            [24] 2056 	push	ar7
+      00096F 75 D0 00         [24] 2057 	mov	psw,#0x00
+      000972 12r02r10         [24] 2058 	lcall	_setDdRamAddress
+      000975 75 D0 08         [24] 2059 	mov	psw,#0x08
+      000978 D0 0F            [24] 2060 	pop	ar7
+                                   2061 ;	assignment4.c:633: }
+      00097A 02r05rCB         [24] 2062 	ljmp	00171$
+      00097D                       2063 00174$:
+      00097D D0 D0            [24] 2064 	pop	psw
+      00097F D0 00            [24] 2065 	pop	(0+0)
+      000981 D0 01            [24] 2066 	pop	(0+1)
+      000983 D0 02            [24] 2067 	pop	(0+2)
+      000985 D0 03            [24] 2068 	pop	(0+3)
+      000987 D0 04            [24] 2069 	pop	(0+4)
+      000989 D0 05            [24] 2070 	pop	(0+5)
+      00098B D0 06            [24] 2071 	pop	(0+6)
+      00098D D0 07            [24] 2072 	pop	(0+7)
+      00098F D0 83            [24] 2073 	pop	dph
+      000991 D0 82            [24] 2074 	pop	dpl
+      000993 D0 F0            [24] 2075 	pop	b
+      000995 D0 E0            [24] 2076 	pop	acc
+      000997 D0*00            [24] 2077 	pop	bits
+      000999 32               [24] 2078 	reti
+                                   2079 	.area CSEG    (CODE)
+                                   2080 	.area CONST   (CODE)
+      000000                       2081 ___str_0:
+      000000 30 30 3A 30 30 3A 30  2082 	.ascii "00:00:00"
+             30
+      000008 00                    2083 	.db 0x00
+      000009                       2084 ___str_1:
+      000009 30 31 2D 30 31 2D 30  2085 	.ascii "01-01-00"
+             30
+      000011 00                    2086 	.db 0x00
+                                   2087 	.area XINIT   (CODE)
+                                   2088 	.area CABS    (ABS,CODE)

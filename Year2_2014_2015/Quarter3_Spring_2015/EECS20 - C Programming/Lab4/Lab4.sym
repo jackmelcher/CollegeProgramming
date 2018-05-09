@@ -1,0 +1,13 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	ASCII                   3073
+//	EXIT                    301C
+//	LOOP                    3016
+//	MESG1                   3021
+//	MESG2                   3052
+//	MESG3                   306E
+//	NEGASCII                3074
+//	NEWLINE                 3075
+//	NEXT                    300A
+//	RESET                   3003
+//	UPPER                   3072

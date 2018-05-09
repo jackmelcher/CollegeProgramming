@@ -1,0 +1,30 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Jack/Desktop/EECS 31L/assignment3_67574625/alu_32bit_testbench_isim_beh.exe -prj C:/Users/Jack/Desktop/EECS 31L/assignment3_67574625/alu_32bit_testbench_beh.prj work.alu_32bit_testbench 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 31L/assignment3_67574625/assignment3_67574625_mux2to1.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 31L/assignment3_67574625/assignment3_67574625_logic_unit.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 31L/assignment3_67574625/assignment3_67574625_full_adder.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 31L/assignment3_67574625/assignment3_67574625_arithmetic_unit.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 31L/assignment3_67574625/assignment3_67574625_alu_1bit.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 31L/assignment3_67574625/assignment3_67574625_alu_32bit.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 31L/assignment3_67574625/assignment3_67574625_alu_32bit_testbench.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture behavioral of entity logic_unit [logic_unit_default]
+Compiling architecture behavioral of entity arithmetic_unit [arithmetic_unit_default]
+Compiling architecture behavioral of entity full_adder [full_adder_default]
+Compiling architecture behavioral of entity mux2to1 [mux2to1_default]
+Compiling architecture behavioral of entity alu_1bit [alu_1bit_default]
+Compiling architecture behavioral of entity alu_32bit [alu_32bit_default]
+Compiling architecture behavior of entity alu_32bit_testbench
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 16 VHDL Units
+Built simulation executable C:/Users/Jack/Desktop/EECS 31L/assignment3_67574625/alu_32bit_testbench_isim_beh.exe
+Fuse Memory Usage: 36112 KB
+Fuse CPU Usage: 498 ms

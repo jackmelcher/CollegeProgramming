@@ -1,0 +1,36 @@
+Jack Melcher
+EECS 22
+10/12/2014
+Homework 1 Text File: Making the Blackjack game
+
+I Started by Initializing the variables for the game.
+These include the integers for player's hand, the dealer's hand, and the car being drawn.
+Included two addition integers that would end the player's turn and end the dealer's turn.
+
+Added a char called playerSelection that will be used to varify whether the user wanted to draw another card or not.
+
+Initialized the random number generator using time.h and stdlib.h libraries.
+
+When a card was drawn by the player or dealer, it would be the numbers 1 to 13.
+Setup several if statements so that numbers 11, 12, and 13 were the Jack, Queen, and King.
+
+The screen will print the values of the cards drawn, and the value of the player's hand and dealer's hand.
+
+Setup a while loop for when it was the players turn.
+The loop would end once the playerTurn integer was greater than one.
+
+I used a switch statement with three cases for the player.
+If player selects 1, they draw another card.
+If player selects 0, their turn is over.
+The default case is used for any other user inputs.
+
+The player can continue to select cards as long as he is less than 21, or choose to end their turn.
+If player has a hand equal to 21, Their turn ends and the dealer's turn begins.
+When the player's hand is greater than 21, the game automatically ends.
+
+When the player's turn is over, the dealer's turn starts.
+The dealer is setup in a while loop to automatically draw until it either wins or loses.
+Dealer wins if his hand is greater than or equal to that of the player.
+Player wins if his hand is greater than dealer's.
+
+After the dealer's turn is over, it displays who won the game and the game is over.

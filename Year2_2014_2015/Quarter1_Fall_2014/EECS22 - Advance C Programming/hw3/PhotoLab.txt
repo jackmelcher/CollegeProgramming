@@ -1,0 +1,32 @@
+EECS 22 Assignment 3: PhotoLab v2
+Jack Melcher 67574625
+
+Constructing PhotoLab v2 was more challenging than expected.
+
+Dealing with multiple source files can be confusing at first. Eventually I realized how each file worked.
+I created new header files and placed the declarations of functions into their respective .h files
+The global constants went into the Constants.h file
+And then the functions and what they did went into their respective.c files.
+
+Compiling the file using a Makefile saved a lot of time and is a very useful tool.
+I provided the necessary targets and dependecies so each file will compile properly.
+
+Adding in the new functions in the Advanced.c file was a bit challenging.
+
+Posterizing required manipulation of the bits using bitwise operations &,|,<<,>> It took some time to understand how to get it to work.
+The specifics are in the comments of my code and shown by the code itself.
+
+Fill Lights function was pretty straightforward. just add a bunch of lights within the boundary of the image.
+Again, its explained in the comments of my code.
+
+Overlay was a bit tricky. It required me to temporarily store the RingMall image, load up Peter or Spider, store that image,
+make the image pure white, replace the new image with offset, and then restore the old image with the overlay.
+Then i found out that the overlay images were not 100% white and had to adjust my check accordingly.
+
+All in all, I believe all three functions work.
+
+Implementing the DEBUG macro was tricky for me. there wasnt a whole lot of reference to go off of.
+So I created new variables within the DEBUG macro for both PhotoLab.c and FileIO.c
+With these variables, I used them to check whether or not certain statements would print.
+
+And again, the method I used works and I was able to create the appropriate executables.

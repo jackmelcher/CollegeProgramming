@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/BranchAdder.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/ForwardingUnit.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/HazardDetectionUnit.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/HazardWriteMux.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/PCadder.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/PipelineReg1_IF_ID.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/PipelineReg2_ID_EX.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/PipelineReg3_EX_MEM.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/PipelineReg4_MEM_WB.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/a_mux.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/alu.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/b_mux.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/branch_control.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/controller.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/fwd_a.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/fwd_b.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/lab2_pack.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/output_mux.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/pc.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/processor.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/ram.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/ram_read.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/regfile.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(3rd iteration of pipeline with loading data hazard detection)/rom.vhd&quot; into library work</arg>
+</msg>
+
+</messages>
+

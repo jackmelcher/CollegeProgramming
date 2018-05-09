@@ -1,0 +1,24 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	ASCII                   305B
+//	FF                      305E
+//	Input1                  300B
+//	Input2                  3047
+//	Input3                  3058
+//	Loop1                   3014
+//	Loop2                   3018
+//	Loop3                   302C
+//	Loop4                   303B
+//	MENU                    3002
+//	MESG1                   305F
+//	MESG2                   30B0
+//	MESG3                   30D2
+//	MESG4                   30E1
+//	MESG5                   30ED
+//	NEG                     301D
+//	NEG1                    3031
+//	NEGASCII                305C
+//	NEWLINE                 30FD
+//	STORE                   305D
+//	ZERO                    301E
+//	ZERO1                   3032

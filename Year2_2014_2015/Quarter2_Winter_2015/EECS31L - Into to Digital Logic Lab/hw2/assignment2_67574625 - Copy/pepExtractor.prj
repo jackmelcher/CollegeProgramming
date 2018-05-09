@@ -1,0 +1,6 @@
+work	"alu_1bit.vhd"
+work	"arithmetic_unit.vhd"
+work	"cin_value.vhd"
+work	"full_adder.vhd"
+work	"logic_unit.vhd"
+work	"mux2to1.vhd"

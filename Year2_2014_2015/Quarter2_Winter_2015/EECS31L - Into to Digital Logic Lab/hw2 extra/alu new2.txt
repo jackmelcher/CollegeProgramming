@@ -1,0 +1,186 @@
+--------------------------------------------------
+-- Arithmetic unit
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity arithmetic_unit is
+port(	
+	B: 	in std_logic;
+	S:	in std_logic_vector(2 downto 0);
+	O:	out std_logic
+);
+end arithmetic_unit;
+
+
+architecture behavioral of arithmetic_unit is
+begin
+
+    -- use when.. else statement
+    O <=	B when S="000" else
+		(NOT B) when S="001" else
+		'0' when S="010" else
+		(NOT B) when S="011" else
+		'0' when S="100" else
+		'1' when S="101" else
+		B when S="110" else
+		'Z';
+
+end behavioral;
+--------------------------------------------------
+
+--------------------------------------------------
+-- Logic Unit
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity logic_unit is
+port(	
+	A: 	in std_logic;
+	B: 	in std_logic;
+	S:	in std_logic_vector(2 downto 0);
+	O:	out std_logic
+);
+end mux8to1;
+
+
+architecture behavioral of mux8to1 is
+begin
+
+    -- use when.. else statement
+    O <=	(A AND B) when S="000" else
+		(A OR B) when S="001" else
+		(A XOR B) when S="010" else
+		(NOT A) when S="011" else
+		'0' when S="101" else
+		'Z';
+
+end behavioral;
+--------------------------------------------------
+
+--------------------------------------------------
+-- 2 to 1 MUX
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity mux2to1 is
+port(	
+	I1: 	in std_logic;
+	I0: 	in std_logic;
+	S:	in std_logic;
+	O:	out std_logic
+);
+end mux2to1;  
+
+
+architecture behavioral of mux2to1 is
+begin
+
+    -- use when.. else statement
+    O <=	I0 when S='0' else
+		I1 when S='1' else
+		'Z';
+
+end behavioral;
+--------------------------------------------------
+
+--------------------------------------------------
+--Full Adder
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+entity adder is
+port(	A:	in std_logic;
+	B:	in std_logic;
+	cin:	in std_logic;
+	cout:	out std_logic;
+	sum:	out std_logic);
+end adder;
+
+
+
+architecture behavioral of adder is
+ 
+begin
+   
+sum <=	(A XOR B) XOR cin;
+cout <=	(A AND B) OR (cin AND (A XOR B));
+
+end behavioral;
+--------------------------------------------------
+
+--------------------------------------------------
+--Top level circuit
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity assignment2_67574625_alu is
+    Port ( A: 		in STD_LOGIC;
+           B: 		in STD_LOGIC;
+           cin: 	in STD_LOGIC;
+           opsel:	in STD_LOGIC_VECTOR (2 downto 0);
+           mode: 	in STD_LOGIC;
+           output:	out STD_LOGIC;
+           cout: 	out STD_LOGIC);
+end assignment2_67574625_alu;
+
+architecture structure of assignment2_67574625_alu is
+
+--Component Declarations
+
+	COMPONENT mux2to1 IS
+	port(	I1: 	in std_logic;
+		I0: 	in std_logic;
+		S:	in std_logic;
+		O:	out std_logic
+	);
+	END COMPONENT
+
+	COMPONENT logic_unit is
+	port(	A: 	in std_logic;
+		B: 	in std_logic;
+		S:	in std_logic_vector(2 downto 0);
+		O:	out std_logic
+	);
+	END COMPONENT
+	
+	COMPONENT arithmetic_unit is
+	port(	A: 	in std_logic;
+		B: 	in std_logic;
+		S:	in std_logic_vector(2 downto 0);
+		O:	out std_logic
+	);
+	END COMPONENT
+
+	COMPONENT adder IS
+	port(	A:	in std_logic;
+		B:	in std_logic;
+		cin:	in std_logic;
+		cout:	out std_logic;
+		sum:	out std_logic
+	);
+	END COMPONENT
+
+	signal mux_to_cin: std_logic;
+	signal mux_to_b: std_logic;
+	signal LU_to_mode: std_logic;
+	signal AU_to_mode: std_logic;
+
+begin
+	LU:	mux8to1 PORT MAP (A=>A, B=>B, S=>opsel, O=>LU_to_mode);
+	B_AU:	mux8to1 PORT MAP (I7=>'Z', I6=>B, I5=>'1', I4=>'0', I3=>(B XOR cin), I2=>'0', I1=>(NOT B), I0=>B, S=>opsel, O=>mux_to_b);
+	cin_AU:	mux8to1 PORT MAP (I7=>'Z', I6=>'1', I5=>'0', I4=>'1', I3=>'1', I2=>'0', I1=>'1', I0=>'0', S=>opsel, O=>mux_to_cin);
+	FA:	adder PORT MAP (A=>A, B=>mux_to_b, cin=>mux_to_cin, cout=>cout, sum=>AU_to_mode);
+	MODE:	mux2to1 PORT MAP (I1=>LU_to_mode,I0=>AU_to_mode,S=>,O=>output);
+
+end structure;
+--------------------------------------------------

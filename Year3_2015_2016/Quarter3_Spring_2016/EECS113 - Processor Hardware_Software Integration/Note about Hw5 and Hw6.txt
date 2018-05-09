@@ -1,0 +1,3 @@
+Hw5 and Hw6 were partner projects with a Raspberry Pi 3
+
+My partner owned the device and the code for the assignments were misplaced on my end.

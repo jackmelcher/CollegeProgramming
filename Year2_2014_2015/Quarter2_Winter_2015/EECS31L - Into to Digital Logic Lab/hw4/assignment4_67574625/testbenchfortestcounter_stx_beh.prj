@@ -1,0 +1,2 @@
+vhdl isim_temp "testcounter.vhd"
+vhdl isim_temp "testbenchfortestcounter.vhd"

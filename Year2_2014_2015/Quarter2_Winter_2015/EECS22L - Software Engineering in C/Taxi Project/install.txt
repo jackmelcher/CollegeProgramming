@@ -1,0 +1,14 @@
+-----------------------------------------------
+-------DP Studios: DPTaxi Alpha Package -------
+-------Installation	3/1/2015	-------
+-------Written by: Jack Melcher		-------
+-----------------------------------------------
+
+1. Navigate your way to the /doc directory 
+
+2. Read the Taxi_User_Manual.pdf before using the programs in this package.
+
+3. Navigate your way to the /bin directory
+
+4. Appropriately distribute the executable files and run as stated in the Taxi_User_Manual.pdf
+

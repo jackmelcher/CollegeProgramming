@@ -1,0 +1,355 @@
+/**
+ * Course: EECS 114 Fall 2015
+ *
+ * First Name: Jack
+ * Last Name: Melcher
+ * Lab Section: 1A
+ * email address: jmelcher@uci.edu
+ *
+ *
+ * Assignment: Assignment 1
+ * Filename : assn1.txt
+ *
+ * I hereby certify that the contents of this file represent
+ * my own original individual work. Nowhere herein is there 
+ * code from any outside resources such as another individual,
+ * a website, or publishings unless specifically designated as
+ * permissible by the instructor or TA.
+ */
+
+MyList()
+Worst-Case:
+	T(n)= O(1)
+	Assignment to make head null.
+Best-case:
+	T(n)= O(1)
+
+Average-case:
+	T(n)= O(1)
+All cases are equivalent because the there are no variations in execution.
+
+
+MyList(MyList rhs)
+Worst-Case:
+	T(n)= O(n^2)
+	Copies the entirty of another list.
+Best-case:
+	T(n)= O(n)
+	Copied list had only one element
+Average-case:
+	T(n)= T(n/2) = O(n^2)
+	The given list to copy is half the size as in worst case.
+
+
+MyList (char[] charArray, int n)
+Worst-Case:
+	T(n)= O(n^2)
+	Copies the entirety of the charArray.
+Best-case:
+	T(n)= O(n)
+	Only had to copy 1 element
+Average-case:
+	T(n)= T(n/2)= O(n^2)
+	specified length n is half of worst-case.
+
+
+boolean remove(int index)
+Worst-Case:
+	T(n)= O(n)
+	Removing the 2nd to last node in the list.
+Best-case:
+	T(n)= O(1)
+	Removing the first node.
+Average-case:
+	T(n)= T(n/2) = O(n)
+	Removing element in middle of list. about half of worst-case
+
+
+boolean remove(char value)
+Worst-Case:
+	T(n)= O(n^2)
+	The character you are removing is at the end of the list.
+Best-case:
+	T(n)= O(n)
+	The character is at beginning of list.
+Average-case:
+	T(n)= T(n/2) = O(n^2)
+	The character is in the middle of the list.
+
+
+boolean removeAll(char value)
+Worst-Case:
+	T(n)= O(n^3)
+	The entire list consists of the char to be removed.
+Best-case:
+	T(n)= O(n)
+	There is one char at beginning of the list.
+Average-case:
+	T(n)= T(n/2) = O(n^3)
+	The list is made up of half the char to be removed.
+
+
+Node previous(Node curr)
+Worst-Case:
+	T(n)= O(n)
+	Moving to a preivous node.
+Best-case:
+	T(n)= O(1)
+	curr is at 0 index of list. when looking for previous node, return null.
+Average-case:
+	T(n)= O(n)
+	Same as worst-case.
+
+
+Node next(Node curr)
+Worst-Case:
+	T(n)= O(1)
+	Assignment to reference the next node in list
+Best-case:
+	T(n)= O(1)
+
+Average-case:
+	T(n)= O(1)
+All cases are equivalent because the there are no variations in execution.
+
+
+boolean contains(char value)
+Worst-Case:
+	T(n)= O(n)
+	The char does not exist in the list, or at the end.
+Best-case:
+	T(n)= O(1)
+	The char is at index 0 in the list.
+Average-case:
+	T(n)= T(n/2) = O(n)
+	The char is in the middle of the list.
+
+
+char get(int index)
+Worst-Case:
+	T(n)= O(n)
+	The char you are getting is at end of the list.
+Best-case:
+	T(n)= O(1)
+	The char you are getting is at beginning of list.
+Average-case:
+	T(n)= T(n/2) = O(n)
+	The char you are getting is at middle of the list.
+
+
+void set(int index, char value)
+Worst-Case:
+	T(n)= O(n)
+	The char you are setting is at end of the list.
+Best-case:
+	T(n)= O(1)
+	The char you are setting is at beginning of list.
+Average-case:
+	T(n)= T(n/2) = O(n)
+	The char you are setting is at middle of the list.
+
+
+boolean equals(MyList llist)
+Worst-Case:
+	T(n)= O(n^2)
+	Lists are equivalent.
+Best-case:
+	T(n)= O(1)
+	List sizes are different so that arent compared in depth.
+Average-case:
+	T(n)= T(n/2) = O(n^2)
+	Lists were similar for half of their elements.
+
+
+void pushFront(char value)
+Worst-Case:
+	T(n)= O(1)
+	pushingFront when list is of any size.
+Best-case:
+	T(n)= O(1)
+	pushingFront when list is empty.
+Average-case:
+	T(n)= O(1)
+	Same as worst-case.
+
+
+void pushBack(char value)
+Worst-Case:
+	T(n)= O(n)
+	pushingBack when list is of any size
+Best-case:
+	T(n)= O(1)
+	pushingBack when list is empty.
+Average-case:
+	T(n)= O(n)
+	Same as worst-case.
+
+
+void popFront()
+Worst-Case:
+	T(n)= O(1)
+	poppingFront when list is of any size.
+Best-case:
+	T(n)= O(1)
+	poppingFront when list is empty.
+Average-case:
+	T(n)= O(1)
+	Same as worst-case.
+
+
+void popBack()
+Worst-Case:
+	T(n)= O(n)
+	poppingBack when list is of any size
+Best-case:
+	T(n)= O(1)
+	poppingBack when list is empty.
+Average-case:
+	T(n)= O(n)
+	Same as worst-case.
+
+
+void swap(int i, int j)
+Worst-Case:
+	T(n)= O(n)
+	Swapping elements are the beginning and end of list.
+Best-case:
+	T(n)= O(n)
+	Swapping elements are at front of list and right next to each other.
+Average-case:
+	T(n)= O(n)
+	Swapping elements are half distance of list.
+
+
+void insertAtPos(int index, char value)
+Worst-Case:
+	T(n)= O(n)
+	Inserting at 2nd to last index of list.
+Best-case:
+	T(n)= O(1)
+	Inserting at beginning of list.
+Average-case:
+	T(n)= T(n/2)= O(n)
+	Inserting at middle of list.
+
+
+void insertAfter(int index, char value)
+Worst-Case:
+	T(n)= O(n)
+	Inserting at 2nd to last index of list.
+Best-case:
+	T(n)= O(1)
+	Inserting at beginning of list.
+Average-case:
+	T(n)= T(n/2)= O(n)
+	Inserting at middle of list.
+
+
+void insertBefore(int index, char value)
+Worst-Case:
+	T(n)= O(n)
+	Inserting at 2nd to last index of list.
+Best-case:
+	T(n)= O(1)
+	Inserting at beginning of list.
+Average-case:
+	T(n)= T(n/2)= O(n)
+	Inserting at middle of list.
+
+
+MyList subList(int fromIndex, int toIndex)
+Worst-Case:
+	T(n)= O(n^2)
+	subList the entire list.
+Best-case:
+	T(n)= O(n)
+	subList from the beginning to 2nd element of list.
+Average-case:
+	T(n)= T(n/2)= O(n^2)
+	subList half the list.
+
+
+int find(char value)
+Worst-Case:
+	T(n)= O(n^2)
+	char is at the end of the list.
+Best-case:
+	T(n)= O(1)
+	char is at the beginning of the list.
+Average-case:
+	T(n)= T(n/2)= O(n^2)
+	char is at the middle of the list.
+
+
+int find(MyList queryStr)
+Worst-Case:
+	T(n)= O(n)
+	queryString is not in the list.
+Best-case:
+	T(n)= O(n)
+	queryString is in the list.
+Average-case:
+	T(n)= O(n)
+	Same as worst-case.
+
+
+char[] toArray()
+Worst-Case:
+	T(n)= O(n)
+	list of n elements to put in array.
+Best-case:
+	T(n)= O(1)
+	list has only one element to put in array.
+Average-case:
+	T(n)= T(n/2)= O(n)
+	Same as worst-case.
+
+
+void reverse()
+Worst-Case:
+	T(n)= O(n)
+	List of n elements is reversed.
+Best-case:
+	T(n)= O(1)
+	List is only one node.
+Average-case:
+	T(n)= T(n/2)= O(n)
+	Same as worst-case.
+
+
+int size()
+Worst-Case:
+	T(n)= O(n)
+	List of n elements.
+Best-case:
+	T(n)= O(1)
+	List is only one node.
+Average-case:
+	T(n)= T(n/2)= O(n)
+	Same as worst-case.
+
+
+void print()
+Worst-Case:
+	T(n)= O(n)
+	List of n elements.
+Best-case:
+	T(n)= O(1)
+	List is only one node.
+Average-case:
+	T(n)= T(n/2)= O(n)
+	Same as worst-case.
+
+
+public String toString()
+Worst-Case:
+	T(n)= O(n)
+	List of n elements.
+Best-case:
+	T(n)= O(1)
+	List is only one node.
+Average-case:
+	T(n)= T(n/2)= O(n)
+	Same as worst-case.
+
+

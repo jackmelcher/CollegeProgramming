@@ -1,0 +1,49 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Modeltech_pe_edu_10.4/examples
+Eorgate
+Z0 w1420672344
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/Jack/Desktop/EECS 31L
+Z4 8C:/Users/Jack/Desktop/EECS 31L/orgate.vhd
+Z5 FC:/Users/Jack/Desktop/EECS 31L/orgate.vhd
+l0
+L3
+VeP>hXT0IEDdDYLlFB=>CF1
+!s100 FWaGHB2=1M6gVGBedWb:n3
+Z6 OP;C;10.4;61
+32
+Z7 !s110 1420672387
+!i10b 1
+Z8 !s108 1420672387.613000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jack/Desktop/EECS 31L/orgate.vhd|
+Z10 !s107 C:/Users/Jack/Desktop/EECS 31L/orgate.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+Abehavioral
+R1
+R2
+DEx4 work 6 orgate 0 22 eP>hXT0IEDdDYLlFB=>CF1
+l9
+L8
+VjYIJZ49Jn<e7f;:zU;Wdm3
+!s100 IGnzn=TnR]VIRoC[kSDZc0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12

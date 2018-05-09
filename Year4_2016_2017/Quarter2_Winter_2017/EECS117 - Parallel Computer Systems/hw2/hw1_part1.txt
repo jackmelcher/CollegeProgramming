@@ -1,0 +1,6 @@
+Jack Melcher
+67574625
+EECS 101
+HW5
+
+To find rho, I take the sgm binary image and findoop through all values of theta for the line equation

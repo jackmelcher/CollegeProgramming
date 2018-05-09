@@ -1,0 +1,80 @@
+/**
+ * Course: EECS 114 Fall 2015
+ *
+ * First Name: Jack
+ * Last Name: Melcher
+ * Lab Section: 1A
+ * email address: jmelcher@uci.edu
+ *
+ *
+ * Assignment: Assignment 3
+ * Filename : analysis.txt
+ *
+ * I hereby certify that the contents of this file represent
+ * my own original individual work. Nowhere herein is there 
+ * code from any outside resources such as another individual,
+ * a website, or publishings unless specifically designated as
+ * permissible by the instructor or TA.
+ */
+
+Quicksort: First pivot
+1. What is the worst-case time complexity of the sorting algorithm? Explain.
+	If the first element in the array is always the maximum or minimum in the array.
+2. What is the average-case time complexity of the sorting algorithm? Explain.
+	If the first element between the max, min and the median.
+3. What is the best-case time complexity of the sorting algorithm? Explain.
+	If the first element is the median of the array and in all sub arrays.
+4. Is the sorting algorithm stable? If not, why?
+	Yes, works with arrays of all sizes
+5. In terms of memory, what is the space-complexity of the algorithm? Explain.
+	O(n^2). The sorting takes O(n) and the depth of the tree is O(n).
+
+Quicksort: Random Pivot
+1. What is the worst-case time complexity of the sorting algorithm? Explain.
+	If the random element in the array is always the maximum or minimum in the array.
+2. What is the average-case time complexity of the sorting algorithm? Explain.
+	If the random element between the max, min and the median.
+3. What is the best-case time complexity of the sorting algorithm? Explain.
+	If the random element is the median of the array and in all sub arrays.
+4. Is the sorting algorithm stable? If not, why?
+	Yes, works with arrays of all sizes
+5. In terms of memory, what is the space-complexity of the algorithm? Explain.
+	O(n^2). The sorting takes O(n) and the depth of the tree is O(n).
+
+Quicksort: Median of Three
+1. What is the worst-case time complexity of the sorting algorithm? Explain.
+	If the selected element in the array is always the maximum or minimum in the array.
+2. What is the average-case time complexity of the sorting algorithm? Explain.
+	If the selected element between the max, min and the median.
+3. What is the best-case time complexity of the sorting algorithm? Explain.
+	If the selected element is the median of the array and in all sub arrays.
+4. Is the sorting algorithm stable? If not, why?
+	No, only works with arrays with a size that is divisible by 3
+5. In terms of memory, what is the space-complexity of the algorithm? Explain.
+	O(n^2). The sorting takes O(n) and the depth of the tree is O(n).
+
+Quicksort: Deterministic Quick Select
+1. What is the worst-case time complexity of the sorting algorithm? Explain.
+	Will not occur.
+2. What is the average-case time complexity of the sorting algorithm? Explain.
+	Will not occur
+3. What is the best-case time complexity of the sorting algorithm? Explain.
+	The selection method always picks the median of the array.
+4. Is the sorting algorithm stable? If not, why?
+	No, only works with arrays with a size that is divisible by 5
+5. In terms of memory, what is the space-complexity of the algorithm? Explain.
+	O(n^3). The sorting takes O(n) and the depth of the tree is O(n).
+	The selection process uses Insertion sort which is O(n^2)
+
+MergeSort:
+1. What is the worst-case time complexity of the sorting algorithm? Explain.
+	If the input array is of an odd size, it increases the height by one.
+2. What is the average-case time complexity of the sorting algorithm? Explain.
+	Similar to best-case, When mergesort is used on an array that's of an even size.
+3. What is the best-case time complexity of the sorting algorithm? Explain.
+	When the mergesort is used with an array that's of an even size.
+4. Is the sorting algorithm stable? If not, why?
+	Yes, the algorithm is stable. It should work with any given array.
+5. In terms of memory, what is the space-complexity of the algorithm? Explain.
+	O(n log n). The recursive call is O(log n) which is based on height of tree.
+	The merging process is O(n) at each node of merging.Decent space-complexity efficient.

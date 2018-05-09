@@ -1,0 +1,47 @@
+Script began: Tue Mar 7 17:59:28 PST 2017
+Node: compute-1-14.local
+Current directory: /data/users/jmelcher/hw3
+
+=== Running 5 trials of stride ... ===
+*** Trial 1 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute strided index GPU reduction kernel: 0.002211 secs
+Effective bandwidth: 15.18 GB/s
+Time to execute naive CPU reduction: 0.116037 secs
+SUCCESS: GPU: 41.937744  CPU: 41.937744
+*** Trial 2 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute strided index GPU reduction kernel: 0.00222 secs
+Effective bandwidth: 15.11 GB/s
+Time to execute naive CPU reduction: 0.115992 secs
+SUCCESS: GPU: 41.941692  CPU: 41.941692
+*** Trial 3 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute strided index GPU reduction kernel: 0.002221 secs
+Effective bandwidth: 15.11 GB/s
+Time to execute naive CPU reduction: 0.11601 secs
+SUCCESS: GPU: 41.937355  CPU: 41.937355
+*** Trial 4 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute strided index GPU reduction kernel: 0.00222 secs
+Effective bandwidth: 15.11 GB/s
+Time to execute naive CPU reduction: 0.115994 secs
+SUCCESS: GPU: 41.936226  CPU: 41.936226
+*** Trial 5 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute strided index GPU reduction kernel: 0.002214 secs
+Effective bandwidth: 15.16 GB/s
+Time to execute naive CPU reduction: 0.116017 secs
+SUCCESS: GPU: 41.939407  CPU: 41.939407
+
+=== Done! ===

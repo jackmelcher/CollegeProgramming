@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Jack/Desktop/EECS 31L/assignment3_67574625/alu_32bit_testbench_isim_beh.exe" -prj "C:/Users/Jack/Desktop/EECS 31L/assignment3_67574625/alu_32bit_testbench_beh.prj" "work.alu_32bit_testbench" 

@@ -1,0 +1,63 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/Jack/Desktop/EECS 112L/Lab4/processor_tb_isim_beh.exe -prj C:/Users/Jack/Desktop/EECS 112L/Lab4/processor_tb_beh.prj work.processor_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/Jack/Desktop/EECS 112L/Lab4/processor_tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Lab4/lab2_pack.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Lab4/rom.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Lab4/regfile.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Lab4/ram_read.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Lab4/ram.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Lab4/PipelineReg4_MEM_WB.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Lab4/PipelineReg3_EX_MEM.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Lab4/PipelineReg2_ID_EX.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Lab4/PipelineReg1_IF_ID.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Lab4/PCadder.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Lab4/pc.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Lab4/output_mux.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Lab4/controller.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Lab4/b_mux.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Lab4/branch_control.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Lab4/BranchAdder.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Lab4/a_mux.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Lab4/alu.vhd" into library work
+Parsing VHDL file "C:/Users/Jack/Desktop/EECS 112L/Lab4/processor.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module processor_tb
+Compiling module glbl
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package lab2_pack
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling package textio
+Compiling package std_logic_signed
+Compiling architecture behavioral of entity pc [\pc(32,4,('0','0','0','0','0','0...]
+Compiling architecture behavioral of entity PCadder [pcadder_default]
+Compiling architecture behavioral of entity rom [rom_default]
+Compiling architecture behavioral of entity PipelineReg1_IF_ID [pipelinereg1_if_id_default]
+Compiling architecture behavioral of entity controller [controller_default]
+Compiling architecture behavioral of entity regfile [\regfile(32,5,5)\]
+Compiling architecture behavioral of entity a_mux [a_mux_default]
+Compiling architecture behavioral of entity b_mux [b_mux_default]
+Compiling architecture behavioral of entity PipelineReg2_ID_EX [pipelinereg2_id_ex_default]
+Compiling architecture behavioral of entity alu [alu_default]
+Compiling architecture behavioral of entity branch_and_jump_control [branch_and_jump_control_default]
+Compiling architecture behavioral of entity BranchAdder [branchadder_default]
+Compiling architecture behavioral of entity PipelineReg3_EX_MEM [pipelinereg3_ex_mem_default]
+Compiling architecture behavioral of entity ram [\ram(32,9)\]
+Compiling architecture behavioral of entity ram_read [ram_read_default]
+Compiling architecture behavioral of entity PipelineReg4_MEM_WB [pipelinereg4_mem_wb_default]
+Compiling architecture behavioral of entity output_mux [output_mux_default]
+Compiling architecture behavioral of entity processor [processor_default]
+Time Resolution for simulation is 1ps.
+Waiting for 9 sub-compilation(s) to finish...
+Compiled 44 VHDL Units
+Compiled 2 Verilog Units
+Built simulation executable C:/Users/Jack/Desktop/EECS 112L/Lab4/processor_tb_isim_beh.exe
+Fuse Memory Usage: 40636 KB
+Fuse CPU Usage: 763 ms

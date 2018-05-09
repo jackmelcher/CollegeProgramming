@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/BranchAdder.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/ForwardingUnit.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/PCadder.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/PipelineReg1_IF_ID.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/PipelineReg2_ID_EX.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/PipelineReg3_EX_MEM.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/PipelineReg4_MEM_WB.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/a_mux.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/alu.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/b_mux.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/branch_control.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/controller.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/fwd_a.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/fwd_b.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/lab2_pack.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/output_mux.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/pc.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/processor.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/ram.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/ram_read.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/regfile.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jack/Desktop/EECS 112L/Lab4(2nd iteration of pipeline with forwarding)/rom.vhd&quot; into library work</arg>
+</msg>
+
+</messages>
+
